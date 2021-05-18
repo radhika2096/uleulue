@@ -7,7 +7,7 @@
     tools:context=".loginstudent">
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteX="101dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/Forgotpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="381dp"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log In"
@@ -43,28 +43,37 @@
         tools:layout_editor_absoluteY="536dp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/Signupbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
         tools:layout_editor_absoluteX="218dp"
         tools:layout_editor_absoluteY="536dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="616dp" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:visibility="invisible"
+        tools:itemCount="3"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
         tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/Forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <TextView
+        android:id="@+id/StuddentLoginPage"
+        android:layout_width="136dp"
+        android:layout_height="99dp"
+        android:text="Student Login Page"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="172dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
