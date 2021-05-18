@@ -10,7 +10,7 @@
         android:id="@+id/textView5"
         android:layout_width="93dp"
         android:layout_height="21dp"
-        android:text="Students"
+        android:text="STUDENTS"
         tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="42dp" />
 
@@ -74,8 +74,8 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Warden Name"
-        tools:layout_editor_absoluteX="63dp"
+        android:text="Warden Name:"
+        tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="253dp" />
 
     <TextView
@@ -90,8 +90,8 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sharing"
-        tools:layout_editor_absoluteX="68dp"
+        android:text="Sharing:"
+        tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="284dp" />
 
     <TextView
