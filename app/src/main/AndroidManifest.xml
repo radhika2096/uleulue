@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
         <activity android:name=".wardenhomepage"></activity>
-        <activity android:name=".registerwardenpage" />
-        <activity android:name=".loginwardenpade" />
-        <activity android:name=".registerStudentPage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".registerwardenpage" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity android:name=".loginwardenpade" />
+        <activity android:name=".registerStudentPage"/>
+
         <activity android:name=".HomepageStudents" />
         <activity android:name=".loginstudent" />
     </application>
