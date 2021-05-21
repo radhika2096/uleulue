@@ -46,7 +46,7 @@
         android:paddingBottom="10dp"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textLogin"
+        app:layout_constraintEnd_toEndOf="@+id/Loginimage"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="@+id/textLogin"
         app:layout_constraintTop_toTopOf="parent"
@@ -163,6 +163,7 @@
         android:background="@drawable/btn_bg"
         android:drawableStart="@drawable/ic_google"
         android:drawableLeft="@drawable/ic_google"
+        android:drawablePadding="20dp"
         android:text="Google"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorPrimaryDark"
@@ -170,9 +171,9 @@
         android:textStyle="bold"
         app:backgroundTint="@color/colorRed"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
         app:rippleColor="@color/colorPrimaryDark"
-        tools:layout_editor_absoluteY="648dp" />
+        tools:layout_editor_absoluteY="641dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
