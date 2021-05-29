@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".regselectionpage"
-    android:background="@drawable/">
+    android:background="@drawable/"
+    android:tag="2"
+    tools:context=".regselectionpage">
 
 
     <ImageView
@@ -13,39 +14,47 @@
         android:layout_width="398dp"
         android:layout_height="246dp"
         app:srcCompat="@drawable/hostel"
-        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="43dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="176dp"
+        android:id="@+id/student"
+        android:layout_width="140dp"
         android:layout_height="148dp"
-        app:srcCompat="@drawable/loginwalaimage"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="330dp" />
+        android:background="#673AB7"
+        android:tag="students"
+        app:srcCompat="@drawable/students1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="331dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="193dp"
-        android:layout_height="158dp"
-        app:srcCompat="@drawable/parents"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="330dp" />
+        android:id="@+id/parents"
+        android:layout_width="155dp"
+        android:layout_height="152dp"
+        android:background="#D03F51B5"
+        android:tag="2"
+        app:srcCompat="@drawable/parents1"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="331dp" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="175dp"
-        android:layout_height="162dp"
-        app:srcCompat="@drawable/warden"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="504dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="180dp"
+        android:id="@+id/warden"
+        android:layout_width="154dp"
         android:layout_height="145dp"
-        app:srcCompat="@drawable/gatekeeper"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="504dp" />
+        android:background="#CD673AB7"
+        android:tag="3"
+        app:srcCompat="@drawable/teacher1"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <ImageButton
+        android:id="@+id/gatekeeper"
+        android:layout_width="156dp"
+        android:layout_height="142dp"
+        android:background="#D2673AB7"
+        android:tag="4"
+        app:srcCompat="@drawable/gatekeeper1"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="506dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
