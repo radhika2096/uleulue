@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".regselectionpage"
+    android:background="@drawable/">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="398dp"
+        android:layout_height="246dp"
+        app:srcCompat="@drawable/hostel"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="176dp"
+        android:layout_height="148dp"
+        app:srcCompat="@drawable/loginwalaimage"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="193dp"
+        android:layout_height="158dp"
+        app:srcCompat="@drawable/parents"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="175dp"
+        android:layout_height="162dp"
+        app:srcCompat="@drawable/warden"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="180dp"
+        android:layout_height="145dp"
+        app:srcCompat="@drawable/gatekeeper"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
