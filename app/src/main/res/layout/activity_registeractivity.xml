@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
         android:drawablePadding="10dp"
@@ -20,14 +20,16 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="368dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -38,8 +40,10 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
         tools:layout_editor_absoluteY="440dp" />
 
     <TextView
@@ -51,9 +55,9 @@
         tools:layout_editor_absoluteX="164dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Name"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_account_box_24"
         android:drawablePadding="10dp"
@@ -64,14 +68,16 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="237dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="232dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_assignment_ind_24"
         android:drawablePadding="10dp"
@@ -82,14 +88,16 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
+        app:layout_constraintEnd_toEndOf="@+id/Name"
+        app:layout_constraintStart_toStartOf="@+id/Name"
         tools:layout_editor_absoluteY="297dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="207dp"
-        android:layout_height="42dp"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -100,18 +108,21 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
         tools:layout_editor_absoluteY="522dp" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="117dp"
-        android:layout_height="40dp"
+        android:id="@+id/Register"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
         android:background="@drawable/inputbg5"
         android:hint="Signup"
         android:text="Register"
         android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
         tools:layout_editor_absoluteY="590dp" />
@@ -124,23 +135,24 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Already have an account?"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_admin_panel_settings_24"
         android:drawablePadding="10dp"
         android:hint="   Gate Keeper"
-        android:text="Gate Keeper"
+        android:text="Register"
         android:textColorHint="@color/black"
-        android:textSize="20sp"
+        android:textSize="34sp"
         app:drawableTintMode="add"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Name"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="38dp" />
 
