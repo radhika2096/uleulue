@@ -7,7 +7,7 @@
     tools:context=".registeractivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/phoneno"
         android:layout_width="400dp"
         android:layout_height="49dp"
         android:background="@drawable/input_bg"
@@ -22,12 +22,13 @@
         android:paddingBottom="10dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintEnd_toEndOf="@+id/ID"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ID"
+        tools:layout_editor_absoluteY="362dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/password"
         android:layout_width="400dp"
         android:layout_height="49dp"
         android:background="@drawable/input_bg"
@@ -42,8 +43,8 @@
         android:paddingBottom="10dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toEndOf="@+id/phoneno"
+        app:layout_constraintStart_toStartOf="@+id/phoneno"
         tools:layout_editor_absoluteY="440dp" />
 
     <TextView
@@ -75,7 +76,7 @@
         tools:layout_editor_absoluteY="232dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ID"
         android:layout_width="400dp"
         android:layout_height="49dp"
         android:background="@drawable/input_bg"
@@ -95,7 +96,7 @@
         tools:layout_editor_absoluteY="297dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/confirmpassword"
         android:layout_width="400dp"
         android:layout_height="49dp"
         android:background="@drawable/input_bg"
@@ -110,8 +111,8 @@
         android:paddingBottom="10dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
         tools:layout_editor_absoluteY="522dp" />
 
     <Button
@@ -123,8 +124,9 @@
         android:text="Register"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/confirmpassword"
+        app:layout_constraintStart_toStartOf="@+id/confirmpassword"
         tools:layout_editor_absoluteY="590dp" />
 
     <EditText
@@ -137,8 +139,8 @@
         android:text="Already have an account?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/Register"
+        app:layout_constraintStart_toStartOf="@+id/Register" />
 
     <TextView
         android:id="@+id/Register"
@@ -153,15 +155,16 @@
         android:textSize="34sp"
         app:drawableTintMode="add"
         app:layout_constraintEnd_toEndOf="@+id/Name"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Name"
         tools:layout_editor_absoluteY="38dp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="126dp"
         android:layout_height="128dp"
+        app:layout_constraintEnd_toEndOf="@+id/Name"
+        app:layout_constraintStart_toStartOf="@+id/Name"
         app:srcCompat="@drawable/loginwalaimage"
-        tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="89dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

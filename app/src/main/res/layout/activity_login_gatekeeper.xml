@@ -32,7 +32,7 @@
         tools:layout_editor_absoluteY="256dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
@@ -71,8 +71,8 @@
         android:text="Forgot password?"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/ID"
+        app:layout_constraintTop_toBottomOf="@+id/ID" />
 
     <Button
         android:id="@+id/button6"
@@ -80,8 +80,8 @@
         android:layout_height="45dp"
         android:background="@drawable/inputbg"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/ID"
+        app:layout_constraintStart_toStartOf="@+id/ID"
         tools:layout_editor_absoluteY="438dp" />
 
     <TextView
@@ -90,9 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Dont have an account?"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/ID"
         app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toStartOf="@+id/ID"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <LinearLayout
