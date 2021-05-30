@@ -71,7 +71,7 @@
         android:layout_width="285dp"
         android:layout_height="56dp"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/btnn_bg"
+        android:background="@drawable/inputbg"
         android:text="LOGIN"
         android:textColor="@color/purple_200"
         android:textSize="18sp"
