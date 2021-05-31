@@ -57,7 +57,7 @@ public class registerStudentPage extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     Toast.makeText(registerStudentPage.this,"succesfull", Toast.LENGTH_LONG).show();
-                                    startActivity(new Intent(registerStudentPage.this, loginstudent.class));
+                                    startActivity(new Intent(registerStudentPage.this, login_Student.class));
                                     finish();
 
                                 }

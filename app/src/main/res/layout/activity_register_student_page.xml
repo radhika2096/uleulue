@@ -27,7 +27,8 @@
         android:layout_marginTop="188dp"
         android:text="signup"
         app:layout_constraintTop_toBottomOf="@+id/passwordreg"
-        tools:layout_editor_absoluteX="219dp" />
+        tools:layout_editor_absoluteX="219dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/backToLogin"
@@ -36,7 +37,8 @@
         android:layout_marginTop="116dp"
         android:text="backtoLogin"
         app:layout_constraintTop_toBottomOf="@+id/passwordreg"
-        tools:layout_editor_absoluteX="206dp" />
+        tools:layout_editor_absoluteX="206dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,7 +47,8 @@
         android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/download"
-        tools:layout_editor_absoluteX="2dp" />
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/passwordreg"

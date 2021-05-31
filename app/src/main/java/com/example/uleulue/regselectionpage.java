@@ -8,8 +8,15 @@ import android.view.View;
 
 public class regselectionpage extends AppCompatActivity {
     public void changeUser(View view){
-        if(view.getTag().toString()=="students")
+        int a =1 , b=2, c=3,d=4;
+        if(view.getTag().toString().equals(Integer.toString(a)))
             startActivity(new Intent(regselectionpage.this,registerStudentPage.class));
+        if(view.getTag().toString().equals(Integer.toString(b)))
+            startActivity(new Intent(regselectionpage.this,ParentsRegisterActivity.class));
+       // if(view.getTag().toString().equals(Integer.toString(c)))
+          //  startActivity(new Intent(regselectionpage.this,registeractivity.class));
+       // if(view.getTag().toString().equals(Integer.toString(d)))
+         //   startActivity(new Intent(regselectionpage.this,wardenregisterpage.class));
 
     }
 

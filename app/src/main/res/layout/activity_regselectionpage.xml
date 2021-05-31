@@ -4,57 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/"
     android:tag="2"
     tools:context=".regselectionpage">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeUser"
+        android:tag="1"
+        android:text="Button"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="272dp" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="398dp"
-        android:layout_height="246dp"
-        app:srcCompat="@drawable/hostel"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="43dp" />
-
-    <ImageButton
-        android:id="@+id/student"
-        android:layout_width="140dp"
-        android:layout_height="148dp"
-        android:background="#673AB7"
-        android:tag="students"
-        app:srcCompat="@drawable/students1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="331dp" />
-
-    <ImageButton
-        android:id="@+id/parents"
-        android:layout_width="155dp"
-        android:layout_height="152dp"
-        android:background="#D03F51B5"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeUser"
         android:tag="2"
-        app:srcCompat="@drawable/parents1"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="331dp" />
+        android:text="Button"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="288dp" />
 
-    <ImageButton
-        android:id="@+id/warden"
-        android:layout_width="154dp"
-        android:layout_height="145dp"
-        android:background="#CD673AB7"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeUser"
         android:tag="3"
-        app:srcCompat="@drawable/teacher1"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="501dp" />
+        android:text="Button"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="486dp" />
 
-    <ImageButton
-        android:id="@+id/gatekeeper"
-        android:layout_width="156dp"
-        android:layout_height="142dp"
-        android:background="#D2673AB7"
-        android:tag="4"
-        app:srcCompat="@drawable/gatekeeper1"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="506dp" />
-
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeUser"
+        android:text="Button"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="475dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
