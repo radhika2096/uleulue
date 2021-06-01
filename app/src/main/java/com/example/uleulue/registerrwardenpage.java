@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class wardenregisterpage extends AppCompatActivity {
+public class registerrwardenpage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wardenregisterpage);
+        setContentView(R.layout.activity_registerrwardenpage);
     }
 }
