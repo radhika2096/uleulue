@@ -9,40 +9,43 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="319dp"
+        android:layout_height="60dp"
         android:onClick="changeUser"
         android:tag="1"
-        android:text="Button"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="272dp" />
+        android:text="Students"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="44dp"
         android:onClick="changeUser"
         android:tag="2"
-        android:text="Button"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:text="Parents"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="35dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="307dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="48dp"
         android:onClick="changeUser"
         android:tag="3"
-        android:text="Button"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="486dp" />
+        android:text="GateKeeper"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:layout_editor_absoluteX="43dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="72dp"
         android:onClick="changeUser"
-        android:text="Button"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="475dp" />
+        android:text="warden"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:layout_editor_absoluteX="65dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

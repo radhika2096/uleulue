@@ -13,10 +13,10 @@ public class regselectionpage extends AppCompatActivity {
             startActivity(new Intent(regselectionpage.this,registerStudentPage.class));
         if(view.getTag().toString().equals(Integer.toString(b)))
             startActivity(new Intent(regselectionpage.this,ParentsRegisterActivity.class));
-       // if(view.getTag().toString().equals(Integer.toString(c)))
-          //  startActivity(new Intent(regselectionpage.this,registeractivity.class));
-       // if(view.getTag().toString().equals(Integer.toString(d)))
-         //   startActivity(new Intent(regselectionpage.this,wardenregisterpage.class));
+        if(view.getTag().toString().equals(Integer.toString(c)))
+           startActivity(new Intent(regselectionpage.this,RegisterGatekeeper.class));
+      //  if(view.getTag().toString().equals(Integer.toString(d)))
+         //  startActivity(new Intent(regselectionpage.this,registerrwardenpage.class));
 
     }
 
