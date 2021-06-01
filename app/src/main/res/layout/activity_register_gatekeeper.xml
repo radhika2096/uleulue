@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterGatekeeper">
+
+    <EditText
+        android:id="@+id/Name93"
+        android:layout_width="437dp"
+        android:layout_height="49dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Name"
+        android:textColorHighlight="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <EditText
+        android:id="@+id/ID93"
+        android:layout_width="437dp"
+        android:layout_height="49dp"
+        android:background="@drawable/inputbg"
+        android:drawableLeft="@drawable/ic_baseline_assignment_ind_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  ID"
+        android:textColorHighlight="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Name93"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Name93"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <EditText
+        android:id="@+id/Phnno93"
+        android:layout_width="437dp"
+        android:layout_height="49dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Phone Number"
+        android:textColorHighlight="@color/colorBlack"
+        android:textColorLink="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ID93"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ID93"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <EditText
+        android:id="@+id/Password93"
+        android:layout_width="437dp"
+        android:layout_height="49dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:textColorHighlight="@color/colorBlack"
+        android:textColorLink="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Phnno93"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Phnno93"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <EditText
+        android:id="@+id/Confirmpassword93"
+        android:layout_width="437dp"
+        android:layout_height="55dp"
+        android:background="@drawable/inputt_bg"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Confirm Password"
+        android:textColorHighlight="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Password93"
+        app:layout_constraintStart_toStartOf="@+id/Password93"
+        tools:layout_editor_absoluteY="493dp" />
+
+    <Button
+        android:id="@+id/Register93"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inputbg5"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/Confirmpassword93"
+        app:layout_constraintStart_toStartOf="@+id/Confirmpassword93"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <EditText
+        android:id="@+id/Account93"
+        android:layout_width="256dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Already have an account?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Confirmpassword93"
+        app:layout_constraintStart_toStartOf="@+id/Confirmpassword93" />
+
+    <TextView
+        android:id="@+id/Register293"
+        android:layout_width="204dp"
+        android:layout_height="47dp"
+        android:text="   REGISTER"
+        android:textColorHighlight="@color/colorBlack"
+        android:textColorLink="@color/colorBlack"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Name93"
+        app:layout_constraintStart_toStartOf="@+id/Name93"
+        tools:layout_editor_absoluteY="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

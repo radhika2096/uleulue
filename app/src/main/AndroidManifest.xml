@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
-        <activity android:name=".registerrwardenpage"></activity>
+        <activity android:name=".RegisterGatekeeper"></activity>
+        <activity android:name=".registerrwardenpage" />
         <activity android:name=".wardenhomepage" />
         <activity android:name=".loginwardenpade" />
         <activity android:name=".registerStudentPage" />
