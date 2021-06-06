@@ -15,7 +15,7 @@
         android:id="@+id/ID"
         android:layout_width="400dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="ID"
@@ -29,14 +29,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/PhoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/PhoneNumber"
         android:layout_width="400dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="PhoneNumber"
@@ -50,16 +50,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Account3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginBottom="60dp"
         android:hint="Already have an account?"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -75,7 +74,9 @@
         android:id="@+id/name93"
         android:layout_width="400dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_account_box_24"
         android:drawablePadding="10dp"
@@ -112,14 +113,14 @@
         app:iconTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/Account3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="400dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Password"
@@ -132,16 +133,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Password2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Password2"
         android:layout_width="400dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Confirm Password"
@@ -172,6 +172,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/name93"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
 </androidx.constraintlayout.widget.ConstraintLayout>
