@@ -9,20 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
+        <activity android:name=".GatekeeperRegister"></activity>
+        <activity android:name=".regselectionpage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".regselectionpage" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-        <activity android:name=".registerStudentPage"/>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".registerStudentPage" />
         <activity android:name=".wardenregisterpage" />
-        <activity android:name=".ParentsRegisterActivity"/>
-        <activity android:name=".Gatekeeperlogin"/>
+        <activity android:name=".ParentsRegisterActivity" />
     </application>
 
 </manifest>

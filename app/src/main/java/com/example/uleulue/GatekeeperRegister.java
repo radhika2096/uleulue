@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Gatekeeperlogin extends AppCompatActivity {
+public class GatekeeperRegister extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gatekeeperlogin);
+        setContentView(R.layout.activity_gatekeeper_register);
     }
 }
