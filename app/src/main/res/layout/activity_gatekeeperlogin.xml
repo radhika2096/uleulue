@@ -78,7 +78,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Name"
