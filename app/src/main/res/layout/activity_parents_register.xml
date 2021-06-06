@@ -5,7 +5,7 @@
     android:id="@+id/imageregistry"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+
     android:paddingLeft="20dp"
     android:paddingTop="10dp"
     android:paddingRight="10dp"
@@ -37,8 +37,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_person"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="NAME"
@@ -59,8 +58,7 @@
         android:id="@+id/inputEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="EMAIL"
@@ -81,8 +79,7 @@
         android:id="@+id/inputConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="CONFIRM PASSWORD"
@@ -103,8 +100,7 @@
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="PASSWORD"
@@ -127,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/btn_bg"
+
         android:text="REGISTER"
         android:textColor="@color/colorWhite"
         app:backgroundTint="@color/colorPrimaryDark"
@@ -143,7 +139,7 @@
         android:id="@+id/InputUsn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="ENTER USN"
@@ -164,8 +160,7 @@
         android:id="@+id/Contact"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="ENTER CONTACT NUMBER"
@@ -186,7 +181,7 @@
         android:id="@+id/StudentsName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
+
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="ENTER STUDENT NAME"
