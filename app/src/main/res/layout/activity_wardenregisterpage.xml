@@ -21,15 +21,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <EditText
         android:id="@+id/namee"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Name"
@@ -41,7 +42,6 @@
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -49,7 +49,7 @@
         android:id="@+id/Emaill"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Email"
@@ -69,7 +69,7 @@
         android:id="@+id/contactnumberr"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Contact Number"
@@ -81,6 +81,7 @@
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/Emaill"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Emaill"
         app:layout_constraintTop_toBottomOf="@+id/Emaill" />
 
@@ -88,7 +89,7 @@
         android:id="@+id/hostelnamee"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Hostel Name"
@@ -100,6 +101,7 @@
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/sharring"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/sharring"
         app:layout_constraintTop_toBottomOf="@+id/sharring" />
 
@@ -107,7 +109,7 @@
         android:id="@+id/sharring"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Sharing"
@@ -127,7 +129,7 @@
         android:id="@+id/passworrd"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Password"
@@ -139,6 +141,7 @@
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/hostelnamee"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/hostelnamee"
         app:layout_constraintTop_toBottomOf="@+id/hostelnamee" />
 
@@ -146,7 +149,7 @@
         android:id="@+id/confirmpassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
         android:hint="Confirm Password"
@@ -158,6 +161,7 @@
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passworrd"
         app:layout_constraintTop_toBottomOf="@+id/passworrd" />
 
@@ -165,7 +169,7 @@
         android:id="@+id/registeer"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/btnn_bg"
         android:text="Register"
         android:textColor="@color/colorBlack"
@@ -173,7 +177,7 @@
         android:textColorHint="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="@+id/confirmpassword"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/confirmpassword"
         app:layout_constraintTop_toBottomOf="@+id/confirmpassword" />
 

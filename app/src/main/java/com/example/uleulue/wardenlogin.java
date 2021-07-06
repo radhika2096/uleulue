@@ -94,7 +94,7 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified())
                     {
-                        startActivity(new Intent(wardenlogin.this,HomeStudents.class));
+                        startActivity(new Intent(wardenlogin.this,HomeWarden.class));
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(wardenlogin.this,"check you mail to confirm it",Toast.LENGTH_LONG).show();
