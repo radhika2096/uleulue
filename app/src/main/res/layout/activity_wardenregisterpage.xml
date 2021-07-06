@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/namee"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/Emaill"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -60,13 +60,13 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/namee"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/namee"
+        app:layout_constraintTop_toBottomOf="@+id/namee" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/contactnumberr"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -80,12 +80,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/Emaill"
+        app:layout_constraintStart_toStartOf="@+id/Emaill"
+        app:layout_constraintTop_toBottomOf="@+id/Emaill" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/hostelnamee"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -99,12 +99,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintEnd_toEndOf="@+id/sharring"
+        app:layout_constraintStart_toStartOf="@+id/sharring"
+        app:layout_constraintTop_toBottomOf="@+id/sharring" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/sharring"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -118,13 +118,13 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toEndOf="@+id/contactnumberr"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintStart_toStartOf="@+id/contactnumberr"
+        app:layout_constraintTop_toBottomOf="@+id/contactnumberr" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passworrd"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -138,12 +138,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintEnd_toEndOf="@+id/hostelnamee"
+        app:layout_constraintStart_toStartOf="@+id/hostelnamee"
+        app:layout_constraintTop_toBottomOf="@+id/hostelnamee" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/confirmpassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -157,12 +157,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/passworrd"
+        app:layout_constraintStart_toStartOf="@+id/passworrd"
+        app:layout_constraintTop_toBottomOf="@+id/passworrd" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/registeer"
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
@@ -172,21 +172,21 @@
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/confirmpassword"
         app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintStart_toStartOf="@+id/confirmpassword"
+        app:layout_constraintTop_toBottomOf="@+id/confirmpassword" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/alreadyhaveaccount"
         android:layout_width="180dp"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
         android:text="Already Have an Account?"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/registeer"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintStart_toStartOf="@+id/registeer"
+        app:layout_constraintTop_toBottomOf="@+id/registeer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
