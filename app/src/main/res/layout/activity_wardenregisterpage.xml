@@ -145,41 +145,22 @@
         app:layout_constraintStart_toStartOf="@+id/hostelnamee"
         app:layout_constraintTop_toBottomOf="@+id/hostelnamee" />
 
-    <EditText
-        android:id="@+id/confirmpassword"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/inpuut_bg"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passworrd"
-        app:layout_constraintTop_toBottomOf="@+id/passworrd" />
-
     <Button
         android:id="@+id/registeer"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="176dp"
         android:background="@drawable/btnn_bg"
         android:text="Register"
         android:textColor="@color/colorBlack"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="@+id/confirmpassword"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="@+id/confirmpassword"
-        app:layout_constraintTop_toBottomOf="@+id/confirmpassword" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostelnamee"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/alreadyhaveaccount"

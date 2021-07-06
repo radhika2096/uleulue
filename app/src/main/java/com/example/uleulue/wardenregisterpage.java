@@ -36,6 +36,8 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
         rregister.setOnClickListener(this);
         rTextname = (EditText) findViewById(R.id.namee);
         rTextemail = (EditText) findViewById(R.id.Emaill);
+        rTextphonenumber = (EditText) findViewById(R.id.contactnumberr);
+        rTextpassword = (EditText) findViewById(R.id.passworrd);
 
         rTextsharing = (EditText) findViewById(R.id.sharring);
         rTexthostelname = (EditText) findViewById(R.id.hostelnamee);
@@ -114,15 +116,15 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user2 user2 = new user2(nname, eemail, pphone,ssharing,hhostelname);
-                    FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    user2 useR2 = new user2(nname, eemail, pphone,ssharing,hhostelname);
+                    FirebaseDatabase.getInstance().getReference("wusers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(useR2).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(wardenregisterpage.this, "registered", Toast.LENGTH_LONG).show();
 
-                                startActivity(new Intent(wardenregisterpage.this,login.class));
+                                startActivity(new Intent(wardenregisterpage.this,wardenlogin.class));
                             } else {
                                 Toast.makeText(wardenregisterpage.this, "registration failed", Toast.LENGTH_LONG).show();
 
