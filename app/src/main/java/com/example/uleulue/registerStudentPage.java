@@ -47,7 +47,7 @@ public class registerStudentPage extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
       switch (view.getId()){
-          case R.id.registeruser:
+          case R.id.register:
               Registeruser();
       }
     }
