@@ -14,7 +14,6 @@ public class user4 {
         this.parentsname = parentsname;
         this.email = email;
         this.phonenumber = phonenumber;
-
         this.studentname = studentname;
         this.usn = usn;
     }

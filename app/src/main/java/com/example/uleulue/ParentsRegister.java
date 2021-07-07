@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class ParentsRegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class ParentsRegister extends AppCompatActivity implements View.OnClickListener {
 
     private EditText dTextname, dTextemail, dTextpassword, dTextphonenumber, dTextusn,dTextstudentname,dTextcpassword;
     private TextView wapasloginpejaobutton;
@@ -46,7 +46,7 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
     }
     public void lechaloUsPaar(View view)
     {
-        startActivity(new Intent(ParentsRegisterActivity.this,login.class));
+        startActivity(new Intent(ParentsRegister.this,login.class));
     }
 
     @Override
@@ -141,11 +141,11 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(ParentsRegisterActivity.this, "User has been Registered", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ParentsRegister.this, "User has been Registered", Toast.LENGTH_LONG).show();
 
-                                startActivity(new Intent(ParentsRegisterActivity.this,Parentslogin.class));
+                                startActivity(new Intent(ParentsRegister.this, ParentsLogin.class));
                             } else {
-                                Toast.makeText(ParentsRegisterActivity.this, "Registration failed", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ParentsRegister.this, "Registration failed", Toast.LENGTH_LONG).show();
 
                             }
                         }
@@ -153,7 +153,7 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
 
 
                 } else {
-                    Toast.makeText(ParentsRegisterActivity.this, "registration failed due", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ParentsRegister.this, "registration failed due", Toast.LENGTH_LONG).show();
                     dprogressBar.setVisibility(View.GONE);
                 }
             }

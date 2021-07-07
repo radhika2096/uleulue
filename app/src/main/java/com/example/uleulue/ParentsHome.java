@@ -18,30 +18,29 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class HomeStudents extends AppCompatActivity {
-    private FirebaseUser user;
+public class ParentsHome extends AppCompatActivity {
+    private FirebaseUser user4;
     private DatabaseReference reference;
     private String userId;
-   private Button logout;
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_students);
+        setContentView(R.layout.activity_parents_home);
         logout = (Button) findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(HomeStudents.this,login.class));
+                startActivity(new Intent( ParentsHome.this,login.class));
             }
         });
 
-        user = FirebaseAuth.getInstance().getCurrentUser();
+        user4 = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("users");
-        userId = user.getUid();
+        userId = user4.getUid();
 
-        final TextView greetingTextView = (TextView) findViewById(R.id.Headline);
         final TextView fullnameTextView = (TextView) findViewById(R.id.nameLabel);
         final TextView emailTextView = (TextView) findViewById(R.id.Emailadressdlabel);
         final TextView phonenumberTextView = (TextView) findViewById(R.id.phonenumberLabel);
@@ -58,7 +57,6 @@ public class HomeStudents extends AppCompatActivity {
                     String phone = userprofile.phonenumber;
                     String usn = userprofile.usn;
 
-                    greetingTextView.setText("welcome " + fullname);
                     fullnameTextView.setText("Name - " + fullname);
                     emailTextView.setText("email - " + email);
                     phonenumberTextView.setText("phoneNumber- " + phone);
@@ -67,8 +65,8 @@ public class HomeStudents extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull  DatabaseError error) {
-                Toast.makeText(HomeStudents.this,"something went wrong",Toast.LENGTH_LONG).show();
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ParentsHome.this,"something went wrong",Toast.LENGTH_LONG).show();
             }
         });
 
