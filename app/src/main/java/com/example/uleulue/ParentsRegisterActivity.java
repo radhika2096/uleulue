@@ -141,9 +141,9 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(ParentsRegisterActivity.this, "Registered", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ParentsRegisterActivity.this, "User has been Registered", Toast.LENGTH_LONG).show();
 
-                                startActivity(new Intent(ParentsRegisterActivity.this,wardenlogin.class));
+                                startActivity(new Intent(ParentsRegisterActivity.this,Parentslogin.class));
                             } else {
                                 Toast.makeText(ParentsRegisterActivity.this, "Registration failed", Toast.LENGTH_LONG).show();
 

@@ -1,8 +1,6 @@
 package com.example.uleulue;
 
 public class user3 {
-
-
     public String fullname, email,phonenumber, usn,studentname;
     public user3()
     {
