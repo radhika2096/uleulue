@@ -62,14 +62,14 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
 
         String emaill = dTextemail.getText().toString();
         String usnn = dTextusn.getText().toString();
-        String namee = dTextname.getText().toString();
+        String parentsnamee = dTextname.getText().toString();
         String phonee = dTextphonenumber.getText().toString();
         String passwordd = dTextpassword.getText().toString();
         String studentname = dTextstudentname.getText().toString();
         String confirmpassword = dTextcpassword.getText().toString();
 
 
-        if(namee.isEmpty())
+        if(parentsnamee.isEmpty())
         {
             dTextname.setError("Full name required");
             dTextname.requestFocus();
@@ -135,9 +135,9 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user3 useR3 = new user3(namee, emaill, phonee,studentname,usnn);
+                    user4 useR4 = new user4(parentsnamee, emaill, phonee,studentname,usnn);
                     FirebaseDatabase.getInstance().getReference("pusers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(useR3).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(useR4).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
