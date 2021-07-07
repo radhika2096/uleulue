@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Parentslogin extends AppCompatActivity {
+public class GatekeeperHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parentslogin);
+        setContentView(R.layout.activity_gatekeeper_home);
     }
 }
