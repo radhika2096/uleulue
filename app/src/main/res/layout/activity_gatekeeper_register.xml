@@ -89,7 +89,7 @@
         android:layout_marginBottom="28dp"
         android:background="@drawable/inpuut_bg"
         android:ems="10"
-        android:hint="ComfirmPassword"
+        android:hint="ConfirmPassword"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
