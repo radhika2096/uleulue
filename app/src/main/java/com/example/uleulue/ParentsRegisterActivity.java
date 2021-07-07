@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ParentsRegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText dTextname, dTextemail, dTextpassword, dTextphonenumber, dTextusn,dTextstudentname,dTextcpassword;
+    private TextView wapasloginpejaobutton;
     private TextView dregisteruser;
     private ProgressBar dprogressBar;
     private FirebaseAuth mAuth;
@@ -30,23 +31,28 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parents_register);
      mAuth = FirebaseAuth.getInstance();
-        dregisteruser = (Button) findViewById(R.id.registeruser);
+        dregisteruser = (Button) findViewById(R.id.btnLogin);
         dregisteruser.setOnClickListener(this);
-        dTextname = (EditText) findViewById(R.id.namee);
-        dTextemail = (EditText) findViewById(R.id.Emailreg);
-        dTextpassword = (EditText) findViewById(R.id.passwordreg);
-        dTextphonenumber = (EditText) findViewById(R.id.phoneStud);
-        dTextusn = (EditText) findViewById(R.id.usnStud);
-        dTextstudentname = (EditText) findViewById(R.id.nameStud);
+        dTextname = (EditText) findViewById(R.id.inputUsername);
+        dTextemail = (EditText) findViewById(R.id.inputEmail);
+        dTextpassword = (EditText) findViewById(R.id.inputPassword);
+        dTextphonenumber = (EditText) findViewById(R.id.Contact);
+        dTextusn = (EditText) findViewById(R.id.InputUsn);
+        dTextstudentname = (EditText) findViewById(R.id.StudentsName);
+        wapasloginpejaobutton = (TextView) findViewById(R.id.Alreadyhave);
         dTextcpassword = (EditText) findViewById(R.id.inputConfirmPassword);
 
         dprogressBar = (ProgressBar) findViewById(R.id.progressBar);
+    }
+    public void lechaloUsPaar(View view)
+    {
+        startActivity(new Intent(ParentsRegisterActivity.this,login.class));
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.registeruser:
+            case R.id.register:
                 DRegisteruser();
 
     }
@@ -111,9 +117,15 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
             dTextstudentname.requestFocus();
             return;
         }
+        if(!confirmpassword.equals(passwordd))
+        {
+            dTextcpassword.setError("Passwords do not match.Kindly recheck");
+            dTextcpassword.requestFocus();
+            return;
+        }
         if(confirmpassword.isEmpty())
         {
-            dTextcpassword.setError("Enter confirm password");
+            dTextcpassword.setError("Enter Confirm Password");
             dTextcpassword.requestFocus();
             return;
         }
@@ -123,9 +135,9 @@ public class ParentsRegisterActivity extends AppCompatActivity implements View.O
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user2 useR2 = new user2(namee, emaill, phonee,studentname,usnn);
+                    user3 useR3 = new user3(namee, emaill, phonee,studentname,usnn);
                     FirebaseDatabase.getInstance().getReference("pusers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(useR2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(useR3).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
