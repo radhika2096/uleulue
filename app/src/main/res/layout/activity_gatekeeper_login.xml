@@ -71,25 +71,28 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818"
+        app:layout_constraintVertical_bias="0.785"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cregister2"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginLeft="213dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="37dp"
         android:text="Dont have an Account?"
         android:textColor="@color/colorBlack"
-        app:layout_constraintBottom_toTopOf="@+id/forgotPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/cprogressBar3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935"
+        app:layout_constraintTop_toBottomOf="@+id/clogin"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -120,8 +123,8 @@
     <ProgressBar
         android:id="@+id/cprogressBar3"
         style="?android:attr/progressBarStyle"
-        android:layout_width="93dp"
-        android:layout_height="103dp"
+        android:layout_width="80dp"
+        android:layout_height="92dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
