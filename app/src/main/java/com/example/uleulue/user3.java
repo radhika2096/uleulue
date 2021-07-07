@@ -1,19 +1,16 @@
 package com.example.uleulue;
-
 public class user3 {
-
-
-    public String fullname, email,phonenumber, usn,studentname;
+    public String name1, email1,phonenumber1;
     public user3()
     {
 
     }
-    public user3(String namee, String emaill, String phonee, String usnn,String studentname)
+    public user3(String name1,String email1, String phonenumber1)
     {
-        this.fullname = namee;
-        this.email = emaill;
-        this.phonenumber = phonee;
-        this.usn = usnn;
-        this.studentname = studentname;
+        this.name1 = name1;
+        this.email1 = email1;
+        this.phonenumber1 = phonenumber1;
+
     }
 }
+

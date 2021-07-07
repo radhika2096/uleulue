@@ -95,7 +95,8 @@ public void onClick(View v) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified())
                     {
-                        startActivity(new Intent(GatekeeperLogin.this,HomeStudents.class));
+                        startActivity(new Intent(GatekeeperLogin.this,GatekeeperHome
+                                .class));
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(GatekeeperLogin.this,"check you mail to confirm it",Toast.LENGTH_LONG).show();
