@@ -14,7 +14,7 @@ public class regselectionpage extends AppCompatActivity {
         if(view.getTag().toString().equals(Integer.toString(b)))
             startActivity(new Intent(regselectionpage.this,ParentsRegisterActivity.class));
         if(view.getTag().toString().equals(Integer.toString(c)))
-           startActivity(new Intent(regselectionpage.this,GatekeeperRegister.class));
+           startActivity(new Intent(regselectionpage.this,GatekeeperLogin.class));
         if(view.getTag().toString().equals(Integer.toString(d)))
           startActivity(new Intent(regselectionpage.this,wardenlogin.class));
 
