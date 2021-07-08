@@ -21,14 +21,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <EditText
         android:id="@+id/namee"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
@@ -47,10 +47,11 @@
 
     <EditText
         android:id="@+id/Emaill"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
@@ -67,10 +68,11 @@
 
     <EditText
         android:id="@+id/contactnumberr"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@android:drawable/ic_menu_call"
         android:ems="10"
         android:hint="Contact Number"
         android:inputType="textPersonName"
@@ -87,7 +89,7 @@
 
     <EditText
         android:id="@+id/hostelnamee"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="@drawable/inpuut_bg"
@@ -107,7 +109,7 @@
 
     <EditText
         android:id="@+id/sharring"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
@@ -127,10 +129,11 @@
 
     <EditText
         android:id="@+id/passworrd"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -149,18 +152,16 @@
         android:id="@+id/registeer"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/btnn_bg"
         android:text="Register"
         android:textColor="@color/colorBlack"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hostelnamee"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@+id/passworrd"
+        app:layout_constraintStart_toStartOf="@+id/passworrd"
+        app:layout_constraintTop_toBottomOf="@+id/passworrd" />
 
     <TextView
         android:id="@+id/alreadyhaveaccount"
