@@ -45,21 +45,24 @@ public class ParentsHome extends AppCompatActivity {
         final TextView emailTextView = (TextView) findViewById(R.id.Emailadressdlabel);
         final TextView phonenumberTextView = (TextView) findViewById(R.id.phonenumberLabel);
         final TextView usnTextView = (TextView) findViewById(R.id.USNlabel);
+        final TextView studentname = (TextView) findViewById(R.id.studentname);
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                user userprofile = snapshot.getValue(user.class);
-                if(userprofile != null)
+                user4 user4profile = snapshot.getValue(user4.class);
+                if(user4profile != null)
                 {
-                    String fullname = userprofile.fullname;
-                    String email = userprofile.email;
-                    String phone = userprofile.phonenumber;
-                    String usn = userprofile.usn;
+                    String fullname = user4profile.parentsname;
+                    String email = user4profile.email;
+                    String phone = user4profile.phonenumber;
+                    String usn = user4profile.usn;
+                    String student = user4profile.studentname;
 
                     fullnameTextView.setText("Name - " + fullname);
                     emailTextView.setText("email - " + email);
                     phonenumberTextView.setText("phoneNumber- " + phone);
                     usnTextView.setText("usn- " +  usn);
+                    studentname.setText("Student Name - " + student);
                 }
             }
 
