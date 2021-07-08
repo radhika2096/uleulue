@@ -46,7 +46,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.register:
-                startActivity(new Intent(this, ParentsRegister.class));
+                startActivity(new Intent(this,matashreepitashreeRegister.class));
 
                 break;
 
