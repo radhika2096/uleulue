@@ -41,7 +41,7 @@ public class HomeWarden extends AppCompatActivity {
         reference2 = FirebaseDatabase.getInstance().getReference("wusers");
         userId2 = user2.getUid();
 
-        final TextView greetingTextView = (TextView) findViewById(R.id.meratext);
+
         final TextView fullnameText = (TextView) findViewById(R.id.wname);
         final TextView emailText= (TextView) findViewById(R.id.wemail);
         final TextView phonenumberText = (TextView) findViewById(R.id.wnum);
@@ -60,7 +60,7 @@ public class HomeWarden extends AppCompatActivity {
                     String sharing = user2profile.ssharing;
                     String hostelname = user2profile.hhostelname;
 
-                    greetingTextView.setText("welcome " + ffullname);
+
                     fullnameText.setText("Name - " + ffullname);
                     emailText.setText("email - " + eemail);
                     phonenumberText.setText("phoneNumber- " + phone);

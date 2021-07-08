@@ -38,14 +38,13 @@ public class ParentsHome extends AppCompatActivity {
         });
 
         user4 = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("users");
+        reference = FirebaseDatabase.getInstance().getReference("pusers");
         userId = user4.getUid();
 
         final TextView fullnameTextView = (TextView) findViewById(R.id.nameLabel);
         final TextView emailTextView = (TextView) findViewById(R.id.Emailadressdlabel);
         final TextView phonenumberTextView = (TextView) findViewById(R.id.phonenumberLabel);
         final TextView usnTextView = (TextView) findViewById(R.id.USNlabel);
-
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

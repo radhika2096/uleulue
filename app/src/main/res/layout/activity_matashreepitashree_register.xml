@@ -2,16 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/imageregistry"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:paddingLeft="20dp"
-    android:paddingTop="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="10dp"
-    android:scrollbarSize="5dp"
-    tools:context=".ParentsRegister">
+    tools:context=".matashreepitashreeRegister">
 
     <TextView
         android:id="@+id/registration"
@@ -32,11 +25,7 @@
         android:id="@+id/inputUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginTop="108dp"
 
         android:drawablePadding="10dp"
         android:ems="10"
@@ -52,13 +41,13 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.383" />
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/inputEmail3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -108,6 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
+        android:layout_marginBottom="228dp"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="PASSWORD"
@@ -120,9 +110,9 @@
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/inputUsn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputUsn"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail"
         app:layout_constraintVertical_bias="0.544" />
 
@@ -146,7 +136,7 @@
         app:rippleColor="@color/colorRed" />
 
     <EditText
-        android:id="@+id/InputUsn"
+        android:id="@+id/inputUsn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -169,7 +159,7 @@
         app:layout_constraintVertical_bias="0.545" />
 
     <EditText
-        android:id="@+id/Contact"
+        android:id="@+id/contact"
         style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="0dp"
 
@@ -193,7 +183,7 @@
         app:layout_constraintVertical_bias="0.334" />
 
     <EditText
-        android:id="@+id/StudentsName"
+        android:id="@+id/studentsName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -211,12 +201,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputUsername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputUsername"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.446" />
 
     <TextView
-        android:id="@+id/Alreadyhave"
+        android:id="@+id/alreadyhave"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
         android:onClick="lechaloUsPaar"
@@ -230,6 +220,4 @@
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.186" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
