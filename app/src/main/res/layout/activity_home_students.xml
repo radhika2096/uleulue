@@ -10,71 +10,88 @@
         android:id="@+id/Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="swagat hai vidyarthiyo"
+        android:text="WELCOME STUDENT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
-
+        app:layout_constraintVertical_bias="0.077" />
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Log out"
+        app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
+        app:layout_constraintEnd_toEndOf="@+id/USNlabel"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="@+id/USNlabel"
+        app:layout_constraintTop_toBottomOf="@+id/Headline"
+        app:layout_constraintVertical_bias="0.824" />
+
 
     <TextView
         android:id="@+id/Emailadressdlabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="60dp"
         android:text="Email Adress:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/phonenumberLabel"
+        app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+        app:layout_constraintVertical_bias="0.544" />
 
     <TextView
         android:id="@+id/nameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
+        android:layout_width="310dp"
+        android:layout_height="41dp"
+
+        android:text="Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/phonenumberLabel"
+        app:layout_constraintEnd_toEndOf="@+id/Headline"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="@+id/Headline"
+        app:layout_constraintTop_toBottomOf="@+id/Headline"
+        app:layout_constraintVertical_bias="0.23" />
 
     <TextView
         android:id="@+id/phonenumberLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="phoneNumber"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:text="PhoneNumber:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="@+id/Emailadressdlabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Emailadressdlabel"
+        app:layout_constraintTop_toBottomOf="@+id/Headline"
+        app:layout_constraintVertical_bias="0.455" />
 
     <TextView
         android:id="@+id/USNlabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="USN"
+        android:layout_width="323dp"
+        android:layout_height="45dp"
+        android:text="USN:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
+        app:layout_constraintVertical_bias="0.189" />
 </androidx.constraintlayout.widget.ConstraintLayout>
