@@ -118,15 +118,16 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
             dTextstudentname.requestFocus();
             return;
         }
-        if(!confirmpassword.equals(passwordd))
-        {
-            dTextcpassword.setError("Passwords do not match.Kindly recheck");
-            dTextcpassword.requestFocus();
-            return;
-        }
+
         if(confirmpassword.isEmpty())
         {
             dTextcpassword.setError("Enter Confirm Password");
+            dTextcpassword.requestFocus();
+            return;
+        }
+        if(!confirmpassword.equals(passwordd))
+        {
+            dTextcpassword.setError("Passwords do not match.Kindly recheck");
             dTextcpassword.requestFocus();
             return;
         }

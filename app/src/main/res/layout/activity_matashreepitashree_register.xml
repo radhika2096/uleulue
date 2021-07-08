@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/registration"
-        android:layout_width="234dp"
-        android:layout_height="65dp"
+        android:layout_width="265dp"
+        android:layout_height="67dp"
         android:text="Parents Information"
 
         android:textColor="#2639B3"
