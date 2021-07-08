@@ -38,7 +38,7 @@ public class HomeWarden extends AppCompatActivity {
         });
 
         user2 = FirebaseAuth.getInstance().getCurrentUser();
-        reference2 = FirebaseDatabase.getInstance().getReference("user2");
+        reference2 = FirebaseDatabase.getInstance().getReference("wusers");
         userId2 = user2.getUid();
 
         final TextView greetingTextView = (TextView) findViewById(R.id.meratext);
