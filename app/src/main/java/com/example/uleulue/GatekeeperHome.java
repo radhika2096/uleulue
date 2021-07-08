@@ -19,16 +19,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class GatekeeperHome extends AppCompatActivity {
-    private FirebaseUser user3;
+   /* private FirebaseUser user3;
     private DatabaseReference reference3;
     private String userId3;
-    private Button logout3;
+    private Button logout3;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gatekeeper_home);
-        logout3 = (Button) findViewById(R.id.clogout2);
+        /*logout3 = (Button) findViewById(R.id.clogout2);
         logout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +52,7 @@ public class GatekeeperHome extends AppCompatActivity {
                 user3 user3profile = snapshot.getValue(user3.class);
                 if(user3profile != null)
                 {
-                    String fullname1 = user3profile.name1;
+                    String fullname1 = user3profile.;
                     String email1 = user3profile.email1;
                     String phonenumber1 = user3profile.phonenumber1;
 
@@ -71,5 +71,5 @@ public class GatekeeperHome extends AppCompatActivity {
             }
         });
 
-    }
-}
+    }*/
+}}

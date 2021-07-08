@@ -11,6 +11,7 @@
         android:id="@+id/Emailreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -21,19 +22,20 @@
         android:textColorLink="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.308" />
 
     <Button
         android:id="@+id/registeruser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="36dp"
         android:text="register user"
         app:layout_constraintBottom_toTopOf="@+id/backToLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -41,31 +43,19 @@
         android:id="@+id/backToLogin"
         android:layout_width="148dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="60dp"
         android:text="Already have an acc?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="89dp"
-        app:layout_constraintBottom_toTopOf="@+id/nameStud"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105"
-        app:srcCompat="@drawable/download"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/passwordreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_lock_lock"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
@@ -76,17 +66,18 @@
         android:textColorLink="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.662" />
 
     <EditText
         android:id="@+id/nameStud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="36dp"
         android:background="#F6F5F5"
+        android:drawableLeft="@drawable/ic_login_email_24"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -97,15 +88,16 @@
         android:textColorLink="#090909"
         app:layout_constraintBottom_toTopOf="@+id/Emailreg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/phoneStud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_dialog_dialer"
         android:ems="10"
         android:hint="phoneNo"
         android:inputType="phone"
@@ -116,7 +108,7 @@
         android:textColorLink="#090909"
         app:layout_constraintBottom_toTopOf="@+id/usnStud"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Emailreg" />
 
@@ -125,6 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
+        android:drawableLeft="@android:drawable/stat_notify_chat"
         android:ems="10"
         android:hint="USN"
         android:inputType="textPersonName"
@@ -135,10 +128,10 @@
         android:textColorLink="#090909"
         app:layout_constraintBottom_toTopOf="@+id/passwordreg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
         android:id="@+id/progressBar"

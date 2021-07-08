@@ -54,6 +54,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
             String phone1 = hphonenumber.getText().toString();
             String password1 = hpassword.getText().toString();
 
+
             if(name1.isEmpty())
             {
                 hname.setError("full name required");
@@ -93,7 +94,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         user3 useR3 = new user3(name1, email1, phone1);
-                        FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                        FirebaseDatabase.getInstance().getReference("gusers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                 .setValue(useR3).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {

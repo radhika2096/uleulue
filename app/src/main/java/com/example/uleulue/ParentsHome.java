@@ -33,7 +33,7 @@ public class ParentsHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent( ParentsHome.this,login.class));
+                startActivity(new Intent( ParentsHome.this,ParentsLogin.class));
             }
         });
 

@@ -1,7 +1,7 @@
 
 package com.example.uleulue;
 
-        import androidx.annotation.NonNull;
+import androidx.annotation.NonNull;
         import androidx.appcompat.app.AppCompatActivity;
 
         import android.content.Intent;
@@ -24,7 +24,7 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
 
     private EditText dTextname, dTextemail, dTextpassword, dTextphonenumber, dTextusn,dTextstudentname,dTextcpassword;
     private TextView wapasloginpejaobutton;
-    private TextView dregisteruser;
+    private Button dregisteruser;
     private ProgressBar dprogressBar;
     private FirebaseAuth mAuth;
     @Override
@@ -32,10 +32,10 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matashreepitashree_register);
         mAuth = FirebaseAuth.getInstance();
-        dregisteruser = (Button) findViewById(R.id.btnLogin);
+        dregisteruser = (Button) findViewById(R.id.preg);
         dregisteruser.setOnClickListener(this);
         dTextname = (EditText) findViewById(R.id.inputUsername);
-        dTextemail = (EditText) findViewById(R.id.inputEmail);
+        dTextemail = (EditText) findViewById(R.id.inputEmail3);
         dTextpassword = (EditText) findViewById(R.id.inputPassword);
         dTextphonenumber = (EditText) findViewById(R.id.contact);
         dTextusn = (EditText) findViewById(R.id.inputUsn);
@@ -43,17 +43,17 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
         wapasloginpejaobutton = (TextView) findViewById(R.id.alreadyhave);
         dTextcpassword = (EditText) findViewById(R.id.inputConfirmPassword);
 
-        dprogressBar = (ProgressBar) findViewById(R.id.progressBar);
+        dprogressBar = (ProgressBar) findViewById(R.id.progressBar3);
     }
     public void lechaloUsPaar(View view)
     {
-        startActivity(new Intent(matashreepitashreeRegister.this,login.class));
+        startActivity(new Intent(matashreepitashreeRegister.this,ParentsLogin.class));
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.register:
+            case R.id.preg:
                 DRegisteruser();
 
         }
@@ -131,6 +131,7 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
             dTextcpassword.requestFocus();
             return;
         }
+
         dprogressBar.setVisibility(View.VISIBLE);
 
         mAuth.createUserWithEmailAndPassword(emaill,passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
