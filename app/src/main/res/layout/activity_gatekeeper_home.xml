@@ -7,19 +7,18 @@
     tools:context=".GatekeeperHome">
 
     <TextView
-        android:id="@+id/meratext2"
+        android:id="@+id/cmeratext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="swagat hai vidyarthiyo"
+        android:text="Details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <Button
-        android:id="@+id/logout2"
+        android:id="@+id/clogout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
@@ -31,31 +30,31 @@
         app:layout_constraintVertical_bias="0.641" />
 
     <TextView
-        android:id="@+id/emailadressdlabel"
+        android:id="@+id/cemailadressdlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email Adress:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
-        android:id="@+id/nameLabel2"
+        android:id="@+id/cnameLabel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.221" />
 
     <TextView
-        android:id="@+id/phonenumberLabel2"
+        android:id="@+id/cphonenumberLabel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="phoneNumber"
@@ -64,17 +63,6 @@
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="0.365" />
 
-    <TextView
-        android:id="@+id/USNlabel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="USN"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
 </androidx.constraintlayout.widget.ConstraintLayout>
