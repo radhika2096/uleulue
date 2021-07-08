@@ -20,6 +20,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.077" />
+
+
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
@@ -28,11 +30,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/USNlabel"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/USNlabel"
         app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.824" />
-
+        app:layout_constraintVertical_bias="0.669" />
 
     <TextView
         android:id="@+id/Emailadressdlabel"
@@ -75,10 +76,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="@+id/Emailadressdlabel"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/Emailadressdlabel"
         app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.455" />
+        app:layout_constraintVertical_bias="0.546" />
 
     <TextView
         android:id="@+id/USNlabel"
@@ -93,5 +94,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
         app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.15" />
 </androidx.constraintlayout.widget.ConstraintLayout>
