@@ -14,12 +14,14 @@
 
         android:textColor="#2639B3"
         android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.068" />
+
 
     <EditText
         android:id="@+id/inputUsername"
@@ -41,13 +43,11 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/inputEmail3"
         app:layout_constraintEnd_toEndOf="@+id/registration"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/registration"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
-
+        app:layout_constraintVertical_bias="0.054" />
 
     <EditText
         android:id="@+id/inputEmail3"
@@ -78,6 +78,7 @@
         android:id="@+id/inputConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_confirm_password"
         android:drawablePadding="10dp"
         android:ems="10"
@@ -86,7 +87,6 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:background="@drawable/inpuut_bg"
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
@@ -98,19 +98,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="256dp"
+        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="PASSWORD"
         android:inputType="textPersonName"
-        android:background="@drawable/inpuut_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -123,8 +123,8 @@
         app:layout_constraintEnd_toEndOf="@+id/inputUsn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputUsn"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/preg"
@@ -133,30 +133,30 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
 
+        android:background="@drawable/inpuut_bg"
         android:text="REGISTER"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:backgroundTint="@color/colorPrimaryDark"
-        android:background="@drawable/inpuut_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.364"
         app:rippleColor="@color/colorRed" />
 
     <EditText
         android:id="@+id/inputUsn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_usn"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Enter Usn"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        android:background="@drawable/inpuut_bg"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
@@ -169,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/contact"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.54" />
 
     <EditText
         android:id="@+id/contact"

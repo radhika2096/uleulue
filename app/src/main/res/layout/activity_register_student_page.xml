@@ -11,7 +11,7 @@
         android:id="@+id/Emailreg"
         android:layout_width="357dp"
         android:layout_height="78dp"
-        android:background="@drawable/inpuut_bg"
+
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="10dp"
         android:ems="10"

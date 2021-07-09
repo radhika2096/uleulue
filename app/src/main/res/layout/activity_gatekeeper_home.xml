@@ -23,9 +23,12 @@
 
     <Button
         android:id="@+id/clogout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="47dp"
+        android:background="@drawable/inpuut_bg"
+
         android:text="Button"
+        app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -35,37 +38,37 @@
 
     <TextView
         android:id="@+id/cemailadressdlabel"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
+        android:layout_width="175dp"
+        android:layout_height="49dp"
         android:text="Email Address:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cnameLabel2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cnameLabel2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.312" />
 
     <TextView
         android:id="@+id/cnameLabel2"
-        android:layout_width="99dp"
-        android:layout_height="43dp"
+        android:layout_width="178dp"
+        android:layout_height="46dp"
         android:text="Name :"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cmeratext"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/cmeratext"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/cphonenumberLabel2"
-        android:layout_width="131dp"
-        android:layout_height="48dp"
+        android:layout_width="177dp"
+        android:layout_height="49dp"
         android:text="PhoneNumber :"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cemailadressdlabel"
         app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cemailadressdlabel"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.411" />
 

@@ -11,8 +11,6 @@
         android:layout_width="306dp"
         android:layout_height="58dp"
 
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
         android:background="@drawable/inpuut_bg"
         android:drawablePadding="10dp"
         android:ems="10"
@@ -23,11 +21,10 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColorHint="@color/colorBlack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textLogin"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintEnd_toEndOf="@+id/cLogin3"
+        app:layout_constraintStart_toStartOf="@+id/cLogin3"
+        tools:layout_editor_absoluteY="117dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cLogin3"
@@ -38,9 +35,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
         android:id="@+id/clogin"
@@ -56,7 +54,7 @@
         app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/cPassword3"
         app:rippleColor="@color/colorRed" />
 
     <TextView
@@ -70,9 +68,9 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cprogressBar3"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cprogressBar3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.785"
         tools:ignore="MissingConstraints" />
@@ -81,8 +79,6 @@
         android:id="@+id/cregister2"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="213dp"
-        android:layout_marginLeft="213dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
@@ -90,9 +86,11 @@
         android:text="Dont have an Account?"
         android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/cprogressBar3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/clogin"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/clogin"
         app:layout_constraintTop_toBottomOf="@+id/clogin"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -100,8 +98,6 @@
         android:layout_width="306dp"
         android:layout_height="58dp"
 
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
         android:layout_marginBottom="460dp"
         android:background="@drawable/inpuut_bg"
         android:drawablePadding="10dp"
@@ -114,10 +110,10 @@
         android:paddingBottom="10dp"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Cemail"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        app:layout_constraintStart_toStartOf="@+id/Cemail"
+        app:layout_constraintTop_toBottomOf="@+id/Cemail"
         app:layout_constraintVertical_bias="0.074" />
 
     <ProgressBar
