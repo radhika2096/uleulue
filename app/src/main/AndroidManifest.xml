@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
-        <activity android:name=".Vidyarthiregister"></activity>
+        <activity android:name=".studentreg"></activity>
+
         <activity android:name=".GatekeeperHome" />
         <activity android:name=".regselectionpage">
             <intent-filter>
@@ -20,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".registerStudentPage" />
         <activity android:name=".wardenregisterpage" />
         <activity android:name=".matashreepitashreeRegister" />
         <activity android:name=".ParentsLogin" />
@@ -29,6 +29,7 @@
         <activity android:name=".wardenlogin" />
         <activity android:name=".GatekeeperLogin" />
         <activity android:name=".ParentsHome" />
+
         <activity android:name=".HomeWarden" />
         <activity android:name=".HomeStudents" />
     </application>

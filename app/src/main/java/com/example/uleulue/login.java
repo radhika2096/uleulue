@@ -49,7 +49,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.register:
-                startActivity(new Intent(this,registerStudentPage.class));
+                startActivity(new Intent(this,studentreg.class));
 
                 break;
 
