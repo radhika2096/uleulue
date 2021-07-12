@@ -23,11 +23,20 @@ public class ParentsHome extends AppCompatActivity {
     private DatabaseReference reference;
     private String userId;
     private Button logout;
+    private Button buttons;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parents_home);
+        buttons = (Button) findViewById(R.id.buttons);
+        buttons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( ParentsHome.this,parentshomepage2.class));
+            }
+        });
         logout = (Button) findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,4 +82,8 @@ public class ParentsHome extends AppCompatActivity {
         });
 
     }
+
+
+
+
 }
