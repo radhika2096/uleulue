@@ -60,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chname"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <EditText
         android:id="@+id/chphoneno"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="33dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
         android:drawablePadding="@dimen/activity_vertical_margin"
@@ -84,7 +84,7 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chpassword"
+        app:layout_constraintBottom_toTopOf="@+id/cAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
@@ -97,7 +97,7 @@
         android:layout_marginLeft="31dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_confirm_password"
         android:drawablePadding="@dimen/activity_horizontal_margin"
@@ -125,7 +125,7 @@
         android:layout_marginLeft="33dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="@dimen/activity_horizontal_margin"
@@ -142,7 +142,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/chpassword2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -189,13 +189,38 @@
         android:id="@+id/chaccount"
         android:layout_width="188dp"
         android:layout_height="22dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="52dp"
         android:text="Already have an account?"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/cAddress"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@drawable/ic_baseline_text_student"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chpassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
