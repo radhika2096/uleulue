@@ -10,7 +10,7 @@
     <EditText
         android:id="@+id/inputEmail2"
         android:layout_width="318dp"
-        android:layout_height="63dp"
+        android:layout_height="68dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_login_email_24"
         android:drawablePadding="10dp"
@@ -30,8 +30,8 @@
         app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintTop_toBottomOf="@+id/textLogin2"
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
         android:id="@+id/textLogin2"
@@ -60,11 +60,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
-        app:layout_constraintHorizontal_bias="0.604"
 
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
-        app:layout_constraintVertical_bias="0.97"
+        app:layout_constraintVertical_bias="1.0"
         app:rippleColor="@color/colorRed" />
 
     <TextView
@@ -79,24 +78,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/register"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@+id/register"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin2"
+        app:layout_constraintVertical_bias="0.873"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/register"
-        android:layout_width="187dp"
-        android:layout_height="47dp"
-        android:text="Dont have an Account?"
+        android:layout_width="240dp"
+        android:layout_height="31dp"
+        android:text="Don't have an Account?"
         android:textColor="@color/colorBlack"
-        android:textSize="18sp"
+        android:textSize="19dp"
+
         app:layout_constraintBottom_toTopOf="@+id/forgotPassword2"
         app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/progressBar2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        app:layout_constraintVertical_bias="0.695"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -119,8 +120,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail2"
+        app:layout_constraintVertical_bias="0.059" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -128,11 +129,11 @@
         android:layout_width="93dp"
         android:layout_height="103dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPassword2"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
-        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/btnLogin2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin2"
+        app:layout_constraintVertical_bias="0.335" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

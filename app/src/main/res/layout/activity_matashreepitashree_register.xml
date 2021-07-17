@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".matashreepitashreeRegister">
 
+
     <TextView
         android:id="@+id/registration"
         android:layout_width="222dp"
@@ -20,8 +21,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
-
+        app:layout_constraintVertical_bias="0.065" />
 
     <EditText
         android:id="@+id/inputUsername"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="@+id/registration"
         app:layout_constraintStart_toStartOf="@+id/registration"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <EditText
         android:id="@+id/inputEmail3"
@@ -72,7 +72,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputUsername"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <EditText
         android:id="@+id/inputConfirmPassword"
@@ -98,12 +98,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.135" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
         android:layout_marginBottom="256dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
@@ -123,14 +124,13 @@
         app:layout_constraintEnd_toEndOf="@+id/inputUsn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputUsn"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inputUsn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/preg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
 
         android:background="@drawable/inpuut_bg"
@@ -143,13 +143,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
-        app:layout_constraintVertical_bias="0.364"
+        app:layout_constraintVertical_bias="0.306"
         app:rippleColor="@color/colorRed" />
 
     <EditText
         android:id="@+id/inputUsn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_usn"
         android:drawablePadding="10dp"
@@ -168,18 +169,18 @@
         app:layout_constraintEnd_toEndOf="@+id/contact"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/contact"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintTop_toBottomOf="@+id/studentsName"
+        app:layout_constraintVertical_bias="0.017" />
 
     <EditText
         android:id="@+id/contact"
         style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:background="@drawable/inpuut_bg"
         android:hint="Parents Contact No"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
@@ -195,20 +196,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputEmail3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <EditText
         android:id="@+id/studentsName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_text_student"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Enter Student Name"
-        android:inputType="textPersonName"
 
+        android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        android:background="@drawable/inpuut_bg"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
@@ -217,11 +218,11 @@
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputUsername"
+        app:layout_constraintEnd_toEndOf="@+id/contact"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/contact"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/alreadyhave"
@@ -234,10 +235,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/preg"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="@+id/preg"
         app:layout_constraintTop_toBottomOf="@+id/preg"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.431" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
@@ -247,6 +248,8 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/inputUsername"
         app:layout_constraintEnd_toEndOf="@+id/inputUsername"
-        app:layout_constraintStart_toEndOf="@+id/registration"
-        app:layout_constraintTop_toTopOf="@+id/registration" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/registration"
+        app:layout_constraintTop_toTopOf="@+id/registration"
+        app:layout_constraintVertical_bias="0.48" />
 </androidx.constraintlayout.widget.ConstraintLayout>
