@@ -11,7 +11,7 @@
         android:id="@+id/chname"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_text_fields_24"
         android:drawablePadding="@dimen/activity_vertical_margin"
@@ -28,20 +28,15 @@
         android:textColorLink="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chregisteration"
+        app:layout_constraintStart_toStartOf="@+id/chregisteration"
         app:layout_constraintTop_toBottomOf="@+id/chregisteration" />
 
     <EditText
         android:id="@+id/chemail"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="@dimen/activity_vertical_margin"
@@ -55,22 +50,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chphoneno"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chname"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chname"
-        app:layout_constraintVertical_bias="0.568" />
+        app:layout_constraintStart_toStartOf="@+id/chname"
+        app:layout_constraintTop_toBottomOf="@+id/chname" />
 
     <EditText
         android:id="@+id/chphoneno"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
         android:drawablePadding="@dimen/activity_vertical_margin"
@@ -84,20 +73,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/chemail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/chemail"
+        app:layout_constraintTop_toBottomOf="@+id/chemail" />
 
     <EditText
         android:id="@+id/chpassword2"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_confirm_password"
         android:drawablePadding="@dimen/activity_horizontal_margin"
@@ -112,20 +97,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chregister"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chpassword"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/chpassword"
+        app:layout_constraintTop_toBottomOf="@+id/chpassword" />
 
     <EditText
         android:id="@+id/chpassword"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="@dimen/activity_horizontal_margin"
@@ -140,21 +121,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chpassword2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cAddress"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/cAddress"
+        app:layout_constraintTop_toBottomOf="@+id/cAddress" />
 
     <TextView
         android:id="@+id/chregisteration"
         android:layout_width="224dp"
         android:layout_height="58dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginLeft="94dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="633dp"
         android:paddingLeft="25dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -163,50 +139,47 @@
         android:textColor="@color/colorBlack"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chname"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
 
     <Button
         android:id="@+id/chregister"
         android:layout_width="356dp"
         android:layout_height="56dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:text="Register"
         android:textSize="20sp"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/chaccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/chpassword2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chpassword2"
+        app:layout_constraintTop_toBottomOf="@+id/chpassword2" />
 
     <TextView
         android:id="@+id/chaccount"
         android:layout_width="188dp"
         android:layout_height="22dp"
-        android:layout_marginBottom="52dp"
-        android:text="Already have an account?"
+        android:layout_marginTop="24dp"
+        android:text=" Already have an account?"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/chregister"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="@+id/chregister"
+        app:layout_constraintTop_toBottomOf="@+id/chregister"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/cAddress"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_text_student"
         android:drawablePadding="@dimen/activity_horizontal_margin"
@@ -219,8 +192,9 @@
         android:paddingBottom="10dp"
         android:textColorHint="@color/colorBlack"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/chpassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/chphoneno"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/chphoneno"
+        app:layout_constraintTop_toBottomOf="@+id/chphoneno" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
