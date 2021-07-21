@@ -22,7 +22,7 @@ public class HomeStudents extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userId;
-   private Button logout;
+   private Button logout,opreq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,13 @@ public class HomeStudents extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(HomeStudents.this,login.class));
+            }
+        });
+        opreq = (Button) findViewById(R.id.outpassrequest);
+        opreq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeStudents.this,matapitadhundo.class));
             }
         });
 
@@ -73,4 +80,6 @@ public class HomeStudents extends AppCompatActivity {
         });
 
     }
+
 }
+

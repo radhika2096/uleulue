@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
-        <activity android:name=".parentshomepage2"></activity>
+        <activity android:name=".matapitaprofileView"></activity>
         <activity android:name=".studentreg" />
         <activity android:name=".GatekeeperHome" />
         <activity android:name=".regselectionpage">
@@ -29,8 +29,11 @@
         <activity android:name=".wardenlogin" />
         <activity android:name=".GatekeeperLogin" />
         <activity android:name=".ParentsHome" />
+        <activity android:name=".matapitadhundo" />
+        <activity android:name=".showParents" />
         <activity android:name=".HomeWarden" />
         <activity android:name=".HomeStudents" />
+
     </application>
 
 </manifest>

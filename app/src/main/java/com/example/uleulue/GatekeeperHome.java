@@ -28,7 +28,7 @@ public class GatekeeperHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gatekeeper_home);
-        logout3 = (Button) findViewById(R.id.clogout2);
+        logout3 = (Button) findViewById(R.id.crequests);
         logout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +37,7 @@ public class GatekeeperHome extends AppCompatActivity {
             }
         });
     user3 = FirebaseAuth.getInstance().getCurrentUser();
-    reference3 = FirebaseDatabase.getInstance().getReference("user3");
+    reference3 = FirebaseDatabase.getInstance().getReference("gusers");
     userId3 = user3.getUid();
 
     final TextView greetingTextView = (TextView) findViewById(R.id.cmeratext);
