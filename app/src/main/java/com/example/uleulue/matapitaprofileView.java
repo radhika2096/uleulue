@@ -28,6 +28,7 @@ public class matapitaprofileView extends AppCompatActivity {
     DatabaseReference mUserRef,requestRef,friendref;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+
     String username, phone,email;
     TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime;
     Button btnperfrom,btndecline;
