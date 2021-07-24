@@ -8,7 +8,7 @@
     tools:context=".regselectionpage">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/s"
         android:layout_width="305dp"
         android:layout_height="54dp"
         android:background="@drawable/btnn_bg"
@@ -24,7 +24,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/p"
         android:layout_width="305dp"
         android:layout_height="54dp"
         android:background="@drawable/btnn_bg"
@@ -33,15 +33,15 @@
         android:text="Parents"
         app:backgroundTint="@color/design_default_color_primary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/s"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/s"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.353"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/g"
         android:layout_width="305dp"
         android:layout_height="54dp"
         android:layout_marginTop="48dp"
@@ -51,15 +51,15 @@
         android:text="GateKeeper"
         app:backgroundTint="@color/design_default_color_primary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/w"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/w"
+        app:layout_constraintTop_toBottomOf="@+id/p"
         app:layout_constraintVertical_bias="0.455"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/w"
         android:layout_width="305dp"
         android:layout_height="54dp"
         android:background="@drawable/btnn_bg"
@@ -68,10 +68,10 @@
         android:text="warden"
         app:backgroundTint="@color/design_default_color_primary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/p"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/p"
+        app:layout_constraintTop_toBottomOf="@+id/p"
         app:layout_constraintVertical_bias="0.179"
         tools:ignore="MissingConstraints" />
 
@@ -79,9 +79,9 @@
         android:id="@+id/imageView"
         android:layout_width="222dp"
         android:layout_height="204dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/s"
+        app:layout_constraintEnd_toEndOf="@+id/s"
+        app:layout_constraintStart_toStartOf="@+id/s"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.431"
         app:srcCompat="@drawable/jgiicon" />

@@ -6,6 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".studentreg">
 
+    <EditText
+        android:id="@+id/enterParentsName"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="@drawable/inpuut_bg"
+        android:drawableLeft="?android:attr/fingerprintAuthDrawable"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="enter parents name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contact"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
+
     <TextView
         android:id="@+id/registeruser2"
         android:layout_width="222dp"
@@ -56,7 +83,7 @@
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Email of Parent"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -144,7 +171,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/contact"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.472" />
 
     <EditText
         android:id="@+id/phoneStud2"

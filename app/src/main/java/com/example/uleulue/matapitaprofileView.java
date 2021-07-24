@@ -2,10 +2,13 @@ package com.example.uleulue;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class matapitaprofileView extends AppCompatActivity {
@@ -28,12 +32,13 @@ public class matapitaprofileView extends AppCompatActivity {
     DatabaseReference mUserRef,requestRef,friendref;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-
+    ListView listView;
     String username, phone,email;
     TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime;
-    Button btnperfrom,btndecline;
+    Button btnperfrom,btndecline,newreq;
+    CardView cardView;
 
-    String currentstate = "nothingHappened";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,13 +60,108 @@ public class matapitaprofileView extends AppCompatActivity {
         entrydate = findViewById(R.id.entryDate2);
         entrytime = findViewById(R.id.entryTime2);
         exittime = findViewById(R.id.exitTime2);
+        cardView = findViewById(R.id.cardView);
+        newreq = findViewById(R.id.newreq);
+
+        listView = findViewById(R.id.list);
+        ArrayList<String> list = new ArrayList<>();
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.activity_listitem,list);
+        listView.setAdapter(adapter);
 
 
         LoadUser();
+
         btnperfrom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 perfromaction(userid);
+
+            }
+        });
+        btndecline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deletereq(userid);
+
+            }
+        });
+        newreq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cardView.setVisibility(View.VISIBLE);
+                btnperfrom.setVisibility(View.VISIBLE);
+                listView.setVisibility(View.GONE);
+                newreq.setVisibility(View.GONE);
+
+            }
+        });
+
+
+
+
+
+        requestRef.child(mUser.getUid()).child(userid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                if(snapshot.exists())
+                {
+                    list.clear();
+                    for(DataSnapshot snapshot1:snapshot.getChildren())
+                    {
+                        list.add(snapshot1.getValue().toString());
+                    }
+                    adapter.notifyDataSetChanged();
+
+                    if(snapshot.child("status").getValue().toString().equals("pending"))
+                    {
+                        cardView.setVisibility(View.GONE);
+                        btnperfrom.setVisibility(View.GONE);
+                        listView.setVisibility(View.VISIBLE);
+                        newreq.setVisibility(View.VISIBLE);
+
+                    }
+                    else if(snapshot.child("status").getValue().toString().equals("Declined"))
+                    {
+                        cardView.setVisibility(View.GONE);
+                        btnperfrom.setVisibility(View.GONE);
+                        listView.setVisibility(View.VISIBLE);
+                        newreq.setVisibility(View.VISIBLE);
+
+
+                    }
+                   else if(snapshot.child("status").getValue().toString().equals("Accepted"))
+                    {
+                        cardView.setVisibility(View.GONE);
+                        btnperfrom.setVisibility(View.GONE);
+                        listView.setVisibility(View.VISIBLE);
+                        newreq.setVisibility(View.VISIBLE);
+
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                Toast.makeText(matapitaprofileView.this,"some error occured in loading confirmation status by parents",Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
+
+    }
+
+    private void deletereq(String userid) {
+        requestRef.child(mUser.getUid()).child(userid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<Void> task) {
+                Toast.makeText(matapitaprofileView.this, "request removed" , Toast.LENGTH_LONG).show();
+                cardView.setVisibility(View.VISIBLE);
+                btnperfrom.setVisibility(View.VISIBLE);
+                listView.setVisibility(View.GONE);
+                newreq.setVisibility(View.GONE);
 
             }
         });
@@ -73,109 +173,34 @@ public class matapitaprofileView extends AppCompatActivity {
         String stentryDate = entrydate.getText().toString();
         String stentrytime = entrytime.getText().toString();
         String stexittime = exittime.getText().toString();
-        if(currentstate.equals("nothingHappened"))
-        {
-            HashMap hashMap = new HashMap();
-            hashMap.put("status","pending");
-            hashMap.put("address",staddress);
-            hashMap.put("exitDate",stexitDate);
-            hashMap.put("exitTime",stexittime);
-            hashMap.put("entryTime",stentrytime);
-            hashMap.put("entryDate",stentryDate);
+
+        HashMap hashMap = new HashMap();
+        hashMap.put("status", "pending");
+        hashMap.put("address", staddress);
+        hashMap.put("exitDate", stexitDate);
+        hashMap.put("exitTime", stexittime);
+        hashMap.put("entryTime", stentrytime);
+        hashMap.put("entryDate", stentryDate);
 
 
-            requestRef.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-                @Override
-                public void onComplete(@NonNull Task task) {
-                    if(task.isSuccessful())
-                    {
-                        Toast.makeText(matapitaprofileView.this," request sent",Toast.LENGTH_LONG ).show();
-                        btndecline.setVisibility(View.GONE);
-                        currentstate = "i_sent_pending";
-                        btnperfrom.setText("cancel outpass request");
-                    }
-                    else
-                    {
-                        Toast.makeText(matapitaprofileView.this,""+task.getException(),Toast.LENGTH_LONG).show();
+        requestRef.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(matapitaprofileView.this, " request sent", Toast.LENGTH_LONG).show();
 
-                    }
-
+                } else {
+                    Toast.makeText(matapitaprofileView.this, "" + task.getException(), Toast.LENGTH_LONG).show();
 
                 }
-            });
-
-        }
-        if(currentstate.equals("i_sent_pending")||currentstate.equals("i_sent_decline"))
-        {
-            requestRef.child(mUser.getUid()).child(userid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull @NotNull Task<Void> task) {
-                    if(task.isSuccessful())
-                    {
-                        Toast.makeText(matapitaprofileView.this,"your request has been cancelled",Toast.LENGTH_LONG).show();
-                        //agar parents decline kiye to kuchh to karo
-                        currentstate = "nothingHappened";
-                        btnperfrom.setText("send outPass request");
-                        btndecline.setVisibility(View.GONE);
-                    }
-                    else
-                    {
-                        Toast.makeText(matapitaprofileView.this,""+task.getException(),Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-        }
-
-        if (currentstate.equals("heSentPending"))
-        {
-            requestRef.child(mUser.getUid()).child(userid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull @NotNull Task<Void> task) {
-                    if (task.isSuccessful())
-                    {
-                        HashMap hashMap = new HashMap();
-                        hashMap.put("status","Accepted");
-                        hashMap.put("username",username);
-                        friendref.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-                            @Override
-                            public void onComplete(@NonNull Task task) {
-                                if(task.isSuccessful())
-                                {
-                                    friendref.child(userid).child(mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-                                        @Override
-                                        public void onComplete(@NonNull  Task task) {
-                                            Toast.makeText(matapitaprofileView.this,"completeByParents",Toast.LENGTH_LONG).show();
-                                            currentstate = "friend";
-                                            btnperfrom.setText("completed");
-                                            btnperfrom.setText("undo");
-                                            btndecline.setVisibility(View.VISIBLE);
-
-                                        }
-                                    });
-
-                                }
-                            }
-                        });
 
 
-
-                    }
-                }
-            });
-
-
-
-
-        }
-        if (currentstate.equals("friend"))
-
-        {
-            //
-        }
-
-
-
+            }
+        });
     }
+
+
+
 
     private void LoadUser(){
         mUserRef.addValueEventListener(new ValueEventListener() {
@@ -209,5 +234,4 @@ public class matapitaprofileView extends AppCompatActivity {
             }
         });
 
-    }
-}
+    }}

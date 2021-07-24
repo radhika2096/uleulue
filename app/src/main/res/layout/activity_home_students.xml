@@ -7,6 +7,21 @@
     tools:context=".HomeStudents">
 
     <TextView
+        android:id="@+id/pname"
+        android:layout_width="323dp"
+        android:layout_height="60dp"
+        android:text="parents name-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/phonenumberLabel"
+        app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <TextView
         android:id="@+id/Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/nameLabel"
         app:layout_constraintTop_toBottomOf="@+id/nameLabel"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <TextView
         android:id="@+id/nameLabel"

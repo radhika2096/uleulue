@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class matapitadhundoHolder extends RecyclerView.ViewHolder {
 
-    TextView username,profession;
+    TextView username,profession,studentsname;
 
     public matapitadhundoHolder(@NonNull  View itemView) {
 
@@ -18,5 +18,6 @@ public class matapitadhundoHolder extends RecyclerView.ViewHolder {
         super(itemView);
         profession = itemView.findViewById(R.id.proffesion);
          username= itemView.findViewById(R.id.uname);
+         studentsname = itemView.findViewById(R.id.studentsname);
     }
 }

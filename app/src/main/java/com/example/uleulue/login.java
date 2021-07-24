@@ -98,6 +98,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                     if(user.isEmailVerified())
                     {
                         startActivity(new Intent(login.this,HomeStudents.class));
+                        finish();
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(login.this,"check you mail to confirm it",Toast.LENGTH_LONG).show();

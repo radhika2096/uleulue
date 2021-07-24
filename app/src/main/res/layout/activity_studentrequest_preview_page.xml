@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".studentrequestPreviewPage">
+
+    <ImageView
+        android:id="@+id/tick"
+        android:layout_width="247dp"
+        android:layout_height="210dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+    <Button
+        android:id="@+id/gobacktohome"
+        android:layout_width="152dp"
+        android:layout_height="69dp"
+        android:text="Go back to home"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
+        app:layout_constraintEnd_toEndOf="@+id/tick"
+        app:layout_constraintStart_toStartOf="@+id/tick"
+        app:layout_constraintTop_toBottomOf="@+id/tick" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="410dp"
+        android:layout_height="730dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:text="Address  -"
+            android:textAllCaps="true"
+            android:textColor="#090909"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/address9148"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:text="Entry Time  -"
+            android:textAllCaps="true"
+            android:textColor="#090909"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/entime"
+            app:layout_constraintTop_toBottomOf="@+id/c" />
+
+        <TextView
+            android:id="@+id/entime"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="52dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="entry Time"
+            android:textAllCaps="true"
+            android:textColor="#0B0A0A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/exdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:text="Exit Date  -"
+            android:textAllCaps="true"
+            android:textColor="#090909"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/exdate"
+            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d" />
+
+        <TextView
+            android:id="@+id/address9148"
+            android:layout_width="211dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Address"
+            android:textAllCaps="true"
+            android:textColor="#0B0A0A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/extime"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="Accept"
+            app:layout_constraintEnd_toStartOf="@+id/Decline"
+            app:layout_constraintHorizontal_bias="0.227"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e" />
+
+        <TextView
+            android:id="@+id/exdate"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Exit Date"
+            android:textAllCaps="true"
+            android:textColor="#0B0A0A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Decline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.904"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/extime"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="52dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="exitTime"
+            android:textAllCaps="true"
+            android:textColor="#0B0A0A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/entime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Date  -"
+            android:textAllCaps="true"
+            android:textColor="#090909"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/b"
+            app:layout_constraintEnd_toStartOf="@+id/edate"
+            app:layout_constraintHorizontal_bias="0.245"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.266" />
+
+        <TextView
+            android:id="@+id/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:text="ExitTime  -"
+            android:textAllCaps="true"
+            android:textColor="#090909"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/extime"
+            app:layout_constraintTop_toBottomOf="@+id/b" />
+
+        <Button
+            android:id="@+id/Decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.734" />
+
+        <TextView
+            android:id="@+id/edate"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="entryDate"
+            android:textAllCaps="true"
+            android:textColor="#0B0A0A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/address9148"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.465" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

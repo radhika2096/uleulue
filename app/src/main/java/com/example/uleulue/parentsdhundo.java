@@ -1,20 +1,25 @@
 package com.example.uleulue;
 
+import java.security.PrivateKey;
+
 public class parentsdhundo {
+    private String fullname;
     private String email;
     private String parentsname;
     private String phonenumber;
     private String studentname;
     private String usn;
+
        public parentsdhundo()
        {}
-       public parentsdhundo(String email,String parentsname,String phonenumber,String studentname,String usn)
+       public parentsdhundo(String email,String parentsname,String phonenumber,String studentname,String usn,String fullname)
        {
            this.email=email;
            this.parentsname = parentsname;
            this.phonenumber = phonenumber;
            this.studentname = studentname;
            this.usn = usn;
+           this.fullname = fullname;
        }
 
     public String getEmail() {
@@ -36,4 +41,5 @@ public class parentsdhundo {
     public String getUsn() {
         return usn;
     }
+    public String getFullname(){return fullname;}
 }

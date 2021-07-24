@@ -23,6 +23,7 @@ public class HomeStudents extends AppCompatActivity {
     private DatabaseReference reference;
     private String userId;
    private Button logout,opreq;
+    String pname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +38,6 @@ public class HomeStudents extends AppCompatActivity {
             }
         });
         opreq = (Button) findViewById(R.id.outpassrequest);
-        opreq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeStudents.this,matapitadhundo.class));
-            }
-        });
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("users");
@@ -53,6 +48,7 @@ public class HomeStudents extends AppCompatActivity {
         final TextView emailTextView = (TextView) findViewById(R.id.Emailadressdlabel);
         final TextView phonenumberTextView = (TextView) findViewById(R.id.phonenumberLabel);
         final TextView usnTextView = (TextView) findViewById(R.id.USNlabel);
+        final TextView parentsname = (TextView) findViewById(R.id.pname);
 
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -64,13 +60,27 @@ public class HomeStudents extends AppCompatActivity {
                     String email = userprofile.email;
                     String phone = userprofile.phonenumber;
                     String usn = userprofile.usn;
+                  pname = userprofile.parentsname;
 
                     greetingTextView.setText("welcome " + fullname);
                     fullnameTextView.setText("Name - " + fullname);
                     emailTextView.setText("email - " + email);
                     phonenumberTextView.setText("phoneNumber- " + phone);
                     usnTextView.setText("usn- " +  usn);
+                    parentsname.setText("parents name - "+ pname);
+
+
+
                 }
+                opreq.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(HomeStudents.this,matapitadhundo.class);
+                        intent.putExtra("p",pname);
+                        startActivity(intent);
+                    }
+                });
+
             }
 
             @Override

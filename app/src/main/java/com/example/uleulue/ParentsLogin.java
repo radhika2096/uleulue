@@ -93,7 +93,8 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified())
-                        startActivity(new Intent(ParentsLogin.this,ParentsHome.class));
+                    {startActivity(new Intent(ParentsLogin.this,ParentsHome.class));
+                        finish();}
                     else {
                         user.sendEmailVerification();
                         Toast.makeText(ParentsLogin.this,"Check your mail to confirm it",Toast.LENGTH_LONG).show();

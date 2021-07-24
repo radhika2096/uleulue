@@ -24,7 +24,7 @@ package com.example.uleulue;
 
 public class studentreg extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, editTextusn;
+    private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, editTextusn,editparentsname;
     private TextView registeruser;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
@@ -40,6 +40,7 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
         editTextpassword = (EditText) findViewById(R.id.passwordreg2);
         editTextphonenumber = (EditText) findViewById(R.id.phoneStud2);
         editTextusn = (EditText) findViewById(R.id.usnStud2);
+        editparentsname = (EditText) findViewById(R.id.enterParentsName);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
@@ -60,6 +61,7 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
         String name = editTextname.getText().toString();
         String phone = editTextphonenumber.getText().toString();
         String password = editTextpassword.getText().toString();
+        String parentsnameinstud = editparentsname.getText().toString();
 
         if(name.isEmpty())
         {
@@ -91,6 +93,12 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
             editTextemail.requestFocus();
             return;
         }
+        if(parentsnameinstud.isEmpty())
+        {
+            editparentsname.setError("emai; required");
+            editparentsname.requestFocus();
+            return;
+        }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextemail.setError("please provide valid email");
             editTextemail.requestFocus();
@@ -109,7 +117,7 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user useR = new user(name, email, phone, usn);
+                    user useR = new user(name, email, phone, usn,parentsnameinstud);
                     FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
