@@ -22,12 +22,19 @@ public class HomeWarden extends AppCompatActivity {
     private FirebaseUser user2;
     private DatabaseReference reference2;
     private String userId2;
-    private Button logout2;
+    private Button logout2,viewreq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_warden);
-
+        viewreq = findViewById(R.id.viewreq);
+        viewreq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(HomeWarden.this,studentsdhundoviawarden.class));
+            }
+        });
         logout2 = (Button) findViewById(R.id.wbutton);
         logout2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +46,7 @@ public class HomeWarden extends AppCompatActivity {
 
         user2 = FirebaseAuth.getInstance().getCurrentUser();
         reference2 = FirebaseDatabase.getInstance().getReference("wusers");
-        userId2 = user2.getUid();
+
 
 
         final TextView fullnameText = (TextView) findViewById(R.id.wname);
@@ -48,7 +55,7 @@ public class HomeWarden extends AppCompatActivity {
         final TextView sharingText = (TextView) findViewById(R.id.wshar);
         final TextView hostelnameText = (TextView) findViewById(R.id.whostname);
 
-        reference2.child(userId2).addListenerForSingleValueEvent(new ValueEventListener() {
+        reference2.child(user2.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user2 user2profile = snapshot.getValue(user2.class);

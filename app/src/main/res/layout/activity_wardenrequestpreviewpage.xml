@@ -7,30 +7,30 @@
     tools:context=".wardenrequestpreviewpage">
 
     <ImageView
-        android:id="@+id/tick"
+        android:id="@+id/tickw"
         android:layout_width="247dp"
         android:layout_height="210dp"
         android:background="@drawable/ic_baseline_check_circle_24"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1w"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
          />
 
     <Button
-        android:id="@+id/gobacktohome"
+        android:id="@+id/gobacktohomew"
         android:layout_width="152dp"
         android:layout_height="69dp"
         android:text="Go back to home"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
-        app:layout_constraintEnd_toEndOf="@+id/tick"
-        app:layout_constraintStart_toStartOf="@+id/tick"
-        app:layout_constraintTop_toBottomOf="@+id/tick" />
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1w"
+        app:layout_constraintEnd_toEndOf="@+id/tickw"
+        app:layout_constraintStart_toStartOf="@+id/tickw"
+        app:layout_constraintTop_toBottomOf="@+id/tickw" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1"
+        android:id="@+id/constraintLayout1w"
         android:layout_width="410dp"
         android:layout_height="730dp"
         android:layout_marginTop="1dp"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/bd"
+            android:id="@+id/bdw"
             android:layout_width="107dp"
             android:layout_height="21dp"
             android:layout_marginTop="148dp"
@@ -53,13 +53,13 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="@+id/AD"
+            app:layout_constraintEnd_toEndOf="@+id/ADw"
             app:layout_constraintHorizontal_bias="0.541"
-            app:layout_constraintStart_toStartOf="@+id/AD"
+            app:layout_constraintStart_toStartOf="@+id/ADw"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dd"
+            android:id="@+id/ddw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
@@ -70,12 +70,12 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toStartOf="@+id/entimed"
+            app:layout_constraintEnd_toStartOf="@+id/entimedw"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cd" />
+            app:layout_constraintTop_toBottomOf="@+id/cdw" />
 
         <TextView
-            android:id="@+id/entimed"
+            android:id="@+id/entimedw"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:layout_marginBottom="56dp"
@@ -84,13 +84,13 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/d"
+            app:layout_constraintBottom_toTopOf="@+id/dw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/ed"
+            android:id="@+id/edw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
@@ -99,13 +99,13 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toStartOf="@+id/d"
+            app:layout_constraintEnd_toStartOf="@+id/dw"
             app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dd" />
+            app:layout_constraintTop_toBottomOf="@+id/ddw" />
 
         <TextView
-            android:id="@+id/addressd"
+            android:id="@+id/addressdw"
             android:layout_width="211dp"
             android:layout_height="71dp"
             android:layout_marginBottom="8dp"
@@ -114,26 +114,26 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/extimed"
-            app:layout_constraintEnd_toEndOf="@+id/edated"
+            app:layout_constraintBottom_toTopOf="@+id/extimedw"
+            app:layout_constraintEnd_toEndOf="@+id/edatedw"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/edated"
+            app:layout_constraintStart_toStartOf="@+id/edatedw"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.951" />
 
         <Button
-            android:id="@+id/acceptd"
+            android:id="@+id/acceptdw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
             android:text="Accept"
-            app:layout_constraintEnd_toStartOf="@+id/Declined"
+            app:layout_constraintEnd_toStartOf="@+id/Declinedw"
             app:layout_constraintHorizontal_bias="0.774"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ed" />
+            app:layout_constraintTop_toBottomOf="@+id/edw" />
 
         <TextView
-            android:id="@+id/d"
+            android:id="@+id/dw"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:layout_marginBottom="44dp"
@@ -142,13 +142,13 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/Declined"
+            app:layout_constraintBottom_toTopOf="@+id/Declinedw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/extimed"
+            android:id="@+id/extimedw"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:layout_marginBottom="52dp"
@@ -157,13 +157,13 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/entimed"
+            app:layout_constraintBottom_toTopOf="@+id/entimedw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/AD"
+            android:id="@+id/ADw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Entry Date  -"
@@ -171,15 +171,15 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/bd"
-            app:layout_constraintEnd_toStartOf="@+id/edated"
+            app:layout_constraintBottom_toTopOf="@+id/bdw"
+            app:layout_constraintEnd_toStartOf="@+id/edatedw"
             app:layout_constraintHorizontal_bias="0.317"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.606" />
 
         <TextView
-            android:id="@+id/cd"
+            android:id="@+id/cdw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
@@ -188,12 +188,12 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="@+id/bd"
-            app:layout_constraintStart_toStartOf="@+id/bd"
-            app:layout_constraintTop_toBottomOf="@+id/bd" />
+            app:layout_constraintEnd_toEndOf="@+id/bdw"
+            app:layout_constraintStart_toStartOf="@+id/bdw"
+            app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
         <Button
-            android:id="@+id/Declined"
+            android:id="@+id/Declinedw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Decline"
@@ -205,7 +205,7 @@
             app:layout_constraintVertical_bias="0.802" />
 
         <TextView
-            android:id="@+id/edated"
+            android:id="@+id/edatedw"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:fontFamily="sans-serif-condensed"
@@ -213,7 +213,7 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/addressd"
+            app:layout_constraintBottom_toTopOf="@+id/addressdw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.864"
             app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +221,7 @@
             app:layout_constraintVertical_bias="0.666" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imageView9w"
             android:layout_width="133dp"
             android:layout_height="112dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -233,12 +233,13 @@
             app:srcCompat="@drawable/jgiicon" />
 
         <TextView
-            android:id="@+id/nameD"
+            android:id="@+id/nameDw"
             android:layout_width="206dp"
             android:layout_height="30dp"
             android:text="TextView"
             tools:layout_editor_absoluteX="79dp"
-            tools:layout_editor_absoluteY="16dp" />
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

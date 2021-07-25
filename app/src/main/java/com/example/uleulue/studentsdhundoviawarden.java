@@ -33,19 +33,21 @@ public class studentsdhundoviawarden extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     RecyclerView recyclerView;
-    parentsdhundo obj;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentsdhundoviawarden);
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mUserRef = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
+
 
         mAuth = FirebaseAuth.getInstance();
         muser = mAuth.getCurrentUser();
+        //String useridofwarden = muser.getUid().toString();
+        mUserRef = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
 
         loadUsers( "");
 
@@ -57,7 +59,7 @@ public class studentsdhundoviawarden extends AppCompatActivity {
 
     private void loadUsers(String s) {
 
-        Query query = mUserRef.orderByChild("Address").startAt(s).endAt(s+ "\uf8ff");
+        Query query = mUserRef.orderByChild("address").startAt(s).endAt(s+ "\uf8ff");
         options = new FirebaseRecyclerOptions.Builder<requestdhundo>().setQuery(query,requestdhundo.class).build();
         adapter = new FirebaseRecyclerAdapter<requestdhundo, matapitadhundoHolder>(options) {
             @Override
@@ -76,7 +78,7 @@ public class studentsdhundoviawarden extends AppCompatActivity {
                         public void onClick(View view) {
 
                             Intent intent = new Intent(studentsdhundoviawarden.this, wardenrequestpreviewpage.class);
-                            intent.putExtra("userkey", getRef(position).getKey().toString());
+                            intent.putExtra("userkey5", getRef(position).getKey().toString());
                             startActivity(intent);
 
                         }
@@ -104,3 +106,7 @@ public class studentsdhundoviawarden extends AppCompatActivity {
 
     }
 }
+
+
+
+

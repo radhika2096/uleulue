@@ -39,6 +39,7 @@
         <activity android:name=".HomeStudents" />
         <activity android:name=".studentsDhundo" />
         <activity android:name=".studentrequestPreviewPage" />
+
     </application>
 
 </manifest>

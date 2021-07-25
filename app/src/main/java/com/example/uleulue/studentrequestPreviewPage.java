@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 
 public class studentrequestPreviewPage extends AppCompatActivity {
-    DatabaseReference mUserRef,senddatatowarden;
+    DatabaseReference mUserRef;
     FirebaseUser mUser;
     FirebaseAuth mAuth;
     String userid1;
@@ -43,10 +43,10 @@ public class studentrequestPreviewPage extends AppCompatActivity {
         setContentView(R.layout.activity_studentrequest_preview_page);
          userid1 = getIntent().getStringExtra("userkey1");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
-        senddatatowarden = FirebaseDatabase.getInstance().getReference().child("requestsinwarden");
+
         entryDatesh = (TextView) findViewById(R.id.edated);
         exitDatesh = (TextView) findViewById(R.id.d);
-        entrytimesh =(TextView)  findViewById(R.id.entimed);
+        entrytimesh =(TextView)  findViewById(R.id.entimedw);
         exittimesh =(TextView)  findViewById(R.id.extimed);
         Addresssh = (TextView) findViewById(R.id.addressd);
         mAuth = FirebaseAuth.getInstance();
@@ -106,6 +106,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
     {
 
         HashMap hashMap = new HashMap();
+
         hashMap.put("status","AcceptedByParents");
         mUserRef.child(userid1).child(mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override

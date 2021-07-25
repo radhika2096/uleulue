@@ -37,7 +37,7 @@ public class wardendhundoViaStudents extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     RecyclerView recyclerView;
-   String ad,ent,ext,end,exd,n;
+   String ad,ent,ext,end,exd,n,useridparents;
 
 
     @Override
@@ -53,15 +53,16 @@ public class wardendhundoViaStudents extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         muser = mAuth.getCurrentUser();
-
-
-        loadUsers( "");
         ad = getIntent().getStringExtra("ad");
         ent = getIntent().getStringExtra("ent");
         ext= getIntent().getStringExtra("ext");
         end = getIntent().getStringExtra("end");
         exd = getIntent().getStringExtra("exd");
         n = getIntent().getStringExtra("n");
+        useridparents = getIntent().getStringExtra("useridparents");
+
+
+        loadUsers( "");
 
 
 
@@ -95,9 +96,11 @@ public class wardendhundoViaStudents extends AppCompatActivity {
                             hashMap.put("entryTime", ent);
                             hashMap.put("entryDate", end);
                             hashMap.put("name",n);
+                            hashMap.put("useridstudent",muser.getUid().toString());
                             hashMap.put("status", "AcceptedByParents");
                             hashMap.put("status2", "pendingbywarden");
-                            databaseofwarden.child(muser.getUid()).child(getRef(position).getKey().toString()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                            hashMap.put("useridparents", useridparents);
+                            databaseofwarden.child(getRef(position).getKey().toString()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                                 @Override
                                 public void onComplete(@NonNull @NotNull Task task) {
                                     Toast.makeText(wardendhundoViaStudents.this,"you succesfully sent request to warden",Toast.LENGTH_LONG).show();

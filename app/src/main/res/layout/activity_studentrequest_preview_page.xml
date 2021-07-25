@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/bd"
+            android:id="@+id/bdw"
             android:layout_width="107dp"
             android:layout_height="21dp"
             android:layout_marginTop="148dp"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dd"
+            android:id="@+id/ddw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
@@ -71,12 +71,12 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toStartOf="@+id/entimed"
+            app:layout_constraintEnd_toStartOf="@+id/entimedw"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cd" />
 
         <TextView
-            android:id="@+id/entimed"
+            android:id="@+id/entimedw"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:layout_marginBottom="56dp"
@@ -103,7 +103,7 @@
             app:layout_constraintEnd_toStartOf="@+id/d"
             app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dd" />
+            app:layout_constraintTop_toBottomOf="@+id/ddw" />
 
         <TextView
             android:id="@+id/addressd"
@@ -156,7 +156,7 @@
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/entimed"
+            app:layout_constraintBottom_toTopOf="@+id/entimedw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
@@ -170,7 +170,7 @@
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/bd"
+            app:layout_constraintBottom_toTopOf="@+id/bdw"
             app:layout_constraintEnd_toStartOf="@+id/edated"
             app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
@@ -191,7 +191,7 @@
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/extimed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bd" />
+            app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
         <Button
             android:id="@+id/Declined"
