@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
-        <activity android:name=".studentsdhundoviawarden"></activity>
+        <activity android:name=".wardenrequestpreviewpage"></activity>
+        <activity android:name=".studentsdhundoviawarden" />
         <activity android:name=".wardendhundoViaStudents" />
         <activity android:name=".listitem" />
         <activity android:name=".matapitaprofileView" />

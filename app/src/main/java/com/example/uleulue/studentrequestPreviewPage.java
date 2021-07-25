@@ -44,15 +44,15 @@ public class studentrequestPreviewPage extends AppCompatActivity {
          userid1 = getIntent().getStringExtra("userkey1");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
         senddatatowarden = FirebaseDatabase.getInstance().getReference().child("requestsinwarden");
-        entryDatesh = (TextView) findViewById(R.id.edate);
-        exitDatesh = (TextView) findViewById(R.id.exdate);
-        entrytimesh =(TextView)  findViewById(R.id.entime);
-        exittimesh =(TextView)  findViewById(R.id.extime);
-        Addresssh = (TextView) findViewById(R.id.address9148);
+        entryDatesh = (TextView) findViewById(R.id.edated);
+        exitDatesh = (TextView) findViewById(R.id.d);
+        entrytimesh =(TextView)  findViewById(R.id.entimed);
+        exittimesh =(TextView)  findViewById(R.id.extimed);
+        Addresssh = (TextView) findViewById(R.id.addressd);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-        accept = findViewById(R.id.accept);
-        decline = findViewById(R.id.Decline);
+        accept = findViewById(R.id.acceptd);
+        decline = findViewById(R.id.Declined);
         tick = findViewById(R.id.tick);
         gobacktohome = findViewById(R.id.gobacktohome);
         gobacktohome.setOnClickListener(new View.OnClickListener() {

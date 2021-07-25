@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".studentrequestPreviewPage">
+    tools:context=".wardenrequestpreviewpage">
 
     <ImageView
         android:id="@+id/tick"
         android:layout_width="247dp"
         android:layout_height="210dp"
+        android:background="@drawable/ic_baseline_check_circle_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+         />
 
     <Button
         android:id="@+id/gobacktohome"
@@ -47,16 +48,14 @@
             android:layout_width="107dp"
             android:layout_height="21dp"
             android:layout_marginTop="148dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
             android:text="Address  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toStartOf="@+id/addressd"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/AD"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="@+id/AD"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -109,16 +108,18 @@
             android:id="@+id/addressd"
             android:layout_width="211dp"
             android:layout_height="71dp"
-            android:layout_marginStart="144dp"
-            android:layout_marginLeft="144dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed"
             android:text="Address"
             android:textAllCaps="true"
             android:textColor="#0B0A0A"
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/extimed"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/edated"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edated"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
 
         <Button
             android:id="@+id/acceptd"
@@ -162,7 +163,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/A"
+            android:id="@+id/AD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Entry Date  -"
@@ -172,25 +173,23 @@
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/bd"
             app:layout_constraintEnd_toStartOf="@+id/edated"
-            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintHorizontal_bias="0.317"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.537" />
+            app:layout_constraintVertical_bias="0.606" />
 
         <TextView
             android:id="@+id/cd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
             android:text="ExitTime  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            app:layout_constraintEnd_toStartOf="@+id/extimed"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bd"
+            app:layout_constraintStart_toStartOf="@+id/bd"
             app:layout_constraintTop_toBottomOf="@+id/bd" />
 
         <Button
@@ -216,10 +215,10 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/addressd"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.723"
+            app:layout_constraintHorizontal_bias="0.864"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.663" />
+            app:layout_constraintVertical_bias="0.666" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -233,17 +232,14 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/jgiicon" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="79dp"
-            android:layout_height="71dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.951"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.078"
-            app:srcCompat="@drawable/ic_face" />
+        <TextView
+            android:id="@+id/nameD"
+            android:layout_width="206dp"
+            android:layout_height="30dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="16dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
