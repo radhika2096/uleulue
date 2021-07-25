@@ -8,34 +8,46 @@
 
     <TextView
         android:id="@+id/pname"
-        android:layout_width="323dp"
-        android:layout_height="60dp"
+        android:layout_width="328dp"
+        android:layout_height="27dp"
         android:text="parents name-"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phonenumberLabel"
         app:layout_constraintEnd_toEndOf="@+id/nameLabel"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/nameLabel"
-        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="416dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="6dp"
+        android:background="#1E5FCF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="700dp"
         android:text="WELCOME STUDENT"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077" />
-
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/toolbar3" />
 
     <Button
         android:id="@+id/logout"
@@ -45,10 +57,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/USNlabel"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/USNlabel"
         app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.831" />
+        app:layout_constraintVertical_bias="0.604" />
 
     <Button
         android:id="@+id/outpassrequest"
@@ -58,69 +70,95 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/USNlabel"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="@+id/USNlabel"
         app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <TextView
         android:id="@+id/Emailadressdlabel"
         android:layout_width="323dp"
-        android:layout_height="60dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
         android:text="Email Adress:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phonenumberLabel"
-        app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+        app:layout_constraintEnd_toEndOf="@+id/pname"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameLabel"
-        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintStart_toStartOf="@+id/pname"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
     <TextView
         android:id="@+id/nameLabel"
-        android:layout_width="310dp"
-        android:layout_height="41dp"
+        android:layout_width="312dp"
+        android:layout_height="30dp"
 
+        android:layout_marginTop="48dp"
         android:text="Name:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/phonenumberLabel"
         app:layout_constraintEnd_toEndOf="@+id/Headline"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toStartOf="@+id/Headline"
-        app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintTop_toBottomOf="@+id/Headline" />
 
     <TextView
         android:id="@+id/phonenumberLabel"
-        android:layout_width="320dp"
-        android:layout_height="52dp"
+        android:layout_width="321dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="2dp"
         android:text="PhoneNumber:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintBottom_toTopOf="@+id/USNlabel"
         app:layout_constraintEnd_toEndOf="@+id/Emailadressdlabel"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/Emailadressdlabel"
-        app:layout_constraintTop_toBottomOf="@+id/Headline"
-        app:layout_constraintVertical_bias="0.604" />
+        app:layout_constraintTop_toBottomOf="@+id/pname"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/USNlabel"
-        android:layout_width="323dp"
-        android:layout_height="45dp"
+        android:layout_width="321dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="124dp"
         android:text="USN:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/outpassrequest"
         app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="62dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/jgiicon" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="75dp"
+        android:layout_height="83dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:layout_constraintVertical_bias="0.034"
+        app:srcCompat="@drawable/ic_face" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

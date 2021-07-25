@@ -44,17 +44,19 @@
 
         <TextView
             android:id="@+id/b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="108dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
+            android:layout_width="107dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:text="Address  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/address9148"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -62,21 +64,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="Entry Time  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/entime"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c" />
 
         <TextView
             android:id="@+id/entime"
             android:layout_width="211dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="52dp"
+            android:layout_marginBottom="56dp"
             android:fontFamily="sans-serif-condensed"
             android:text="entry Time"
             android:textAllCaps="true"
@@ -84,21 +87,21 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/exdate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="76dp"
             android:text="Exit Date  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/exdate"
-            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/d" />
 
@@ -106,9 +109,9 @@
             android:id="@+id/address9148"
             android:layout_width="211dp"
             android:layout_height="71dp"
-            android:layout_marginStart="180dp"
-            android:layout_marginLeft="180dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginLeft="144dp"
+            android:layout_marginBottom="28dp"
             android:fontFamily="sans-serif-condensed"
             android:text="Address"
             android:textAllCaps="true"
@@ -121,10 +124,10 @@
             android:id="@+id/accept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="72dp"
             android:text="Accept"
             app:layout_constraintEnd_toStartOf="@+id/Decline"
-            app:layout_constraintHorizontal_bias="0.227"
+            app:layout_constraintHorizontal_bias="0.774"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/e" />
 
@@ -132,7 +135,7 @@
             android:id="@+id/exdate"
             android:layout_width="211dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="44dp"
             android:fontFamily="sans-serif-condensed"
             android:text="Exit Date"
             android:textAllCaps="true"
@@ -140,7 +143,7 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/Decline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.904"
+            app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -155,7 +158,7 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/entime"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -169,24 +172,25 @@
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/b"
             app:layout_constraintEnd_toStartOf="@+id/edate"
-            app:layout_constraintHorizontal_bias="0.245"
+            app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.266" />
+            app:layout_constraintVertical_bias="0.537" />
 
         <TextView
             android:id="@+id/c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginRight="64dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
             android:text="ExitTime  -"
             android:textAllCaps="true"
             android:textColor="#090909"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/extime"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/b" />
 
         <Button
@@ -196,10 +200,10 @@
             android:text="Decline"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintHorizontal_bias="0.623"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.734" />
+            app:layout_constraintVertical_bias="0.802" />
 
         <TextView
             android:id="@+id/edate"
@@ -212,10 +216,34 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/address9148"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.465" />
+            app:layout_constraintVertical_bias="0.663" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="133dp"
+            android:layout_height="112dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.992"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/jgiicon" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="79dp"
+            android:layout_height="71dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078"
+            app:srcCompat="@drawable/ic_face" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

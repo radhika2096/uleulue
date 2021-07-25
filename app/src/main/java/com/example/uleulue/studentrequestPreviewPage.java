@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 
 public class studentrequestPreviewPage extends AppCompatActivity {
-    DatabaseReference mUserRef;
+    DatabaseReference mUserRef,senddatatowarden;
     FirebaseUser mUser;
     FirebaseAuth mAuth;
     String userid1;
@@ -35,6 +35,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
     Button accept,decline,gobacktohome;
     ImageView tick;
     ConstraintLayout constraintLayout;
+    String entrytime,entryDate, exittime,exitDate,Address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
         setContentView(R.layout.activity_studentrequest_preview_page);
          userid1 = getIntent().getStringExtra("userkey1");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
+        senddatatowarden = FirebaseDatabase.getInstance().getReference().child("requestsinwarden");
         entryDatesh = (TextView) findViewById(R.id.edate);
         exitDatesh = (TextView) findViewById(R.id.exdate);
         entrytimesh =(TextView)  findViewById(R.id.entime);
@@ -104,7 +106,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
     {
 
         HashMap hashMap = new HashMap();
-        hashMap.put("status","Accepted");
+        hashMap.put("status","AcceptedByParents");
         mUserRef.child(userid1).child(mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
@@ -130,11 +132,11 @@ public class studentrequestPreviewPage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists())
                 {
-                   String entrytime = snapshot.child("entryTime").getValue().toString();
-                    String  entryDate = snapshot.child("entryDate").getValue().toString();
-                    String  exittime = snapshot.child("exitTime").getValue().toString();
-                    String   exitDate = snapshot.child("exitDate").getValue().toString();
-                    String   Address = snapshot.child("address").getValue().toString();
+                   entrytime = snapshot.child("entryTime").getValue().toString();
+                      entryDate = snapshot.child("entryDate").getValue().toString();
+                     exittime = snapshot.child("exitTime").getValue().toString();
+                       exitDate = snapshot.child("exitDate").getValue().toString();
+                      Address = snapshot.child("address").getValue().toString();
                     entryDatesh.setText(entryDate);
                     exitDatesh.setText(exitDate);
                     entrytimesh.setText( entrytime);
@@ -147,8 +149,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
 
                 }
 
-
-            }
+               }
 
             @Override
             public void onCancelled(@NonNull @NotNull DatabaseError error) {

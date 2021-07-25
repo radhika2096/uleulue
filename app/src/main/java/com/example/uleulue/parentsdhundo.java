@@ -8,7 +8,7 @@ public class parentsdhundo {
     private String parentsname;
     private String phonenumber;
     private String studentname;
-    private String usn;
+    private String usn,eemail,hhostelname,nname,pphonenumber,ssharing;
 
        public parentsdhundo()
        {}
@@ -20,6 +20,7 @@ public class parentsdhundo {
            this.studentname = studentname;
            this.usn = usn;
            this.fullname = fullname;
+
        }
 
     public String getEmail() {

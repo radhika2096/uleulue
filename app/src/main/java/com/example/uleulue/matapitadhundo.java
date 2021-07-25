@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class matapitadhundo extends AppCompatActivity {
     FirebaseRecyclerOptions<parentsdhundo> options;
     FirebaseRecyclerAdapter<parentsdhundo,matapitadhundoHolder>adapter;
-   DatabaseReference mUserRef,studentref;
+   DatabaseReference mUserRef;
    FirebaseAuth mAuth;
    FirebaseUser muser;
    RecyclerView recyclerView;
@@ -43,7 +43,7 @@ public class matapitadhundo extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mUserRef = FirebaseDatabase.getInstance().getReference().child("pusers");
-       studentref = FirebaseDatabase.getInstance().getReference().child("users");
+
         mAuth = FirebaseAuth.getInstance();
          obj = new parentsdhundo();
          String parentsname = getIntent().getStringExtra("p");

@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.util.Hex;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,9 +36,9 @@ public class matapitaprofileView extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     ListView listView;
-    String username, phone,email;
-    TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime;
-    Button btnperfrom,btndecline,newreq;
+    String username, phone,email,staddress,stexitDate,stentryDate,stentrytime,  stexittime ,nameinstudentutpass;
+    TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime,nameinoutpass;
+    Button btnperfrom,btndecline,newreq,pushreqtoparent;
     CardView cardView;
 
 
@@ -47,7 +50,7 @@ public class matapitaprofileView extends AppCompatActivity {
         Toast.makeText(this , "" + userid, Toast.LENGTH_LONG).show();
         mUserRef = FirebaseDatabase.getInstance().getReference().child("pusers").child(userid);
         requestRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
-        friendref = FirebaseDatabase.getInstance().getReference().child("requestcompleteHistory");
+
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         btnperfrom = findViewById(R.id.request9810);
@@ -59,9 +62,13 @@ public class matapitaprofileView extends AppCompatActivity {
         exitdate = findViewById(R.id.exitDate2);
         entrydate = findViewById(R.id.entryDate2);
         entrytime = findViewById(R.id.entryTime2);
+        nameinoutpass = findViewById(R.id.nameinstudentutpass);
         exittime = findViewById(R.id.exitTime2);
         cardView = findViewById(R.id.cardView);
         newreq = findViewById(R.id.newreq);
+
+
+        pushreqtoparent = findViewById(R.id.pushreqtowarden);
 
         listView = findViewById(R.id.list);
         ArrayList<String> list = new ArrayList<>();
@@ -85,6 +92,7 @@ public class matapitaprofileView extends AppCompatActivity {
 
             }
         });
+
         newreq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,6 +100,7 @@ public class matapitaprofileView extends AppCompatActivity {
                 btnperfrom.setVisibility(View.VISIBLE);
                 listView.setVisibility(View.GONE);
                 newreq.setVisibility(View.GONE);
+                pushreqtoparent.setVisibility(View.GONE);
 
             }
         });
@@ -118,6 +127,8 @@ public class matapitaprofileView extends AppCompatActivity {
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
                         newreq.setVisibility(View.VISIBLE);
+                        listView.setBackgroundColor(Color.GRAY);
+                        pushreqtoparent.setVisibility(View.GONE);
 
                     }
                     else if(snapshot.child("status").getValue().toString().equals("Declined"))
@@ -126,15 +137,33 @@ public class matapitaprofileView extends AppCompatActivity {
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
                         newreq.setVisibility(View.VISIBLE);
+                        listView.setBackgroundColor(Color.RED);
+                        pushreqtoparent.setVisibility(View.GONE);
 
 
                     }
-                   else if(snapshot.child("status").getValue().toString().equals("Accepted"))
+                   else if(snapshot.child("status").getValue().toString().equals("AcceptedByParents"))
                     {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
                         newreq.setVisibility(View.VISIBLE);
+                        listView.setBackgroundColor(Color.GREEN);
+                        pushreqtoparent.setVisibility(View.VISIBLE);
+                        pushreqtoparent.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(matapitaprofileView.this,wardendhundoViaStudents.class);
+                                intent.putExtra("ad",staddress);
+                                intent.putExtra("ext",stexittime);
+                                intent.putExtra("exd",stexitDate);
+                                intent.putExtra("ent",stentrytime);
+                                intent.putExtra("end",stentryDate);
+                                intent.putExtra("n",nameinstudentutpass);
+                                startActivity(intent);
+
+                            }
+                        });
 
                     }
 
@@ -167,12 +196,13 @@ public class matapitaprofileView extends AppCompatActivity {
         });
     }
 
-    private void perfromaction(String userid) {
-        String staddress = adress.getText().toString();
-        String stexitDate = exitdate.getText().toString();
-        String stentryDate = entrydate.getText().toString();
-        String stentrytime = entrytime.getText().toString();
-        String stexittime = exittime.getText().toString();
+    private void perfromaction(String userid ) {
+        staddress = adress.getText().toString();
+        stexitDate = exitdate.getText().toString();
+        stentryDate = entrydate.getText().toString();
+        stentrytime = entrytime.getText().toString();
+        stexittime = exittime.getText().toString();
+        nameinstudentutpass = nameinoutpass.getText().toString();
 
         HashMap hashMap = new HashMap();
         hashMap.put("status", "pending");
@@ -181,6 +211,7 @@ public class matapitaprofileView extends AppCompatActivity {
         hashMap.put("exitTime", stexittime);
         hashMap.put("entryTime", stentrytime);
         hashMap.put("entryDate", stentryDate);
+        hashMap.put("Name",nameinstudentutpass);
 
 
         requestRef.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
@@ -197,6 +228,7 @@ public class matapitaprofileView extends AppCompatActivity {
 
             }
         });
+
     }
 
 
