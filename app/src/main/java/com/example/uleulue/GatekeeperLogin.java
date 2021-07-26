@@ -26,7 +26,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class GatekeeperLogin extends AppCompatActivity implements View.OnClickListener {
     private EditText editemail, editPassword;
-    private TextView ttregister, forgotpassword;
+    private TextView ttregister, forgotpasswor1d;
     private Button signinn;
     private FirebaseAuth mAuth;
     private ProgressBar progresssBar;
@@ -39,7 +39,13 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
 
         ttregister = (TextView) findViewById(R.id.cregister2);
         ttregister.setOnClickListener(this);
-        forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
+        forgotpasswor1d = (TextView) findViewById(R.id.cforgotPassword);
+        forgotpasswor1d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GatekeeperLogin.this, forgotpassword.class));
+            }
+        });
         signinn = (Button) findViewById(R.id.clogin);
         signinn.setOnClickListener(this);
 

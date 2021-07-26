@@ -24,12 +24,14 @@ public class GatekeeperHome extends AppCompatActivity {
     private String userId3;
     private Button logout3,viewacc;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gatekeeper_home);
         logout3 = (Button) findViewById(R.id.crequests);
         logout3.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();

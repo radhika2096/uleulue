@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/cmeratext"
-        android:layout_width="147dp"
-        android:layout_height="60dp"
+        android:layout_width="156dp"
+        android:layout_height="70dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -24,15 +24,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.128" />
 
     <TextView
         android:id="@+id/cemailadressdlabel"
-        android:layout_width="175dp"
+        android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/inpuut_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -44,19 +46,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cnameLabel2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cnameLabel2"
         app:layout_constraintTop_toBottomOf="@+id/cnameLabel2" />
 
     <TextView
         android:id="@+id/cnameLabel2"
-        android:layout_width="178dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="217dp"
-        android:layout_marginRight="217dp"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/inpuut_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -67,16 +66,17 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cmeratext"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="@+id/cmeratext"
         app:layout_constraintTop_toBottomOf="@+id/cmeratext" />
 
     <TextView
         android:id="@+id/cphonenumberLabel2"
-        android:layout_width="177dp"
+        android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/inpuut_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -94,9 +94,10 @@
 
     <TextView
         android:id="@+id/caddress"
-        android:layout_width="177dp"
+        android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/inpuut_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -114,27 +115,24 @@
 
     <Button
         android:id="@+id/chistories"
-        android:layout_width="180dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="165dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:text="HISTORY"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/crequests"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/crequests"
-        app:layout_constraintTop_toTopOf="@+id/crequests"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
     <Button
         android:id="@+id/crequests"
-        android:layout_width="180dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="167dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="LogOut"
         android:textSize="16sp"
@@ -149,17 +147,25 @@
         android:id="@+id/cviewaccepted"
         android:layout_width="229dp"
         android:layout_height="39dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btnn_bg"
         android:text="View Accepted Request"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/chistories"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="@+id/crequests"
-        app:layout_constraintTop_toBottomOf="@+id/crequests"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/crequests" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="107dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/jgiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
