@@ -121,4 +121,13 @@
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="@+id/lbutton"
         app:layout_constraintTop_toBottomOf="@+id/lbutton" />
+
+    <CheckBox
+        android:id="@+id/remember3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/lpass"
+        app:layout_constraintStart_toStartOf="@+id/lpass"
+        tools:layout_editor_absoluteY="247dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

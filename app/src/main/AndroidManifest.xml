@@ -41,6 +41,7 @@
         <activity android:name=".HomeStudents" />
         <activity android:name=".studentsDhundo" />
         <activity android:name=".studentrequestPreviewPage" />
+        <activity android:name=".setrealtime"/>
     </application>
 
 </manifest>

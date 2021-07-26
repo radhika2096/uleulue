@@ -167,27 +167,27 @@
         app:layout_constraintTop_toBottomOf="@+id/eetime" />
 
     <Button
-        android:id="@+id/eaccept"
+        android:id="@+id/realexittimeanddate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Accept"
+        android:text="presstogetrealexittimeanddate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/exdate"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="@+id/exdate"
         app:layout_constraintTop_toBottomOf="@+id/exdate"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
-        android:id="@+id/edecline"
+        android:id="@+id/realcamebacktimeanddate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Decline"
+        android:text="press to set time and date of entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/eexdate"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/eexdate"
         app:layout_constraintTop_toBottomOf="@+id/eexdate"
         app:layout_constraintVertical_bias="0.157" />

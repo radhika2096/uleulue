@@ -76,6 +76,15 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
             }
         });
+        HashMap hashMap2 = new HashMap();
+        hashMap2.put("status2","Accepted By Warden");
+        mUserRef2.child(userid2).updateChildren(hashMap2).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task task) {
+                Toast.makeText(wardenrequestpreviewpage.this,"you accepted child reques",Toast.LENGTH_LONG);
+
+            }
+        });
 
     }
 

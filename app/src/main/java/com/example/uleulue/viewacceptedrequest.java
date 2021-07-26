@@ -67,7 +67,9 @@ public class viewacceptedrequest extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        Intent intent = new Intent(viewacceptedrequest.this, setrealtime.class);
+                        intent.putExtra("userkey67", getRef(position).getKey().toString());
+                        startActivity(intent);
 
 
                     }}

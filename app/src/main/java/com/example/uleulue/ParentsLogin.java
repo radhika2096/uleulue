@@ -29,8 +29,6 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     String checkbox2;
-
-
     CheckBox remember2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +44,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         remember2 = findViewById(R.id.remember2);
         mAuth = FirebaseAuth.getInstance();
-        SharedPreferences preferences2 = getSharedPreferences("checkbox",MODE_PRIVATE);
+        SharedPreferences preferences2 = getSharedPreferences("checkbox2",MODE_PRIVATE);
         checkbox2 = preferences2.getString("remember2","");
 
         if(checkbox2.equals("true"))
@@ -63,7 +61,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(compoundButton.isChecked())
                 {
-                    SharedPreferences preferences2 = getSharedPreferences("checkbox",MODE_PRIVATE);
+                    SharedPreferences preferences2 = getSharedPreferences("checkbox2",MODE_PRIVATE);
                     SharedPreferences.Editor editor2 = preferences2.edit();
                     editor2.putString("remember2","true");
                     editor2.apply();
@@ -71,7 +69,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
                 }
                 else if(!compoundButton.isChecked())
                 {
-                    SharedPreferences preferences2 = getSharedPreferences("checkbox",MODE_PRIVATE);
+                    SharedPreferences preferences2 = getSharedPreferences("checkbox2",MODE_PRIVATE);
                     SharedPreferences.Editor editor2 = preferences2.edit();
                     editor2.putString("remember2","false");
                     editor2.apply();

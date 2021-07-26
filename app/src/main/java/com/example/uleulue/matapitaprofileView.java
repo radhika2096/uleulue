@@ -32,7 +32,7 @@ import java.util.HashMap;
 
 public class matapitaprofileView extends AppCompatActivity {
 
-    DatabaseReference mUserRef,requestRef,friendref;
+    DatabaseReference mUserRef,requestRef;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     ListView listView;
@@ -50,6 +50,7 @@ public class matapitaprofileView extends AppCompatActivity {
         Toast.makeText(this , "" + userid, Toast.LENGTH_LONG).show();
         mUserRef = FirebaseDatabase.getInstance().getReference().child("pusers").child(userid);
         requestRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
+
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -140,6 +141,15 @@ public class matapitaprofileView extends AppCompatActivity {
                         listView.setBackgroundColor(Color.RED);
                         pushreqtoparent.setVisibility(View.GONE);
 
+
+                    }
+                    else if(snapshot.child("status").getValue().toString().equals("journey completed succesfully"))
+                    {
+                        cardView.setVisibility(View.GONE);
+                        btnperfrom.setVisibility(View.GONE);
+                        listView.setVisibility(View.VISIBLE);
+                        newreq.setVisibility(View.VISIBLE);
+                        listView.setBackgroundColor(Color.MAGENTA);
 
                     }
                    else if(snapshot.child("status").getValue().toString().equals("AcceptedByParents"))

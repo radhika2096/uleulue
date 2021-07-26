@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="420dp"
-        android:layout_height="419dp"
+        android:layout_width="407dp"
+        android:layout_height="310dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginEnd="3dp"
@@ -31,7 +31,6 @@
                 android:id="@+id/exitDate2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="116dp"
                 android:layout_marginBottom="44dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@android:drawable/ic_menu_month"
@@ -44,10 +43,9 @@
                 android:paddingBottom="10dp"
                 android:textColorHint="#090909"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/entryTime2"
+                app:layout_constraintEnd_toEndOf="@+id/exitTime2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/entryTime2"
-                app:layout_constraintTop_toBottomOf="@+id/entryTime2" />
+                app:layout_constraintStart_toStartOf="@+id/exitTime2" />
 
             <EditText
                 android:id="@+id/exitTime2"
@@ -66,9 +64,9 @@
                 android:paddingBottom="10dp"
                 android:textColorHint="#0E0E0E"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/entryDate2"
-                app:layout_constraintHorizontal_bias="0.592"
-                app:layout_constraintStart_toStartOf="@+id/entryDate2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/exitDate2"
                 app:layout_constraintVertical_bias="1.0" />
 
@@ -76,7 +74,6 @@
                 android:id="@+id/entryTime2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@android:drawable/ic_lock_idle_alarm"
                 android:ems="10"
@@ -98,7 +95,7 @@
                 android:id="@+id/adress2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@android:drawable/ic_dialog_map"
                 android:ems="10"
@@ -110,15 +107,14 @@
                 android:paddingBottom="10dp"
                 android:textColorHint="#0C0C0C"
                 app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
                 android:id="@+id/entryDate2"
-                android:layout_width="359dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="28dp"
+                android:layout_width="350dp"
+                android:layout_height="47dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@android:drawable/ic_menu_month"
                 android:ems="10"
@@ -130,9 +126,9 @@
                 android:paddingBottom="10dp"
                 android:textColorHint="#101010"
                 app:layout_constraintBottom_toTopOf="@+id/exitDate2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="@+id/entryTime2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/entryTime2" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -147,25 +143,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ListView
-                android:id="@+id/list"
-                android:layout_width="412dp"
-                android:layout_height="388dp"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView3">
-
-                <EditText
-                    android:id="@+id/nameinstudentutpass"
-                    android:layout_width="316dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/inpuut_bg"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Name" />
-            </ListView>
+            <EditText
+                android:id="@+id/nameinstudentutpass"
+                android:layout_width="316dp"
+                android:layout_height="42dp"
+                android:background="@drawable/inpuut_bg"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="129dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,6 +172,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.015" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="407dp"
+        android:layout_height="293dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        tools:layout_editor_absoluteX="8dp" />
 
     <TextView
         android:id="@+id/showPhone"
@@ -210,7 +207,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/cancelRequest"
@@ -222,7 +219,7 @@
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.673" />
 
     <TextView
         android:id="@+id/showEmail"
@@ -243,31 +240,27 @@
         android:id="@+id/newreq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="108dp"
         android:text="new request"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/pushreqtowarden"
-        app:layout_constraintEnd_toStartOf="@+id/cancelRequest"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="@+id/pushreqtowarden"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        app:layout_constraintVertical_bias="0.212" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="97dp"
         android:layout_height="91dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:background="@drawable/ic_face"
-        android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toBottomOf="@+id/showEmail"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/showPhone"
-        app:layout_constraintTop_toTopOf="@+id/usernameparentsshow"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/ic_face" />
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377"
+        app:srcCompat="@drawable/ic_face" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -275,10 +268,10 @@
         android:layout_height="133dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintHorizontal_bias="0.982"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
@@ -291,9 +284,9 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/request9810"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

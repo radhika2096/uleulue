@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +41,12 @@ public class HomeWarden extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(HomeWarden.this,wardenlogin.class));
+                SharedPreferences preferences3 = getSharedPreferences("checkbox3",MODE_PRIVATE);
+
+                SharedPreferences.Editor editor3 = preferences3.edit();
+                editor3.putString("remember3","false");
+                editor3.apply();
+              finish();
             }
         });
 

@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,6 +28,8 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
     private Button edsignin;
     private FirebaseAuth mAuth;
     private ProgressBar edprogressBar;
+    String checkbox3;
+    CheckBox remember3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +39,46 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
         edregister.setOnClickListener(this);
         edsignin= (Button) findViewById(R.id.lbutton);
         edsignin.setOnClickListener(this);
+        remember3 = findViewById(R.id.remember3);
 
         edTextemail = (EditText) findViewById(R.id.lemail);
         edTextPassword = (EditText) findViewById(R.id.lpass);
         edprogressBar = (ProgressBar) findViewById(R.id.lprogress);
         mAuth = FirebaseAuth.getInstance();
+        SharedPreferences preferences3 = getSharedPreferences("checkbox3",MODE_PRIVATE);
+        checkbox3 = preferences3.getString("remember3","");
+
+        if(checkbox3.equals("true"))
+        {
+            startActivity(new Intent(wardenlogin.this,HomeWarden.class));
+        }
+        else if (checkbox3.equals("false"))
+        {
+            Toast.makeText(this,"please login",Toast.LENGTH_LONG).show();
+        }
+
+        remember3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked())
+                {
+                    SharedPreferences preferences3 = getSharedPreferences("checkbox3",MODE_PRIVATE);
+                    SharedPreferences.Editor editor3 = preferences3.edit();
+                    editor3.putString("remember3","true");
+                    editor3.apply();
+                    Toast.makeText(wardenlogin.this,"checked",Toast.LENGTH_LONG).show();
+                }
+                else if(!compoundButton.isChecked())
+                {
+                    SharedPreferences preferences3 = getSharedPreferences("checkbox3",MODE_PRIVATE);
+                    SharedPreferences.Editor editor3 = preferences3.edit();
+                    editor3.putString("remember3","false");
+                    editor3.apply();
+                    Toast.makeText(wardenlogin.this,"Unchecked",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
 
     }
 

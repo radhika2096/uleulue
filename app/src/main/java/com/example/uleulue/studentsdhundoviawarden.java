@@ -46,7 +46,7 @@ public class studentsdhundoviawarden extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         muser = mAuth.getCurrentUser();
-        //String useridofwarden = muser.getUid().toString();
+
         mUserRef = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
 
         loadUsers( "");
