@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,7 +47,12 @@ public class ParentsHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(ParentsHome.this, ParentsLogin.class));
+                SharedPreferences preferences2 = getSharedPreferences("checkbox2",MODE_PRIVATE);
+
+                SharedPreferences.Editor editor2 = preferences2.edit();
+                editor2.putString("remember2","false");
+                editor2.apply();
+                finish();
             }
         });
 
