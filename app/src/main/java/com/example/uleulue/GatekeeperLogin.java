@@ -1,8 +1,10 @@
 package com.example.uleulue;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -14,14 +16,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 public class GatekeeperLogin extends AppCompatActivity implements View.OnClickListener {
     private EditText editemail, editPassword;
-    private TextView  ttregister;
+    private TextView ttregister, forgotpassword;
     private Button signinn;
     private FirebaseAuth mAuth;
     private ProgressBar progresssBar;
@@ -34,6 +39,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
 
         ttregister = (TextView) findViewById(R.id.cregister2);
         ttregister.setOnClickListener(this);
+        forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
         signinn = (Button) findViewById(R.id.clogin);
         signinn.setOnClickListener(this);
 
@@ -43,28 +49,30 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
         mAuth = FirebaseAuth.getInstance();
     }
 
-@Override
-public void onClick(View v) {
-    switch (v.getId())
-    {
-        case R.id.cregister2:
-            startActivity(new Intent(this,GatekeeperRegister.class));
-            break;
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cregister2:
+                startActivity(new Intent(this, GatekeeperRegister.class));
+                break;
 
-        case R.id.clogin:
-            userLoginn();
-            break;
+            case R.id.clogin:
+                userLoginn();
+                break;
+            case R.id.cforgotPassword:
+                startActivity(new Intent(this,forgotpassword.class));
+                break;
+
+        }
+
     }
-
-}
 
     private void userLoginn() {
 
         String email = editemail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
 
-        if(email.isEmpty())
-        {
+        if (email.isEmpty()) {
             editemail.setError("email required");
             editemail.requestFocus();
             return;
@@ -75,38 +83,33 @@ public void onClick(View v) {
             return;
 
         }
-        if(password.isEmpty())
-        {
+        if (password.isEmpty()) {
             editPassword.setError("password required");
             editPassword.requestFocus();
             return;
         }
-        if(password.length()<6)
-        {
+        if (password.length() < 6) {
             editPassword.setError("min pass require length should be 6");
             editPassword.requestFocus();
             return;
         }
         progresssBar.setVisibility(View.VISIBLE);
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if(user.isEmailVerified())
-                    {
-                        startActivity(new Intent(GatekeeperLogin.this,GatekeeperHome
+                    if (user.isEmailVerified()) {
+                        startActivity(new Intent(GatekeeperLogin.this, GatekeeperHome
                                 .class));
-                    }else {
+                    } else
                         user.sendEmailVerification();
-                        Toast.makeText(GatekeeperLogin.this,"check you mail to confirm it",Toast.LENGTH_LONG).show();
-                    }
-
-                }else
-                {
-                    Toast.makeText(GatekeeperLogin.this,"failed to login",Toast.LENGTH_LONG).show();
+                    Toast.makeText(GatekeeperLogin.this, "check you mail to confirm it", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(GatekeeperLogin.this, "failed to login", Toast.LENGTH_LONG).show();
                 }
             }
         });
-    }
-}
+    }}
+
+ 

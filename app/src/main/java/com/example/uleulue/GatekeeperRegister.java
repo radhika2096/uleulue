@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class GatekeeperRegister extends AppCompatActivity implements View.OnClickListener{
-    private EditText hname, hemail, hpassword, hphonenumber;
+    private EditText hname, hemail, hpassword, hphonenumber,chpassword2;
     private TextView hregister;
 
 
@@ -37,7 +37,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
 
         hpassword = (EditText) findViewById(R.id.chpassword);
         hphonenumber = (EditText) findViewById(R.id.chphoneno);
-
+        chpassword2 = (EditText) findViewById(R.id.chpassword2);
     }
         @Override
         public void onClick(View view) {
@@ -53,18 +53,14 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
             String name1 = hname.getText().toString();
             String phone1 = hphonenumber.getText().toString();
             String password1 = hpassword.getText().toString();
-
+            String password2 = chpassword2.getText().toString();
 
             if(name1.isEmpty())
             {
                 hname.setError("full name required");
                 hname.requestFocus();
                 return;
-            }
-            if(password1.isEmpty()) {
-                hpassword.setError("password required");
-                hpassword.requestFocus();
-                return;
+
             }
                 if (phone1.isEmpty()) {
                     hphonenumber.setError("phonenumber required");
@@ -87,8 +83,18 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
                     hpassword.requestFocus();
                     return;
                 }
+            if(password2.isEmpty())
+            {
+                chpassword2.setError("Enter Confirm Password");
+                chpassword2.requestFocus();
+                return;
+            }
+            if(password2.equals(hpassword)) {
+                chpassword2.setError("Passwords do not match.Kindly recheck");
+                chpassword2.requestFocus();
+                return;
 
-
+            }
             mAuth.createUserWithEmailAndPassword(email1,password1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
