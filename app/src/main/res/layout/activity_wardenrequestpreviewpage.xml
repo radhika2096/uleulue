@@ -8,15 +8,16 @@
 
     <ImageView
         android:id="@+id/tickw"
-        android:layout_width="247dp"
-        android:layout_height="210dp"
+        android:layout_width="160dp"
+        android:layout_height="129dp"
         android:background="@drawable/ic_baseline_check_circle_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1w"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <Button
         android:id="@+id/gobacktohomew"
@@ -237,9 +238,22 @@
             android:layout_width="206dp"
             android:layout_height="30dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="79dp"
-            tools:layout_editor_absoluteY="16dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="177dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="78dp"
+            android:layout_height="77dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.614"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dw"
+            app:layout_constraintVertical_bias="0.253"
+            app:srcCompat="@android:drawable/ic_delete" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

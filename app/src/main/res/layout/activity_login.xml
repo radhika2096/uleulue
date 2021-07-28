@@ -8,7 +8,7 @@
     tools:context=".login">
 
     <EditText
-        android:id="@+id/inputEmail2"
+        android:id="@+id/inputEmail7"
         android:layout_width="359dp"
         android:layout_height="70dp"
         android:background="@drawable/inpuut_bg"
@@ -26,15 +26,15 @@
         android:textColorHighlight="#0B0A0A"
         android:textColorHint="@color/colorBlack"
         android:textColorLink="#1B1A1A"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword2"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/inputPassword7"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword7"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin2"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword7"
+        app:layout_constraintTop_toBottomOf="@+id/textLogin7"
         app:layout_constraintVertical_bias="0.558" />
 
     <TextView
-        android:id="@+id/textLogin2"
+        android:id="@+id/textLogin7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="STUDENTS LOG IN"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.042" />
 
     <Button
-        android:id="@+id/btnLogin2"
+        android:id="@+id/btnLogin7"
         android:layout_width="232dp"
         android:layout_height="49dp"
         android:layout_marginStart="90dp"
@@ -62,16 +62,16 @@
         android:text="LOG IN"
         android:textColor="@color/colorWhite"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword7"
         app:layout_constraintVertical_bias="0.55"
         app:rippleColor="@color/colorRed" />
 
     <TextView
-        android:id="@+id/forgotPassword2"
+        android:id="@+id/forgotPassword7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="@color/colorBlack"
@@ -81,30 +81,30 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/register"
+        app:layout_constraintEnd_toEndOf="@+id/register7"
         app:layout_constraintHorizontal_bias="0.605"
-        app:layout_constraintStart_toStartOf="@+id/register"
+        app:layout_constraintStart_toStartOf="@+id/register7"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.874"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/register7"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:text="Dont have an Account?"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/forgotPassword2"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPassword7"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar7"
         app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="@+id/progressBar2"
+        app:layout_constraintStart_toStartOf="@+id/progressBar7"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.961"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/inputPassword2"
+        android:id="@+id/inputPassword7"
         android:layout_width="359dp"
         android:layout_height="70dp"
 
@@ -124,38 +124,38 @@
         android:textColor="#050505"
         android:textColorHint="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin7"
         app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin2"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail2"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin7"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail7"
         app:layout_constraintVertical_bias="0.074" />
 
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/progressBar7"
         style="?android:attr/progressBarStyle"
         android:layout_width="93dp"
         android:layout_height="103dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/forgotPassword2"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
+        app:layout_constraintBottom_toBottomOf="@+id/forgotPassword7"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin7"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin2"
-        app:layout_constraintTop_toTopOf="@+id/textLogin2"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin7"
+        app:layout_constraintTop_toTopOf="@+id/textLogin7"
         app:layout_constraintVertical_bias="0.787" />
 
     <CheckBox
-        android:id="@+id/remember"
+        android:id="@+id/remember9"
         android:layout_width="155dp"
         android:layout_height="45dp"
         android:layout_marginTop="9dp"
         android:text="remember me"
         android:textColor="#090909"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin7"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword7"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword7"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword7"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

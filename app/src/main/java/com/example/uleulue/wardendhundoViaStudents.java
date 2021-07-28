@@ -37,7 +37,7 @@ public class wardendhundoViaStudents extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     RecyclerView recyclerView;
-   String ad,ent,ext,end,exd,n,useridparents;
+    String ad,ent,ext,end,exd,n,useridparents;
 
 
     @Override
@@ -80,36 +80,36 @@ public class wardendhundoViaStudents extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull matapitadhundoHolder holder, int position, @NonNull wardenDhundo model) {
 
 
-                    holder.username.setText(model.getNname());
-                    holder.profession.setText(model.getEemail());
-                    holder.studentsname.setText(model.getSsharing());
+                holder.username.setText(model.getNname());
+                holder.profession.setText(model.getEemail());
+                holder.studentsname.setText(model.getSsharing());
 
-                    holder.itemView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-
-
-                            HashMap hashMap = new HashMap();
-                            hashMap.put("address", ad);
-                            hashMap.put("exitDate", exd);
-                            hashMap.put("exitTime", ext);
-                            hashMap.put("entryTime", ent);
-                            hashMap.put("entryDate", end);
-                            hashMap.put("name",n);
-                            hashMap.put("useridstudent",muser.getUid().toString());
-                            hashMap.put("status", "AcceptedByParents");
-                            hashMap.put("status2", "pendingbywarden");
-                            hashMap.put("useridparents", useridparents);
-                            databaseofwarden.child(getRef(position).getKey().toString()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-                                @Override
-                                public void onComplete(@NonNull @NotNull Task task) {
-                                    Toast.makeText(wardendhundoViaStudents.this,"you succesfully sent request to warden",Toast.LENGTH_LONG).show();
-                                }
-                            });
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
 
+                        HashMap hashMap = new HashMap();
+                        hashMap.put("address", ad);
+                        hashMap.put("exitDate", exd);
+                        hashMap.put("exitTime", ext);
+                        hashMap.put("entryTime", ent);
+                        hashMap.put("entryDate", end);
+                        hashMap.put("name",n);
+                        hashMap.put("useridstudent",muser.getUid().toString());
+                        hashMap.put("status", "AcceptedByParents");
+                        hashMap.put("status2", "pendingbywarden");
+                        hashMap.put("useridparents", useridparents);
+                        databaseofwarden.child(getRef(position).getKey().toString()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull @NotNull Task task) {
+                                Toast.makeText(wardendhundoViaStudents.this,"you succesfully sent request to warden",Toast.LENGTH_LONG).show();
+                            }
+                        });
 
-                        }});}
+
+
+                    }});}
 
 
 

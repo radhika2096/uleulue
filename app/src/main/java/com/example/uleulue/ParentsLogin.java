@@ -34,15 +34,15 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parents_login);
-        dregister = (TextView) findViewById(R.id.register);
+        dregister = (TextView) findViewById(R.id.register7);
         dregister.setOnClickListener(this);
-        signin = (Button) findViewById(R.id.btnLogin2);
+        signin = (Button) findViewById(R.id.btnLogin7);
         signin.setOnClickListener(this);
 
-        dTextemail = (EditText) findViewById(R.id.inputEmail2);
-        dTextPassword = (EditText) findViewById(R.id.inputPassword2);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
-        remember2 = findViewById(R.id.remember2);
+        dTextemail = (EditText) findViewById(R.id.inputEmail7);
+        dTextPassword = (EditText) findViewById(R.id.inputPassword7);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar7);
+        remember2 = findViewById(R.id.remember7);
         mAuth = FirebaseAuth.getInstance();
         SharedPreferences preferences2 = getSharedPreferences("checkbox2",MODE_PRIVATE);
         checkbox2 = preferences2.getString("remember2","");
@@ -84,12 +84,12 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.register:
+            case R.id.register7:
                 startActivity(new Intent(this, matashreepitashreeRegister.class));
 
                 break;
 
-            case R.id.btnLogin2:
+            case R.id.btnLogin7:
                 userLogin();
                 break;
         }

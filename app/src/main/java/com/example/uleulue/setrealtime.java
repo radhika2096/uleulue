@@ -112,7 +112,7 @@ public class setrealtime extends AppCompatActivity {
         hashMap3.put("realentrydateandtime",d2);
         hashMap3.put("realexitdateandtime",date);
 
-        completedrequestkadb.child(studentuserid).updateChildren(hashMap3).addOnCompleteListener(new OnCompleteListener() {
+        completedrequestkadb.child(studentuserid).child(exitDate).updateChildren(hashMap3).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"alldone",Toast.LENGTH_LONG).show();

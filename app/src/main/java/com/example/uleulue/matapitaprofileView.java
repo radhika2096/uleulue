@@ -152,8 +152,9 @@ public class matapitaprofileView extends AppCompatActivity {
                         listView.setBackgroundColor(Color.MAGENTA);
 
                     }
-                   else if(snapshot.child("status").getValue().toString().equals("AcceptedByParents"))
+                    else if(snapshot.child("status").getValue().toString().equals("AcceptedByParents"))
                     {
+
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
@@ -164,12 +165,12 @@ public class matapitaprofileView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent intent = new Intent(matapitaprofileView.this,wardendhundoViaStudents.class);
-                                intent.putExtra("ad",staddress);
-                                intent.putExtra("ext",stexittime);
-                                intent.putExtra("exd",stexitDate);
-                                intent.putExtra("ent",stentrytime);
-                                intent.putExtra("end",stentryDate);
-                                intent.putExtra("n",nameinstudentutpass);
+                                intent.putExtra("ad",snapshot.child("address").getValue().toString());
+                                intent.putExtra("ext",snapshot.child("exitTime").getValue().toString());
+                                intent.putExtra("exd",snapshot.child("exitDate").getValue().toString());
+                                intent.putExtra("ent",snapshot.child("entryTime").getValue().toString());
+                                intent.putExtra("end",snapshot.child("entryDate").getValue().toString());
+                                intent.putExtra("n",snapshot.child("Name").getValue().toString());
                                 intent.putExtra("useridparents",userid);
                                 startActivity(intent);
 
@@ -250,21 +251,21 @@ public class matapitaprofileView extends AppCompatActivity {
         mUserRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull  DataSnapshot snapshot) {
-              if(snapshot.exists())
-              {
-                  username = snapshot.child("parentsname").getValue().toString();
-                  phone = snapshot.child("phonenumber").getValue().toString();
-                  email = snapshot.child("email").getValue().toString();
-                  username9810.setText(username);
-                  phone9810.setText(phone);
-                  email9810.setText(email);
+                if(snapshot.exists())
+                {
+                    username = snapshot.child("parentsname").getValue().toString();
+                    phone = snapshot.child("phonenumber").getValue().toString();
+                    email = snapshot.child("email").getValue().toString();
+                    username9810.setText(username);
+                    phone9810.setText(phone);
+                    email9810.setText(email);
 
 
-              }
-              else {
-                  Toast.makeText(matapitaprofileView.this,"data not found",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(matapitaprofileView.this,"data not found",Toast.LENGTH_LONG).show();
 
-              }
+                }
 
 
             }
