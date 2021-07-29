@@ -202,14 +202,17 @@
         android:id="@+id/logout"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/btnn_bg"
-        android:text="Log out"
+        android:text="LOGOUT"
+        android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttons"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
+        app:layout_constraintVertical_bias="0.173" />
 
     <Button
         android:id="@+id/buttons"
@@ -218,9 +221,12 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="select student"
+        android:textStyle="bold"
         android:visibility="visible"
         app:backgroundTint="@color/design_default_color_primary_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
+        app:layout_constraintVertical_bias="0.045" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
