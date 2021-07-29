@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="407dp"
-        android:layout_height="310dp"
+        android:layout_width="410dp"
+        android:layout_height="481dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginEnd="3dp"
@@ -25,77 +25,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="397dp"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/exitDate2"
-                android:layout_width="350dp"
-                android:layout_height="47dp"
-                android:layout_marginBottom="44dp"
-                android:background="@drawable/inpuut_bg"
-                android:drawableLeft="@android:drawable/ic_menu_month"
-                android:ems="10"
-                android:hint="Enter Exit Date"
-                android:inputType="date"
-                android:padding="10dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="#090909"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/exitTime2"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/exitTime2" />
-
-            <EditText
-                android:id="@+id/exitTime2"
-                android:layout_width="350dp"
-                android:layout_height="47dp"
-
-                android:background="@drawable/inpuut_bg"
-                android:drawableLeft="@drawable/ic_time"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:hint=" Enter exit time"
-                android:inputType="time"
-                android:padding="10dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="#0E0E0E"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.51"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/exitDate2"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <EditText
-                android:id="@+id/entryTime2"
-                android:layout_width="350dp"
-                android:layout_height="47dp"
-                android:background="@drawable/inpuut_bg"
-                android:drawableLeft="@android:drawable/ic_lock_idle_alarm"
-                android:ems="10"
-                android:hint=" Enter Entry Time"
-                android:inputType="time"
-                android:padding="10dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="#151515"
-                app:layout_constraintBottom_toTopOf="@+id/entryDate2"
-                app:layout_constraintEnd_toEndOf="@+id/adress2"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/adress2"
-                app:layout_constraintTop_toBottomOf="@+id/adress2"
-                app:layout_constraintVertical_bias="0.0" />
+            android:layout_height="364dp">
 
             <EditText
                 android:id="@+id/adress2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@android:drawable/ic_dialog_map"
                 android:ems="10"
@@ -111,25 +47,6 @@
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-            <EditText
-                android:id="@+id/entryDate2"
-                android:layout_width="350dp"
-                android:layout_height="47dp"
-                android:background="@drawable/inpuut_bg"
-                android:drawableLeft="@android:drawable/ic_menu_month"
-                android:ems="10"
-                android:hint="Enter Entry date"
-                android:inputType="date"
-                android:padding="10dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="#101010"
-                app:layout_constraintBottom_toTopOf="@+id/exitDate2"
-                app:layout_constraintEnd_toEndOf="@+id/entryTime2"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/entryTime2" />
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="342dp"
@@ -143,16 +60,73 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/nameinstudentutpass"
-                android:layout_width="316dp"
-                android:layout_height="42dp"
-                android:background="@drawable/inpuut_bg"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
-                tools:layout_editor_absoluteX="40dp"
-                tools:layout_editor_absoluteY="129dp" />
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="404dp"
+                android:layout_height="344dp"
+                android:layout_marginTop="108dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/exitDate2"
+                    android:layout_width="350dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="64dp"
+                    android:background="@drawable/inpuut_bg"
+                    android:drawableLeft="@android:drawable/ic_menu_month"
+                    android:ems="10"
+                    android:hint="Enter Exit Date"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="#090909" />
+
+                <EditText
+                    android:id="@+id/nameinstudentutpass"
+                    android:layout_width="316dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/inpuut_bg"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/entryDate2"
+                    android:layout_width="350dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="36dp"
+                    android:background="@drawable/inpuut_bg"
+                    android:drawableLeft="@android:drawable/ic_menu_month"
+                    android:ems="10"
+                    android:hint="Enter Entry date"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="#101010" />
+
+                <EditText
+                    android:id="@+id/entryTime2"
+                    android:layout_width="350dp"
+                    android:layout_height="47dp"
+                    android:background="@drawable/inpuut_bg"
+                    android:drawableLeft="@android:drawable/ic_lock_idle_alarm"
+                    android:ems="10"
+                    android:hint=" Enter Entry Time"
+                    android:inputType="time"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="#151515" />
+            </ListView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -171,17 +145,7 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="407dp"
-        android:layout_height="293dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/showPhone"
@@ -197,8 +161,8 @@
 
     <Button
         android:id="@+id/request9810"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
         android:text="request"
@@ -207,19 +171,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <Button
         android:id="@+id/cancelRequest"
-        android:layout_width="176dp"
-        android:layout_height="48dp"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
         android:text="cancel Request"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.879" />
 
     <TextView
         android:id="@+id/showEmail"
@@ -240,27 +204,13 @@
         android:id="@+id/newreq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
+        android:layout_marginTop="16dp"
         android:text="new request"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list"
-        app:layout_constraintVertical_bias="0.212" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="97dp"
-        android:layout_height="91dp"
-        app:layout_constraintBottom_toTopOf="@+id/list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377"
-        app:srcCompat="@drawable/ic_face" />
+        app:layout_constraintEnd_toEndOf="@+id/request9810"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="@+id/request9810"
+        app:layout_constraintTop_toBottomOf="@+id/request9810" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -268,25 +218,42 @@
         android:layout_height="133dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintHorizontal_bias="0.773"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
         android:id="@+id/pushreqtowarden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="156dp"
-        android:layout_marginRight="156dp"
+        android:layout_marginTop="16dp"
         android:text="requestToWarden"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintStart_toStartOf="@+id/cancelRequest"
+        app:layout_constraintTop_toBottomOf="@+id/cancelRequest" />
+
+    <EditText
+        android:id="@+id/exitTime2"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+
+        android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@drawable/ic_time"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint=" Enter exit time"
+        android:inputType="time"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="#0E0E0E"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
