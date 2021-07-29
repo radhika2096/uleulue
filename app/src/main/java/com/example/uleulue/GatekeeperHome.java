@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,24 +24,16 @@ public class GatekeeperHome extends AppCompatActivity {
     private String userId3;
     private Button logout3,viewacc;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gatekeeper_home);
         logout3 = (Button) findViewById(R.id.crequests);
         logout3.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                SharedPreferences preferences4 = getSharedPreferences("checkbox4",MODE_PRIVATE);
-
-                SharedPreferences.Editor editor4 = preferences4.edit();
-                editor4.putString("remember4","false");
-                editor4.apply();
-                finish();
-
+                startActivity(new Intent(GatekeeperHome.this, GatekeeperLogin.class));
             }
         });
 

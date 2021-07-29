@@ -135,6 +135,7 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
                     if(user.isEmailVerified())
                     {
                         startActivity(new Intent(wardenlogin.this,HomeWarden.class));
+
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(wardenlogin.this,"check you mail to confirm it",Toast.LENGTH_LONG).show();

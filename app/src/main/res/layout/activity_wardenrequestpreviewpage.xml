@@ -8,15 +8,16 @@
 
     <ImageView
         android:id="@+id/tickw"
-        android:layout_width="247dp"
-        android:layout_height="210dp"
+        android:layout_width="113dp"
+        android:layout_height="97dp"
         android:background="@drawable/ic_baseline_check_circle_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1w"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintVertical_bias="0.96" />
 
     <Button
         android:id="@+id/gobacktohomew"
@@ -29,6 +30,19 @@
         app:layout_constraintStart_toStartOf="@+id/tickw"
         app:layout_constraintTop_toBottomOf="@+id/tickw" />
 
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="129dp"
+        android:layout_height="105dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout1w"
+        app:layout_constraintVertical_bias="0.98"
+        app:srcCompat="@android:drawable/ic_delete" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout1w"
         android:layout_width="410dp"
@@ -38,10 +52,10 @@
         android:layout_marginRight="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/bdw"

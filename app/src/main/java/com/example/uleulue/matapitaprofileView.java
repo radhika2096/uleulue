@@ -38,7 +38,7 @@ public class matapitaprofileView extends AppCompatActivity {
     ListView listView;
     String username, phone,email,staddress,stexitDate,stentryDate,stentrytime,  stexittime ,nameinstudentutpass;
     TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime,nameinoutpass;
-    Button btnperfrom,btndecline,newreq,pushreqtoparent;
+    Button btnperfrom,btndecline,newreq,pushreqtoparent,historyofstudents;
     CardView cardView;
 
 
@@ -51,7 +51,7 @@ public class matapitaprofileView extends AppCompatActivity {
         mUserRef = FirebaseDatabase.getInstance().getReference().child("pusers").child(userid);
         requestRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
 
-
+        historyofstudents = findViewById(R.id.ViewbacchokiHistory);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         btnperfrom = findViewById(R.id.request9810);
@@ -121,6 +121,16 @@ public class matapitaprofileView extends AppCompatActivity {
                         list.add(snapshot1.getValue().toString());
                     }
                     adapter.notifyDataSetChanged();
+                    historyofstudents.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(matapitaprofileView.this,bacchokipuranikatha.class);
+                            intent.putExtra("ui",userid);
+                            intent.putExtra("exd",snapshot.child("exitDate").getValue().toString());
+                            startActivity(intent);
+
+                        }
+                    });
 
                     if(snapshot.child("status").getValue().toString().equals("pending"))
                     {
@@ -188,6 +198,7 @@ public class matapitaprofileView extends AppCompatActivity {
                 Toast.makeText(matapitaprofileView.this,"some error occured in loading confirmation status by parents",Toast.LENGTH_LONG).show();
 
             }
+
         });
 
 

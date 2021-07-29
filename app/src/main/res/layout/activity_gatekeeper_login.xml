@@ -73,7 +73,7 @@
         android:id="@+id/cforgotPassword"
         android:layout_width="186dp"
         android:layout_height="42dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -85,7 +85,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cregister2"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/cregister2"
         app:layout_constraintTop_toBottomOf="@+id/cregister2"
         tools:ignore="MissingConstraints" />

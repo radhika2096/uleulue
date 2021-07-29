@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin2" />
 
     <CheckBox
-        android:id="@+id/remember"
+        android:id="@+id/remember2"
         android:layout_width="107dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"

@@ -6,13 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,12 +26,11 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class GatekeeperLogin extends AppCompatActivity implements View.OnClickListener {
     private EditText editemail, editPassword;
-    private TextView ttregister, forgotpasswor1d;
+    private TextView ttregister, forgotpassword;
     private Button signinn;
     private FirebaseAuth mAuth;
     private ProgressBar progresssBar;
-    String checkbox4;
-    CheckBox remember4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,58 +39,15 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
 
         ttregister = (TextView) findViewById(R.id.cregister2);
         ttregister.setOnClickListener(this);
-        forgotpasswor1d = (TextView) findViewById(R.id.cforgotPassword);
-        forgotpasswor1d.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GatekeeperLogin.this, forgotpassword.class));
-            }
-        });
+        forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
         signinn = (Button) findViewById(R.id.clogin);
         signinn.setOnClickListener(this);
-        remember4=findViewById(R.id.remember4);
+
         editemail = (EditText) findViewById(R.id.Cemail);
         editPassword = (EditText) findViewById(R.id.cPassword3);
         progresssBar = (ProgressBar) findViewById(R.id.cprogressBar3);
         mAuth = FirebaseAuth.getInstance();
-
-        SharedPreferences preferences4 = getSharedPreferences("checkbox4",MODE_PRIVATE);
-        checkbox4= preferences4.getString("remember4","");
-
-        if(checkbox4.equals("true"))
-        {
-            startActivity(new Intent(GatekeeperLogin.this,GatekeeperHome.class));
-        }
-        else if (checkbox4.equals("false"))
-        {
-            Toast.makeText(this,"please login",Toast.LENGTH_LONG).show();
-        }
-
-        remember4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(compoundButton.isChecked())
-                {
-                    SharedPreferences preferences4 = getSharedPreferences("checkbox4",MODE_PRIVATE);
-                    SharedPreferences.Editor editor4 = preferences4.edit();
-                    editor4.putString("remember4","true");
-                    editor4.apply();
-                    Toast.makeText(GatekeeperLogin.this,"checked",Toast.LENGTH_LONG).show();
-                }
-                else if(!compoundButton.isChecked())
-                {
-                    SharedPreferences preferences4= getSharedPreferences("checkbox4",MODE_PRIVATE);
-                    SharedPreferences.Editor editor4 = preferences4.edit();
-                    editor4.putString("remember4","false");
-                    editor4.apply();
-                    Toast.makeText(GatekeeperLogin.this,"Unchecked",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-
     }
-
 
     @Override
     public void onClick(View v) {
@@ -149,6 +102,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
                     if (user.isEmailVerified()) {
                         startActivity(new Intent(GatekeeperLogin.this, GatekeeperHome
                                 .class));
+                        finish();
                     } else
                         user.sendEmailVerification();
                     Toast.makeText(GatekeeperLogin.this, "check you mail to confirm it", Toast.LENGTH_LONG).show();

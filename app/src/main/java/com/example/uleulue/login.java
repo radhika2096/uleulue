@@ -37,14 +37,14 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        register = (TextView) findViewById(R.id.register7);
+        register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
-        signin = (Button) findViewById(R.id.btnLogin7);
+        signin = (Button) findViewById(R.id.btnLogin2);
         signin.setOnClickListener(this);
 
-        editTextemail = (EditText) findViewById(R.id.inputEmail7);
-        editTextPassword = (EditText) findViewById(R.id.inputPassword7);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar7);
+        editTextemail = (EditText) findViewById(R.id.inputEmail2);
+        editTextPassword = (EditText) findViewById(R.id.inputPassword2);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         mAuth = FirebaseAuth.getInstance();
         SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         checkbox = preferences.getString("remember","");
@@ -58,7 +58,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             Toast.makeText(this,"please login",Toast.LENGTH_LONG).show();
         }
 
-        remember = findViewById(R.id.remember9);
+        remember = findViewById(R.id.remember2);
         remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -87,12 +87,12 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.register7:
+            case R.id.register:
                 startActivity(new Intent(this,studentreg.class));
 
                 break;
 
-            case R.id.btnLogin7:
+            case R.id.btnLogin2:
                 userLogin();
                 break;
         }

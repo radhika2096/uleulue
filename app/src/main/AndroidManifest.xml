@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Uleulue">
-        <activity android:name=".forgotpassword"></activity>
+        <activity android:name=".bacchokipuranikatha"></activity>
+        <activity android:name=".forgotpassword" />
         <activity android:name=".viewacceptedrequest" />
         <activity android:name=".wardenrequestpreviewpage" />
         <activity android:name=".studentsdhundoviawarden" />
@@ -41,7 +42,7 @@
         <activity android:name=".HomeStudents" />
         <activity android:name=".studentsDhundo" />
         <activity android:name=".studentrequestPreviewPage" />
-        <activity android:name=".setrealtime"/>
+        <activity android:name=".setrealtime" />
     </application>
 
 </manifest>

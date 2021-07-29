@@ -15,7 +15,8 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:text="DETAILS"
+        android:text="Details"
+        android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textColorHighlight="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
@@ -24,10 +25,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/cemailadressdlabel"
@@ -81,7 +82,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+        android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
         android:drawablePadding="5dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -104,7 +105,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:drawableLeft="@drawable/ic_baseline_apartment_24"
         android:drawablePadding="5dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -123,9 +124,9 @@
 
     <Button
         android:id="@+id/chistories"
-        android:layout_width="167dp"
+        android:layout_width="165dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:text="HISTORY"
         android:textSize="16sp"
@@ -156,10 +157,9 @@
         android:layout_width="229dp"
         android:layout_height="39dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/btnn_bg"
+        android:background="@drawable/inpuut_bg"
         android:text="View Accepted Request"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_dark"
+        app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintEnd_toEndOf="@+id/chistories"
         app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="@+id/crequests"
@@ -167,14 +167,14 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="114dp"
-        android:layout_height="100dp"
+        android:layout_width="107dp"
+        android:layout_height="126dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintHorizontal_bias="0.884"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.047"
         app:srcCompat="@drawable/jgiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
