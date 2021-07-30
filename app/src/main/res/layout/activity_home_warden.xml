@@ -10,6 +10,8 @@
         android:id="@+id/wdetails"
         android:layout_width="173dp"
         android:layout_height="73dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -22,8 +24,6 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.065" />
@@ -48,7 +48,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/wdetails"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="@+id/wdetails"
         app:layout_constraintTop_toBottomOf="@+id/wdetails" />
 
@@ -143,10 +143,12 @@
         android:textColorLink="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/wnum"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/wnum"
-        app:layout_constraintTop_toBottomOf="@+id/wnum" />
+        app:layout_constraintTop_toBottomOf="@+id/wnum"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/wbutton"
@@ -158,8 +160,12 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewreq"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whostname"
-        app:layout_constraintTop_toBottomOf="@+id/whostname" />
+        app:layout_constraintTop_toBottomOf="@+id/whostname"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/viewreq"
@@ -171,19 +177,23 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/whostname"
-        app:layout_constraintTop_toBottomOf="@+id/whostname" />
+        app:layout_constraintTop_toBottomOf="@+id/whostname"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="114dp"
         android:layout_height="100dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toEndOf="@+id/wdetails"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.057"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button

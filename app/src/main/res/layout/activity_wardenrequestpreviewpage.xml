@@ -246,10 +246,12 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bdw"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/bdw"
-            app:layout_constraintTop_toBottomOf="@+id/bdw" />
+            app:layout_constraintTop_toBottomOf="@+id/bdw"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/Declinedw"
@@ -261,9 +263,12 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/addressdw"
+            app:layout_constraintHorizontal_bias="0.704"
             app:layout_constraintStart_toStartOf="@+id/addressdw"
-            app:layout_constraintTop_toBottomOf="@+id/addressdw" />
+            app:layout_constraintTop_toBottomOf="@+id/addressdw"
+            app:layout_constraintVertical_bias="0.043" />
 
         <TextView
             android:id="@+id/edatedw"
@@ -290,7 +295,7 @@
             android:id="@+id/imageView9w"
             android:layout_width="119dp"
             android:layout_height="114dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/edatedw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
