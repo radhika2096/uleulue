@@ -295,7 +295,7 @@
             android:id="@+id/imageView9w"
             android:layout_width="119dp"
             android:layout_height="114dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/edatedw"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
