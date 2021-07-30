@@ -143,7 +143,7 @@
             android:id="@+id/acceptd"
             android:layout_width="167dp"
             android:layout_height="43dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="56dp"
             android:background="@drawable/inpuut_bg"
             android:text="Accept"
             android:textColor="@color/colorWhite"
@@ -151,18 +151,19 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/history2"
             app:layout_constraintEnd_toEndOf="@+id/bdw"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/bdw"
-            app:layout_constraintTop_toBottomOf="@+id/addressd"
+            app:layout_constraintTop_toBottomOf="@+id/bdw"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/Declined"
             android:layout_width="167dp"
             android:layout_height="43dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
             android:background="@drawable/inpuut_bg"
             android:text="Decline"
             android:textColor="@color/colorWhite"
@@ -170,12 +171,12 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/history2"
             app:layout_constraintEnd_toEndOf="@+id/addressd"
-            app:layout_constraintHorizontal_bias="0.409"
-            app:layout_constraintStart_toStartOf="@+id/addressd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/acceptd"
             app:layout_constraintTop_toBottomOf="@+id/addressd"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.533" />
 
         <TextView
             android:id="@+id/d"
@@ -221,7 +222,7 @@
             android:id="@+id/A"
             android:layout_width="155dp"
             android:layout_height="49dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="24dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -232,7 +233,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView9"
-            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintHorizontal_bias="0.197"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
@@ -259,7 +260,7 @@
             android:id="@+id/edated"
             android:layout_width="211dp"
             android:layout_height="49dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="sans-serif-condensed"
             android:hint="ENTRY DATE"
             android:paddingLeft="20dp"
@@ -289,15 +290,18 @@
 
         <Button
             android:id="@+id/history2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
+            android:layout_width="190dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/btnn_bg"
+
+            android:text="HISTORY"
+            app:backgroundTint="@color/design_default_color_primary"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.047"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.01" />
+            app:layout_constraintEnd_toEndOf="@+id/Declined"
+            app:layout_constraintStart_toStartOf="@+id/acceptd"
+            app:layout_constraintTop_toBottomOf="@+id/addressd"
+            app:layout_constraintVertical_bias="0.194" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

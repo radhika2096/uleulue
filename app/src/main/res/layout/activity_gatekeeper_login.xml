@@ -56,7 +56,7 @@
         android:layout_width="232dp"
         android:layout_height="49dp"
 
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/inpuut_bg"
 
         android:text="LOGIN"
@@ -65,6 +65,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintEnd_toEndOf="@+id/cPassword3"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/cPassword3"
         app:layout_constraintTop_toBottomOf="@+id/cPassword3"
         app:rippleColor="@color/colorRed" />
@@ -113,17 +114,18 @@
         android:id="@+id/cPassword3"
         android:layout_width="350dp"
         android:layout_height="58dp"
-
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
+        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="PASSWORD"
         android:inputType="textPassword"
+
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingRight="20dp"
         android:paddingBottom="10dp"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
@@ -150,11 +152,11 @@
         android:id="@+id/remember4"
         android:layout_width="107dp"
         android:layout_height="45dp"
-        android:layout_marginTop="12dp"
         android:text="Check Box"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/clogin"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clogin" />
+        app:layout_constraintBottom_toTopOf="@+id/clogin"
+        app:layout_constraintEnd_toEndOf="@+id/cPassword3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cPassword3"
+        app:layout_constraintTop_toBottomOf="@+id/cPassword3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

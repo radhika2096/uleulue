@@ -66,7 +66,7 @@ public class matapitaprofileView extends AppCompatActivity {
         nameinoutpass = findViewById(R.id.nameinstudentutpass);
         exittime = findViewById(R.id.exitTime2);
         cardView = findViewById(R.id.cardView);
-        newreq = findViewById(R.id.newreq);
+
 
 
         pushreqtoparent = findViewById(R.id.pushreqtowarden);
