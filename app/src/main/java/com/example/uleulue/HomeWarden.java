@@ -23,12 +23,13 @@ public class HomeWarden extends AppCompatActivity {
     private FirebaseUser user2;
     private DatabaseReference reference2;
     private String userId2;
-    private Button logout2,viewreq;
+    private Button logout2,viewreq,history;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_warden);
         viewreq = findViewById(R.id.viewreq);
+        history = findViewById(R.id.his);
         viewreq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +48,13 @@ public class HomeWarden extends AppCompatActivity {
                 editor3.putString("remember3","false");
                 editor3.apply();
               finish();
+            }
+        });
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(HomeWarden.this,forHistoryFindStudentsInWarden.class));
             }
         });
 

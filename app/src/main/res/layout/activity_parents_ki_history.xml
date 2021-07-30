@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bacchokipuranikatha">
+    tools:context=".parentsKiHistory">
 
     <ListView
         android:id="@+id/lv"
@@ -17,12 +17,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
     </ListView>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView32"
         android:layout_width="305dp"
         android:layout_height="50dp"
         android:text="History"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.506" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageViewp"
         android:layout_width="120dp"
         android:layout_height="95dp"
         app:layout_constraintBottom_toTopOf="@+id/lv"
@@ -48,5 +48,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.421"
         app:srcCompat="@drawable/jgiicon" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

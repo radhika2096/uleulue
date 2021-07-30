@@ -186,4 +186,13 @@
         app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/jgiicon" />
 
+    <Button
+        android:id="@+id/his"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="history"
+        app:layout_constraintEnd_toEndOf="@+id/viewreq"
+        app:layout_constraintStart_toStartOf="@+id/wbutton"
+        tools:layout_editor_absoluteY="652dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

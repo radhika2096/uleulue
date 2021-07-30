@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -30,13 +33,17 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
     private Button signinn;
     private FirebaseAuth mAuth;
     private ProgressBar progresssBar;
+    String checkbox5;
+
+
+    CheckBox remember5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_gatekeeper_login);
-
+        remember5 = findViewById(R.id.r4);
         ttregister = (TextView) findViewById(R.id.cregister2);
         ttregister.setOnClickListener(this);
         forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
@@ -47,6 +54,38 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
         editPassword = (EditText) findViewById(R.id.cPassword3);
         progresssBar = (ProgressBar) findViewById(R.id.cprogressBar3);
         mAuth = FirebaseAuth.getInstance();
+        SharedPreferences preferences5 = getSharedPreferences("checkbox5",MODE_PRIVATE);
+        checkbox5 = preferences5.getString("remember5","");
+
+        if(checkbox5.equals("true"))
+        {
+            startActivity(new Intent(GatekeeperLogin.this,GatekeeperHome.class));
+        }
+        else if (checkbox5.equals("false"))
+        {
+            Toast.makeText(this,"please login",Toast.LENGTH_LONG).show();
+        }
+        remember5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked())
+                {
+                    SharedPreferences preferences5 = getSharedPreferences("checkbox5",MODE_PRIVATE);
+                    SharedPreferences.Editor editor5 = preferences5.edit();
+                    editor5.putString("remember5","true");
+                    editor5.apply();
+                    Toast.makeText(GatekeeperLogin.this,"checked",Toast.LENGTH_LONG).show();
+                }
+                else if(!compoundButton.isChecked())
+                {
+                    SharedPreferences preferences5 = getSharedPreferences("checkbox5",MODE_PRIVATE);
+                    SharedPreferences.Editor editor5 = preferences5.edit();
+                    editor5.putString("remember","false");
+                    editor5.apply();
+                    Toast.makeText(GatekeeperLogin.this,"Unchecked",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     @Override

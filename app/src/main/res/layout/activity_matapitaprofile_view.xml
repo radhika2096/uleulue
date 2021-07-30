@@ -145,8 +145,8 @@
 
             <EditText
                 android:id="@+id/nameinstudentutpass"
-                android:layout_width="316dp"
-                android:layout_height="42dp"
+                android:layout_width="347dp"
+                android:layout_height="47dp"
                 android:background="@drawable/inpuut_bg"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -212,9 +212,9 @@
 
     <Button
         android:id="@+id/cancelRequest"
-        android:layout_width="176dp"
-        android:layout_height="48dp"
-        android:text="cancel Request"
+        android:layout_width="185dp"
+        android:layout_height="57dp"
+        android:text="cancel Request or new request"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
@@ -236,20 +236,6 @@
         app:layout_constraintStart_toStartOf="@+id/showPhone"
         app:layout_constraintTop_toBottomOf="@+id/showPhone"
         app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/newreq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
-        android:text="new request"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list"
-        app:layout_constraintVertical_bias="0.212" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -285,17 +271,19 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cancelRequest"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintVertical_bias="0.786" />
 
     <Button
         android:id="@+id/ViewbacchokiHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="638dp" />
+        android:text="History"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pushreqtowarden" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

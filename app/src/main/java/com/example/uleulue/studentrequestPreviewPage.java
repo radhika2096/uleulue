@@ -32,7 +32,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
     FirebaseAuth mAuth;
     String userid1;
     TextView entryDatesh, Addresssh, exitDatesh,entrytimesh, exittimesh;
-    Button accept,decline,gobacktohome;
+    Button accept,decline,gobacktohome,history;
     ImageView tick;
     ConstraintLayout constraintLayout;
     String entrytime,entryDate, exittime,exitDate,Address;
@@ -43,7 +43,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
         setContentView(R.layout.activity_studentrequest_preview_page);
          userid1 = getIntent().getStringExtra("userkey1");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
-
+        history = findViewById(R.id.history2);
         entryDatesh = (TextView) findViewById(R.id.edated);
         exitDatesh = (TextView) findViewById(R.id.d);
         entrytimesh =(TextView)  findViewById(R.id.entimedw);
@@ -74,6 +74,15 @@ public class studentrequestPreviewPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 declinereq(userid1);
+
+            }
+        });
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(studentrequestPreviewPage.this,parentsKiHistory.class);
+                intent.putExtra("ud2",userid1);
+                startActivity(intent);
 
             }
         });

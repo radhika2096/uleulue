@@ -19,8 +19,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class bacchokipuranikatha extends AppCompatActivity {
-   ListView listView;
+public class parentsKiHistory extends AppCompatActivity {
+    ListView listView;
     DatabaseReference mUserRef;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -28,12 +28,12 @@ public class bacchokipuranikatha extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bacchokipuranikatha);
-        userid = getIntent().getStringExtra("ui");
-       exd= getIntent().getStringExtra("exd");
+        setContentView(R.layout.activity_parents_ki_history);
+        userid = getIntent().getStringExtra("ud2");
+
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-        mUserRef = FirebaseDatabase.getInstance().getReference().child("completedjourneysDetails").child(mUser.getUid());
+        mUserRef = FirebaseDatabase.getInstance().getReference().child("completedjourneysDetails").child(userid);
 
         listView = findViewById(R.id.lv);
         ArrayList<String> list = new ArrayList<>();
