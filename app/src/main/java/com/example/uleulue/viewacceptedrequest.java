@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -34,7 +33,7 @@ public class viewacceptedrequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewacceptedrequest);
-        recyclerView = findViewById(R.id.rc5);
+        recyclerView = findViewById(R.id.rc0);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mUserRef = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
 

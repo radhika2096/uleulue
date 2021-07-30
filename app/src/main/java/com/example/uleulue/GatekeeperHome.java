@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ public class GatekeeperHome extends AppCompatActivity {
     private FirebaseUser user3;
     private DatabaseReference reference3;
     private String userId3;
-    private Button logout3,viewacc;
+    private Button logout3,viewacc,history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,12 @@ public class GatekeeperHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(GatekeeperHome.this, GatekeeperLogin.class));
+                SharedPreferences preferences5 = getSharedPreferences("checkbox5",MODE_PRIVATE);
+
+                SharedPreferences.Editor editor5 = preferences5.edit();
+                editor5.putString("remember5","false");
+                editor5.apply();
+                finish();
             }
         });
 
@@ -49,6 +55,14 @@ public class GatekeeperHome extends AppCompatActivity {
                 startActivity(intent);
             }
                 });
+        history = findViewById(R.id.chistories);
+        viewacc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GatekeeperHome.this, forHistoryFindStudentsInWarden.class));
+
+            }
+        });
 
     final TextView greetingTextView = (TextView) findViewById(R.id.cmeratext);
     final TextView fullnameTextView = (TextView) findViewById(R.id.cnameLabel2);
@@ -67,10 +81,10 @@ public class GatekeeperHome extends AppCompatActivity {
                     String phonenumber1 = user3profile.phonenumber1;
 
 
-                    greetingTextView.setText("welcome " + fullname1);
-                    fullnameTextView.setText("Name - " + fullname1);
-                    emailTextView.setText("email - " + email1);
-                    phonenumberTextView.setText("phoneNumber- " + phonenumber1);
+                    greetingTextView.setText("WELCOME " + fullname1.toUpperCase());
+                    fullnameTextView.setText("NAME - " + fullname1.toUpperCase());
+                    emailTextView.setText("EMAIL - " + email1);
+                    phonenumberTextView.setText("PHONE NUMBER - " + phonenumber1);
 
                 }
             }

@@ -100,12 +100,13 @@ public class setrealtime extends AppCompatActivity {
        realentrytimeanddate.setVisibility(View.GONE);
 
         HashMap hashMap3 = new HashMap();
-        hashMap3.put("adress",Address);
-        hashMap3.put("ext",exittime);
-        hashMap3.put("exd",exitDate);
-        hashMap3.put("ent",entrytime);
-        hashMap3.put("end",entryDate);
         hashMap3.put("n",name);
+        hashMap3.put("adress",Address);
+        hashMap3.put("exitTime",exittime);
+        hashMap3.put("exitDate",exitDate);
+        hashMap3.put("entryTime",entrytime);
+        hashMap3.put("entryDate",entryDate);
+
         hashMap3.put("useridparents",useridparent);
         hashMap3.put("useridstudent",studentuserid);
         hashMap3.put("useridstudent",studentuserid);
