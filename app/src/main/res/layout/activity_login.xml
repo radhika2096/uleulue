@@ -60,9 +60,9 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword2"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
         app:rippleColor="@color/colorRed" />
 
@@ -89,7 +89,6 @@
         android:id="@+id/forgotPassword2"
         android:layout_width="186dp"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -100,10 +99,12 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/register"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/register"
         app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="0.455"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -137,22 +138,26 @@
         android:layout_height="103dp"
         android:layout_marginTop="24dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="@+id/btnLogin2"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin2"
+        app:layout_constraintVertical_bias="0.126" />
 
     <CheckBox
         android:id="@+id/remember2"
         android:layout_width="108dp"
         android:layout_height="42dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Check Box"
         android:textColor="#090909"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
