@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class GatekeeperRegister extends AppCompatActivity implements View.OnClickListener{
-    private EditText hname, hemail, hpassword, hphonenumber,chpassword2;
+    private EditText hname, hemail, hpassword, hphonenumber,chpassword2,address;
     private TextView hregister;
 
 
@@ -34,7 +34,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
         hregister.setOnClickListener(this);
         hname = (EditText) findViewById(R.id.chname);
         hemail = (EditText) findViewById(R.id.chemail);
-
+        address= (EditText) findViewById(R.id.cAddress);
         hpassword = (EditText) findViewById(R.id.chpassword);
         hphonenumber = (EditText) findViewById(R.id.chphoneno);
         chpassword2 = (EditText) findViewById(R.id.chpassword2);
@@ -54,7 +54,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
             String phone1 = hphonenumber.getText().toString();
             String password1 = hpassword.getText().toString();
             String password2 = chpassword2.getText().toString();
-
+            String addressstring   = address.getText().toString();
             if(name1.isEmpty())
             {
                 hname.setError("full name required");
@@ -99,7 +99,7 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        user3 useR3 = new user3(name1, email1, phone1);
+                        user3 useR3 = new user3(name1, email1, phone1,addressstring);
                         FirebaseDatabase.getInstance().getReference("gusers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                 .setValue(useR3).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
