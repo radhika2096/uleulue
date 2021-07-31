@@ -214,7 +214,7 @@
         android:layout_marginLeft="16dp"
         android:background="@drawable/btnn_bg"
         android:text="request"
-        app:backgroundTint="@color/design_default_color_primary"
+        app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cancelRequest"
         app:layout_constraintStart_toStartOf="parent"
@@ -269,7 +269,8 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/btnn_bg"
         android:text="History"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/design_default_color_primary"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"

@@ -23,19 +23,19 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="305dp"
-        android:layout_height="50dp"
+        android:layout_width="248dp"
+        android:layout_height="56dp"
         android:text="History"
         android:textAllCaps="true"
         android:textColor="#131313"
         android:textSize="34sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintVertical_bias="0.571" />
 
     <ImageView
         android:id="@+id/imageView12"
