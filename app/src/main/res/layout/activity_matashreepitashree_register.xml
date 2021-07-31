@@ -116,7 +116,7 @@
         android:id="@+id/inputPassword"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -189,7 +189,7 @@
         android:id="@+id/studentsName"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -240,9 +240,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
-        app:layout_constraintVertical_bias="0.428"
+        app:layout_constraintVertical_bias="0.513"
         app:rippleColor="@color/colorRed" />
 
     <ProgressBar
@@ -250,10 +251,22 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.775"
         app:layout_constraintStart_toEndOf="@+id/preg"
         app:layout_constraintTop_toTopOf="@+id/preg" />
+
+    <CheckBox
+        android:id="@+id/checkBoxpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toTopOf="@+id/alreadyhave"
+        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
+        app:layout_constraintVertical_bias="0.18" />
 </androidx.constraintlayout.widget.ConstraintLayout>

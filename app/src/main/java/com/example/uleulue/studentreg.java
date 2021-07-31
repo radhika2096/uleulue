@@ -8,9 +8,12 @@ package com.example.uleulue;
         import android.content.Intent;
         import android.os.Bundle;
 
+        import android.text.method.PasswordTransformationMethod;
         import android.util.Patterns;
         import android.view.View;
         import android.widget.Button;
+        import android.widget.CheckBox;
+        import android.widget.CompoundButton;
         import android.widget.EditText;
         import android.widget.ProgressBar;
         import android.widget.TextView;
@@ -24,10 +27,11 @@ package com.example.uleulue;
 
 public class studentreg extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, editTextusn,editparentsname;
+    private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, editTextusn,editparentsname,inputConfirmPassword21;
     private TextView registeruser;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    CheckBox c8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +42,24 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
         editTextname = (EditText) findViewById(R.id.nameStud2);
         editTextemail = (EditText) findViewById(R.id.emailreg);
         editTextpassword = (EditText) findViewById(R.id.passwordreg2);
+        inputConfirmPassword21 = (EditText) findViewById(R.id.inputConfirmPassword21);
         editTextphonenumber = (EditText) findViewById(R.id.phoneStud2);
         editTextusn = (EditText) findViewById(R.id.usnStud2);
         editparentsname = (EditText) findViewById(R.id.enterParentsName);
-
+        c8 = findViewById(R.id.checkBoxsr);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        c8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editTextpassword.setTransformationMethod(null);
+                    inputConfirmPassword21.setTransformationMethod(null);
+                } else {
+                    editTextpassword.setTransformationMethod(new PasswordTransformationMethod());
+                    inputConfirmPassword21.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
 
     }
 
@@ -62,6 +79,7 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
         String phone = editTextphonenumber.getText().toString();
         String password = editTextpassword.getText().toString();
         String parentsnameinstud = editparentsname.getText().toString();
+        String confirmpasswordstring = inputConfirmPassword21.getText().toString();
 
         if(name.isEmpty())
         {
@@ -108,6 +126,18 @@ public class studentreg extends AppCompatActivity implements View.OnClickListene
         if(password.length()<6)
         {
             editTextpassword.setError("min pass require length should be 6");
+            editTextpassword.requestFocus();
+            return;
+        }
+        if(confirmpasswordstring.isEmpty())
+        {
+            inputConfirmPassword21.setError("Enter Confirm Password");
+            inputConfirmPassword21.requestFocus();
+            return;
+        }
+        if(!confirmpasswordstring.equals(password))
+        {
+            editTextpassword.setError("Passwords do not match.Kindly recheck");
             editTextpassword.requestFocus();
             return;
         }

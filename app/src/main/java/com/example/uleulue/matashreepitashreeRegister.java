@@ -6,9 +6,12 @@ import androidx.annotation.NonNull;
 
         import android.content.Intent;
         import android.os.Bundle;
-        import android.view.View;
+import android.text.method.PasswordTransformationMethod;
+import android.view.View;
         import android.widget.Button;
-        import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
         import android.widget.ProgressBar;
         import android.widget.TextView;
         import android.widget.Toast;
@@ -27,6 +30,7 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
     private Button dregisteruser;
     private ProgressBar dprogressBar;
     private FirebaseAuth mAuth;
+    CheckBox c6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +46,23 @@ public class matashreepitashreeRegister extends AppCompatActivity implements Vie
         dTextstudentname = (EditText) findViewById(R.id.studentsName);
         wapasloginpejaobutton = (TextView) findViewById(R.id.alreadyhave);
         dTextcpassword = (EditText) findViewById(R.id.inputConfirmPassword);
-
+        c6 = findViewById(R.id.checkBoxpr);
         dprogressBar = (ProgressBar) findViewById(R.id.progressBar3);
+        c6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    dTextpassword.setTransformationMethod(null);
+                    dTextcpassword.setTransformationMethod(null);
+                } else {
+                    dTextpassword.setTransformationMethod(new PasswordTransformationMethod());
+                    dTextcpassword.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
     }
+
+
     public void lechaloUsPaar(View view)
     {
         startActivity(new Intent(matashreepitashreeRegister.this,ParentsLogin.class));

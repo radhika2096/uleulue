@@ -182,7 +182,7 @@
         android:id="@+id/registeer"
         android:layout_width="180dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/btnn_bg"
         android:text="Register"
         android:textColor="@color/colorWhite"
@@ -191,10 +191,12 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.276"
         app:layout_constraintStart_toStartOf="@+id/passworrd"
-        app:layout_constraintTop_toBottomOf="@+id/passworrd" />
+        app:layout_constraintTop_toBottomOf="@+id/passworrd"
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/alreadyhaveaccount"
@@ -210,4 +212,16 @@
         app:layout_constraintStart_toStartOf="@+id/registeer"
         app:layout_constraintTop_toBottomOf="@+id/registeer"
         app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBoxwr"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
+        android:text="Show Password"
+        app:layout_constraintBottom_toBottomOf="@+id/alreadyhaveaccount"
+        app:layout_constraintEnd_toEndOf="@+id/passworrd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/registeer"
+        app:layout_constraintTop_toBottomOf="@+id/passworrd"
+        app:layout_constraintVertical_bias="0.175" />
 </androidx.constraintlayout.widget.ConstraintLayout>

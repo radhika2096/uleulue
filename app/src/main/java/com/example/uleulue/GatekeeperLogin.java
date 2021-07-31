@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +37,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
     String checkbox5;
 
 
-    CheckBox remember5;
+    CheckBox remember5,c2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
         forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
         signinn = (Button) findViewById(R.id.clogin);
         signinn.setOnClickListener(this);
-
+        c2 = findViewById(R.id.checkBoxg);
         editemail = (EditText) findViewById(R.id.Cemail);
         editPassword = (EditText) findViewById(R.id.cPassword3);
         progresssBar = (ProgressBar) findViewById(R.id.cprogressBar3);
@@ -86,6 +87,17 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+        c2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editPassword.setTransformationMethod(null);
+                } else {
+                    editPassword.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
+
     }
 
     @Override

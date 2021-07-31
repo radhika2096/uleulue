@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     String checkbox2;
-    CheckBox remember2;
+    CheckBox remember2,c4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
         dregister.setOnClickListener(this);
         signin = (Button) findViewById(R.id.btnLogin2);
         signin.setOnClickListener(this);
-
+        c4 = findViewById(R.id.checkBoxp);
         dTextemail = (EditText) findViewById(R.id.inputEmail2);
         dTextPassword = (EditText) findViewById(R.id.inputPassword2);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
@@ -74,6 +75,16 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
                     editor2.putString("remember2","false");
                     editor2.apply();
                     Toast.makeText(ParentsLogin.this,"Unchecked",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        c4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    dTextPassword.setTransformationMethod(null);
+                } else {
+                    dTextPassword.setTransformationMethod(new PasswordTransformationMethod());
                 }
             }
         });

@@ -189,7 +189,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/chpassword2"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.415"
         app:layout_constraintStart_toStartOf="@+id/chpassword2"
         app:layout_constraintTop_toBottomOf="@+id/chpassword2" />
 
@@ -208,5 +208,17 @@
         app:layout_constraintStart_toStartOf="@+id/chregister"
         app:layout_constraintTop_toBottomOf="@+id/chregister"
         app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBoxgr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toBottomOf="@+id/chregister"
+        app:layout_constraintEnd_toEndOf="@+id/chpassword2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chregister"
+        app:layout_constraintTop_toBottomOf="@+id/chpassword2"
+        app:layout_constraintVertical_bias="0.52" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

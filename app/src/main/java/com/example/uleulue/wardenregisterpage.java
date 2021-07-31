@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,7 +28,7 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
     private TextView rregister;
 
     private FirebaseAuth mAuth;
-
+    CheckBox c7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +41,22 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
         rTextemail = (EditText) findViewById(R.id.Emaill);
         rTextphonenumber = (EditText) findViewById(R.id.contactnumberr);
         rTextpassword = (EditText) findViewById(R.id.passworrd);
-
+        c7 = findViewById(R.id.checkBoxwr);
         rTextsharing = (EditText) findViewById(R.id.sharring);
         rTexthostelname = (EditText) findViewById(R.id.hostelnamee);
 
+        c7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    rTextpassword.setTransformationMethod(null);
 
+                } else {
+                    rTextpassword.setTransformationMethod(new PasswordTransformationMethod());
+
+                }
+            }
+        });
     }
 
     @Override
