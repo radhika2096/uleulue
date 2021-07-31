@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +25,15 @@ import org.jetbrains.annotations.NotNull;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Random;
 
 public class setrealtime extends AppCompatActivity {
     DatabaseReference mUserRef,dalo,completedrequestkadb;
     FirebaseUser mUser;
     FirebaseAuth mAuth;
-
+    Random rn;
+    int range;
+    ImageView imageView;
     Calendar calendar,c2;
     SimpleDateFormat simpleDateFormat,s2;
     TextView entryDatesh, Addresssh, exitDatesh,entrytimesh, exittimesh;
@@ -39,7 +43,9 @@ public class setrealtime extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setrealtime);
+        imageView = findViewById(R.id.i);
       userid = getIntent().getStringExtra("userkey67");
+
         dalo = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
         completedrequestkadb = FirebaseDatabase.getInstance().getReference().child("completedjourneysDetails");
@@ -49,7 +55,8 @@ public class setrealtime extends AppCompatActivity {
         s2 = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
         date = simpleDateFormat.format(calendar.getTime());
         d2 = simpleDateFormat.format(calendar.getTime());
-
+        rn= new Random();
+        range = 40000 - 0+1;
         entryDatesh = (TextView) findViewById(R.id.eedate);
         exitDatesh = (TextView) findViewById(R.id.eexdate);
         entrytimesh =(TextView)  findViewById(R.id.eetime);
@@ -71,20 +78,43 @@ public class setrealtime extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 perfromaction2(userid,studentuserid,useridparent);
+                imageView.setVisibility(View.VISIBLE);
+
+            }
+        });
+        mUserRef.child(userid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                if(snapshot.child("realentrydateandtime").getValue().toString()!=null)
+                {
+                    realentrytimeanddate.setVisibility(View.GONE);
+                    imageView.setVisibility(View.VISIBLE);
+                }
+                if(snapshot.child("realexitdateandtime").getValue().toString()!=null)
+                { realexittimeanddate.setVisibility(View.GONE);
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                Toast.makeText(setrealtime.this,"error occured",Toast.LENGTH_LONG).show();
 
             }
         });
     }
 
     private void perfromaction2(String userid, String studentuserid, String useridparent) {
+        imageView.setVisibility(View.VISIBLE);
         HashMap hashMap2 = new HashMap();
         hashMap2.put("realentrydateandtime",d2);
         hashMap2.put("status","journey completed succesfully");
         dalo.child(studentuserid).child(useridparent).updateChildren(hashMap2).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG);
-                Toast.makeText(setrealtime.this,"trip completed",Toast.LENGTH_LONG);
+                Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG).show();
+                Toast.makeText(setrealtime.this,"trip completed",Toast.LENGTH_LONG).show();
 
             }
         });
@@ -97,10 +127,12 @@ public class setrealtime extends AppCompatActivity {
             }
         });
 
+
        realentrytimeanddate.setVisibility(View.GONE);
+       int requesuniqueid = rn.nextInt(range)+0;
 
         HashMap hashMap3 = new HashMap();
-        hashMap3.put("n",name);
+        hashMap3.put("name",name);
         hashMap3.put("adress",Address);
         hashMap3.put("exitTime",exittime);
         hashMap3.put("exitDate",exitDate);
@@ -113,7 +145,9 @@ public class setrealtime extends AppCompatActivity {
         hashMap3.put("realentrydateandtime",d2);
         hashMap3.put("realexitdateandtime",date);
 
-        completedrequestkadb.child(studentuserid).child(exitDate).updateChildren(hashMap3).addOnCompleteListener(new OnCompleteListener() {
+
+
+        completedrequestkadb.child(studentuserid).child(String.valueOf(requesuniqueid)).updateChildren(hashMap3).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"alldone",Toast.LENGTH_LONG).show();
@@ -133,7 +167,7 @@ public class setrealtime extends AppCompatActivity {
 
             }
         });
-        mUserRef.child(mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+        mUserRef.child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"you gave the real exit time",Toast.LENGTH_LONG).show();

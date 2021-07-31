@@ -20,7 +20,6 @@
         <activity android:name=".viewacceptedrequest" />
         <activity android:name=".wardenrequestpreviewpage" />
         <activity android:name=".studentsdhundoviawarden" />
-        <activity android:name=".wardendhundoViaStudents" />
         <activity android:name=".listitem" />
         <activity android:name=".matapitaprofileView" />
         <activity android:name=".studentreg" />

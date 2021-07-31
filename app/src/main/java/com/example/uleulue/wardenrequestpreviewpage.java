@@ -88,6 +88,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
                         tick.setVisibility(View.GONE);
                         accept.setVisibility(View.GONE);
                         decline.setVisibility(View.GONE);
+                        cross.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -124,7 +125,8 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
     }
     private void perfromaction2(String userid2, String studentuserid, String useridparent) {
-
+decline.setVisibility(View.GONE);
+accept.setVisibility(View.GONE);
         HashMap hashMap = new HashMap();
         hashMap.put("status2","Declined By Warden");
         dalo.child(studentuserid).child(useridparent).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {

@@ -17,13 +17,17 @@ public class regselectionpage extends AppCompatActivity {
     public void changeUser(View view){
         int a =1 , b=2, c=3,d=4;
         if(view.getTag().toString().equals(Integer.toString(a)))
-            startActivity(new Intent(regselectionpage.this,login.class));
-        if(view.getTag().toString().equals(Integer.toString(b)))
+        { startActivity(new Intent(regselectionpage.this,login.class));
+             finish();}
+        if(view.getTag().toString().equals(Integer.toString(b))){
             startActivity(new Intent(regselectionpage.this,ParentsLogin.class));
-        if(view.getTag().toString().equals(Integer.toString(c)))
+        finish();}
+        if(view.getTag().toString().equals(Integer.toString(c))){
            startActivity(new Intent(regselectionpage.this,GatekeeperLogin.class));
-        if(view.getTag().toString().equals(Integer.toString(d)))
+    finish();}
+        if(view.getTag().toString().equals(Integer.toString(d))){
           startActivity(new Intent(regselectionpage.this,wardenlogin.class));
+        finish();}
 
 
     }
