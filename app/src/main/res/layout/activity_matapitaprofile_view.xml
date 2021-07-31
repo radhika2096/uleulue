@@ -8,14 +8,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="417dp"
+        android:layout_height="417dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:visibility="visible"
-        app:cardBackgroundColor="#C0CDD8"
+        app:cardBackgroundColor="#D2FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.31"
@@ -217,9 +217,10 @@
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cancelRequest"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.778" />
 
     <ListView
         android:id="@+id/list"
@@ -273,20 +274,20 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cancelRequest"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <Button
         android:id="@+id/cancelRequest"
         android:layout_width="176dp"
         android:layout_height="53dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginTop="528dp"
         android:background="@drawable/btnn_bg"
         android:text="cancel Request"
         app:layout_constraintEnd_toEndOf="@+id/ViewbacchokiHistory"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="@+id/ViewbacchokiHistory"
         app:layout_constraintTop_toTopOf="parent" />
 
