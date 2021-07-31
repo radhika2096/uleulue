@@ -116,10 +116,10 @@
 
     <Button
         android:id="@+id/realexittimeanddate"
-        android:layout_width="356dp"
-        android:layout_height="46dp"
+        android:layout_width="382dp"
+        android:layout_height="51dp"
         android:background="@drawable/inpuut_bg"
-        android:text="press to get real exit time and date"
+        android:text="press to get exit time and date"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
@@ -214,4 +214,17 @@
         app:layout_constraintStart_toEndOf="@+id/eaddress"
         app:layout_constraintTop_toBottomOf="@+id/eetime"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/i"
+        android:layout_width="127dp"
+        android:layout_height="122dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

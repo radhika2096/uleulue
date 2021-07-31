@@ -56,7 +56,7 @@ public class GatekeeperHome extends AppCompatActivity {
             }
                 });
         history = findViewById(R.id.chistories);
-        viewacc.setOnClickListener(new View.OnClickListener() {
+        history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(GatekeeperHome.this, forHistoryFindStudentsInWarden.class));
@@ -68,6 +68,7 @@ public class GatekeeperHome extends AppCompatActivity {
     final TextView fullnameTextView = (TextView) findViewById(R.id.cnameLabel2);
     final TextView emailTextView = (TextView) findViewById(R.id.cemailadressdlabel);
     final TextView phonenumberTextView = (TextView) findViewById(R.id.cphonenumberLabel2);
+    final TextView adress= (TextView) findViewById(R.id.caddress);
 
 
         reference3.child(userId3).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -79,12 +80,15 @@ public class GatekeeperHome extends AppCompatActivity {
                     String fullname1 = user3profile.fullname1;
                     String email1 = user3profile.email1;
                     String phonenumber1 = user3profile.phonenumber1;
+                    String address1 = user3profile.address;
+
 
 
                     greetingTextView.setText("WELCOME " + fullname1.toUpperCase());
                     fullnameTextView.setText("NAME - " + fullname1.toUpperCase());
                     emailTextView.setText("EMAIL - " + email1);
                     phonenumberTextView.setText("PHONE NUMBER - " + phonenumber1);
+                    adress.setText("Address: " + address1);
 
                 }
             }

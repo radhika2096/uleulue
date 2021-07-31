@@ -57,7 +57,7 @@ public class viewacceptedrequest extends AppCompatActivity {
         adapter = new FirebaseRecyclerAdapter<acceptedrequestdhundo, matapitadhundoHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull matapitadhundoHolder holder, int position, @NonNull acceptedrequestdhundo model) {
-
+                if(model.getStatus2().toString().equals("Accepted By Warden")){
 
                 holder.username.setText(model.getAddress());
                 holder.profession.setText(model.getName());
@@ -68,11 +68,17 @@ public class viewacceptedrequest extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent = new Intent(viewacceptedrequest.this, setrealtime.class);
                         intent.putExtra("userkey67", getRef(position).getKey().toString());
+
                         startActivity(intent);
 
 
                     }}
-                );
+                );}
+                else
+                {
+                    holder.itemView.setVisibility(View.GONE);
+                    holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0,0));
+                }
             }
 
 

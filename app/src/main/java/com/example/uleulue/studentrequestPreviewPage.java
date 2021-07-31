@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 
 public class studentrequestPreviewPage extends AppCompatActivity {
-    DatabaseReference mUserRef;
+    DatabaseReference mUserRef,databaseofwarden;
     FirebaseUser mUser;
     FirebaseAuth mAuth;
     String userid1;
@@ -37,12 +38,15 @@ public class studentrequestPreviewPage extends AppCompatActivity {
     ConstraintLayout constraintLayout;
     String entrytime,entryDate, exittime,exitDate,Address;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentrequest_preview_page);
          userid1 = getIntent().getStringExtra("userkey1");
         mUserRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
+        databaseofwarden = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
+
         history = findViewById(R.id.history2);
         entryDatesh = (TextView) findViewById(R.id.edated);
         exitDatesh = (TextView) findViewById(R.id.d);
@@ -87,6 +91,30 @@ public class studentrequestPreviewPage extends AppCompatActivity {
             }
         });
         LoadUser();
+        mUserRef.child(userid1).child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                if(snapshot.child("status").getValue().toString().equals("AcceptedByParents"))
+                {
+                    constraintLayout.setVisibility(View.GONE);
+                    tick.setVisibility(View.VISIBLE);
+                    gobacktohome.setVisibility(View.VISIBLE);
+                }
+                if(snapshot.child("status").getValue().toString().equals("Declined"))
+                {
+                    Toast.makeText(studentrequestPreviewPage.this,"you declined child request",Toast.LENGTH_LONG ).show();
+                    gobacktohome.setVisibility(View.VISIBLE);
+                    constraintLayout.setVisibility(View.GONE);
+                    tick.setBackgroundResource(R.drawable.ic_cross);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void declinereq(String userid1) {
@@ -131,6 +159,36 @@ public class studentrequestPreviewPage extends AppCompatActivity {
                 {
                     Toast.makeText(studentrequestPreviewPage.this,"some error occured",Toast.LENGTH_LONG ).show();
                 }
+
+            }
+        });
+        mUserRef.child(userid1).child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    HashMap hashMap = new HashMap();
+                    hashMap.put("address", snapshot.child("address").getValue());
+                    hashMap.put("exitDate", snapshot.child("exitDate").getValue());
+                    hashMap.put("exitTime", snapshot.child("exitTime").getValue());
+                    hashMap.put("entryTime", snapshot.child("entryTime").getValue());
+                    hashMap.put("entryDate", snapshot.child("entryDate").getValue());
+                    hashMap.put("name",snapshot.child("Name").getValue());
+                    hashMap.put("useridstudent",userid1);
+                    hashMap.put("status", "AcceptedByParents");
+                    hashMap.put("status2", "pendingbywarden");
+                    hashMap.put("useridparents", mUser.getUid().toString());
+                    databaseofwarden.child(userid1).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task task) {
+                            Toast.makeText(studentrequestPreviewPage.this,"you succesfully sent request to warden",Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
 
             }
         });

@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -28,7 +25,6 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
 
 
     private FirebaseAuth mAuth;
-    CheckBox c5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,25 +34,11 @@ public class GatekeeperRegister extends AppCompatActivity implements View.OnClic
         hregister.setOnClickListener(this);
         hname = (EditText) findViewById(R.id.chname);
         hemail = (EditText) findViewById(R.id.chemail);
-       c5 = findViewById(R.id.checkBoxgr);
 
         hpassword = (EditText) findViewById(R.id.chpassword);
         hphonenumber = (EditText) findViewById(R.id.chphoneno);
         chpassword2 = (EditText) findViewById(R.id.chpassword2);
-        c5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    hpassword.setTransformationMethod(null);
-                    chpassword2.setTransformationMethod(null);
-                } else {
-                    hpassword.setTransformationMethod(new PasswordTransformationMethod());
-                    chpassword2.setTransformationMethod(new PasswordTransformationMethod());
-                }
-            }
-        });
     }
-
         @Override
         public void onClick(View view) {
             switch (view.getId()){

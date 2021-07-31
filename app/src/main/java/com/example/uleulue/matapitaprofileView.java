@@ -38,7 +38,7 @@ public class matapitaprofileView extends AppCompatActivity {
     ListView listView;
     String username, phone,email,staddress,stexitDate,stentryDate,stentrytime,  stexittime ,nameinstudentutpass;
     TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime,nameinoutpass;
-    Button btnperfrom,btndecline,newreq,pushreqtoparent,historyofstudents;
+    Button btnperfrom,btndecline,historyofstudents;
     CardView cardView;
 
 
@@ -69,7 +69,7 @@ public class matapitaprofileView extends AppCompatActivity {
 
 
 
-        pushreqtoparent = findViewById(R.id.pushreqtowarden);
+
 
         listView = findViewById(R.id.list);
         ArrayList<String> list = new ArrayList<>();
@@ -90,18 +90,6 @@ public class matapitaprofileView extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 deletereq(userid);
-
-            }
-        });
-
-        newreq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cardView.setVisibility(View.VISIBLE);
-                btnperfrom.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);
-                newreq.setVisibility(View.GONE);
-                pushreqtoparent.setVisibility(View.GONE);
 
             }
         });
@@ -137,9 +125,9 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
-                        newreq.setVisibility(View.VISIBLE);
+
                         listView.setBackgroundColor(Color.GRAY);
-                        pushreqtoparent.setVisibility(View.GONE);
+                       // pushreqtoparent.setVisibility(View.GONE);
 
                     }
                     else if(snapshot.child("status").getValue().toString().equals("Declined"))
@@ -147,9 +135,9 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
-                        newreq.setVisibility(View.VISIBLE);
+
                         listView.setBackgroundColor(Color.RED);
-                        pushreqtoparent.setVisibility(View.GONE);
+                      //  pushreqtoparent.setVisibility(View.GONE);
 
 
                     }
@@ -158,7 +146,7 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
-                        newreq.setVisibility(View.VISIBLE);
+
                         listView.setBackgroundColor(Color.MAGENTA);
 
                     }
@@ -168,10 +156,9 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
-                        newreq.setVisibility(View.VISIBLE);
-                        listView.setBackgroundColor(Color.GREEN);
-                        pushreqtoparent.setVisibility(View.VISIBLE);
-                        pushreqtoparent.setOnClickListener(new View.OnClickListener() {
+                         listView.setBackgroundColor(Color.GREEN);
+                       // pushreqtoparent.setVisibility(View.VISIBLE);
+                     /*   pushreqtoparent.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Intent intent = new Intent(matapitaprofileView.this,wardendhundoViaStudents.class);
@@ -185,7 +172,7 @@ public class matapitaprofileView extends AppCompatActivity {
                                 startActivity(intent);
 
                             }
-                        });
+                        });*/
 
                     }
 
@@ -209,11 +196,16 @@ public class matapitaprofileView extends AppCompatActivity {
         requestRef.child(mUser.getUid()).child(userid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<Void> task) {
-                Toast.makeText(matapitaprofileView.this, "request removed" , Toast.LENGTH_LONG).show();
+                if(task.isSuccessful())
+                {Toast.makeText(matapitaprofileView.this, "request removed" , Toast.LENGTH_LONG).show();
                 cardView.setVisibility(View.VISIBLE);
                 btnperfrom.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);
-                newreq.setVisibility(View.GONE);
+                listView.setVisibility(View.GONE);}
+                else
+                {
+                    Toast.makeText(matapitaprofileView.this, "error in cancelling the request" , Toast.LENGTH_LONG).show();
+                }
+
 
             }
         });

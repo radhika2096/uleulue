@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/cmeratext"
-        android:layout_width="178dp"
-        android:layout_height="73dp"
+        android:layout_width="239dp"
+        android:layout_height="109dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -24,15 +24,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
         android:id="@+id/cemailadressdlabel"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
+        android:layout_width="392dp"
+        android:layout_height="48dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/cnameLabel2"
-        android:layout_width="350dp"
+        android:layout_width="392dp"
         android:layout_height="49dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
@@ -77,8 +77,8 @@
 
     <TextView
         android:id="@+id/cphonenumberLabel2"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
+        android:layout_width="385dp"
+        android:layout_height="52dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_local_phone_24"
@@ -100,8 +100,8 @@
 
     <TextView
         android:id="@+id/caddress"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
+        android:layout_width="391dp"
+        android:layout_height="52dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_home_24"

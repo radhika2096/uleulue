@@ -44,7 +44,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_gatekeeper_login);
-        remember5 = findViewById(R.id.remember4);
+        remember5 = findViewById(R.id.r4);
         ttregister = (TextView) findViewById(R.id.cregister2);
         ttregister.setOnClickListener(this);
         forgotpassword = (TextView) findViewById(R.id.cforgotPassword);
@@ -155,8 +155,8 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
                                 .class));
                         finish();
                     } else
-                        user.sendEmailVerification();
-                    Toast.makeText(GatekeeperLogin.this, "check you mail to confirm it", Toast.LENGTH_LONG).show();
+                    { user.sendEmailVerification();
+                    Toast.makeText(GatekeeperLogin.this, "check you mail to confirm it", Toast.LENGTH_LONG).show();}
                 } else {
                     Toast.makeText(GatekeeperLogin.this, "failed to login", Toast.LENGTH_LONG).show();
                 }
