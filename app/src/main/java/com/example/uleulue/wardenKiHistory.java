@@ -33,7 +33,7 @@ public class wardenKiHistory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warden_ki_history);
+        setContentView(R.layout.activity_warden_ki_history );
         userid = getIntent().getStringExtra("userkey9810");
 
         mAuth = FirebaseAuth.getInstance();
