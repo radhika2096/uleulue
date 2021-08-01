@@ -193,28 +193,27 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="@+id/passworrd"
         app:layout_constraintTop_toBottomOf="@+id/passworrd"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/alreadyhaveaccount"
         android:layout_width="210dp"
         android:layout_height="39dp"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="4dp"
-        android:paddingLeft="10dp"
+        android:paddingLeft="5dp"
         android:text="Already have an Account?"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/registeer"
-        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/registeer"
         app:layout_constraintTop_toBottomOf="@+id/registeer"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkBoxwr"
@@ -224,8 +223,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/alreadyhaveaccount"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toEndOf="@+id/registeer"
         app:layout_constraintTop_toBottomOf="@+id/passworrd"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.09" />
 </androidx.constraintlayout.widget.ConstraintLayout>

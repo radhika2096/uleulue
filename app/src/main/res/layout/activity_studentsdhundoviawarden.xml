@@ -29,7 +29,7 @@
         android:paddingRight="10dp"
         android:text="Requests of students"
         android:textAllCaps="true"
-        android:textColor="#121111"
+        android:textColor="@color/colorWhite"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
