@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,6 +28,7 @@ public class wardenKiHistory extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     String userid;
+    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +42,7 @@ public class wardenKiHistory extends AppCompatActivity {
 
         listView = findViewById(R.id.lv);
         ArrayList<String> list = new ArrayList<>();
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.activity_list2,list);
+         adapter = new ArrayAdapter<String>(this,R.layout.activity_list2,list);
         listView.setAdapter(adapter);
 
         mUserRef.addValueEventListener(new ValueEventListener() {
@@ -60,5 +64,29 @@ public class wardenKiHistory extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
+        MenuItem menuItem=menu.findItem(R.id.action_search);
+        SearchView searchView=(SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Type here to search");
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        }) ;
+        return super.onCreateOptionsMenu(menu);
     }
 }
