@@ -120,6 +120,7 @@
         android:layout_height="51dp"
         android:background="@drawable/inpuut_bg"
         android:text="press to get exit time and date"
+        android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
@@ -132,19 +133,20 @@
 
     <Button
         android:id="@+id/realcamebacktimeanddate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
         android:background="@drawable/inpuut_bg"
         android:text="press to set time and date of entry"
+        android:textColor="@color/colorWhite"
         android:textSize="16dp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aaddress"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="@+id/eaddress"
         app:layout_constraintTop_toBottomOf="@+id/aaddress"
-        app:layout_constraintVertical_bias="0.274" />
+        app:layout_constraintVertical_bias="0.276" />
 
     <TextView
         android:id="@+id/eextime"
@@ -165,8 +167,8 @@
         android:id="@+id/eedate"
         android:layout_width="219dp"
         android:layout_height="49dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/edate"

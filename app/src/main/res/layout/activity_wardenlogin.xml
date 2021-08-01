@@ -66,8 +66,8 @@
 
     <TextView
         android:id="@+id/lforpass"
-        android:layout_width="215dp"
-        android:layout_height="46dp"
+        android:layout_width="218dp"
+        android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -89,8 +89,8 @@
 
     <TextView
         android:id="@+id/lreg"
-        android:layout_width="268dp"
-        android:layout_height="53dp"
+        android:layout_width="259dp"
+        android:layout_height="42dp"
         android:layout_marginTop="32dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -147,7 +147,7 @@
         android:layout_width="139dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
-        android:text="remember me"
+        android:text="Remember me"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lbutton"
@@ -161,7 +161,7 @@
         android:layout_width="151dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="show password"
+        android:text="Show Password"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/lbutton"
         app:layout_constraintEnd_toEndOf="@+id/lpass"
