@@ -49,12 +49,13 @@
 
         android:background="@drawable/inpuut_bg"
         android:text="Log out"
+        android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
         app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
         app:layout_constraintVertical_bias="0.0" />
@@ -66,12 +67,13 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="outpass request"
-        android:textSize="14sp"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toEndOf="@+id/logout"
         app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
         app:layout_constraintVertical_bias="0.0" />
@@ -152,7 +154,7 @@
         android:layout_width="394dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -169,7 +171,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cmeratext2"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="@+id/cmeratext2"
         app:layout_constraintTop_toBottomOf="@+id/cmeratext2" />
 
