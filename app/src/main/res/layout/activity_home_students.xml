@@ -78,9 +78,9 @@
 
     <TextView
         android:id="@+id/cmeratext2"
-        android:layout_width="178dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="255dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="60dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -93,13 +93,13 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/Headline"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Headline"
         app:layout_constraintTop_toBottomOf="@+id/Headline" />
 
     <TextView
         android:id="@+id/pname"
-        android:layout_width="350dp"
+        android:layout_width="394dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/Emailadressdlabel"
-        android:layout_width="350dp"
+        android:layout_width="394dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -149,8 +149,8 @@
 
     <TextView
         android:id="@+id/nameLabel"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
+        android:layout_width="394dp"
+        android:layout_height="50dp"
 
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -175,7 +175,7 @@
 
     <TextView
         android:id="@+id/USNlabel"
-        android:layout_width="350dp"
+        android:layout_width="394dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -200,7 +200,7 @@
 
     <TextView
         android:id="@+id/phonenumberLabel"
-        android:layout_width="350dp"
+        android:layout_width="394dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"

@@ -193,10 +193,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="@+id/passworrd"
         app:layout_constraintTop_toBottomOf="@+id/passworrd"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.384" />
 
     <TextView
         android:id="@+id/alreadyhaveaccount"
@@ -215,13 +215,14 @@
 
     <CheckBox
         android:id="@+id/checkBoxwr"
-        android:layout_width="128dp"
+        android:layout_width="149dp"
         android:layout_height="43dp"
         android:text="Show Password"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/alreadyhaveaccount"
         app:layout_constraintEnd_toEndOf="@+id/passworrd"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/registeer"
         app:layout_constraintTop_toBottomOf="@+id/passworrd"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

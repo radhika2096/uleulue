@@ -63,6 +63,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(studentrequestPreviewPage.this,ParentsHome.class));
+                finish();
 
             }
         });

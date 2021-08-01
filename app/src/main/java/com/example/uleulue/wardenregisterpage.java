@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class wardenregisterpage extends AppCompatActivity implements View.OnClickListener {
     private EditText rTextname, rTextemail, rTextpassword, rTextphonenumber, rTextsharing, rTexthostelname;
-    private TextView rregister;
+    private TextView rregister,al2;
 
     private FirebaseAuth mAuth;
     CheckBox c7;
@@ -38,6 +38,7 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
         rregister = (Button) findViewById(R.id.registeer);
         rregister.setOnClickListener(this);
         rTextname = (EditText) findViewById(R.id.namee);
+        al2 = (TextView) findViewById(R.id.alreadyhaveaccount);
         rTextemail = (EditText) findViewById(R.id.Emaill);
         rTextphonenumber = (EditText) findViewById(R.id.contactnumberr);
         rTextpassword = (EditText) findViewById(R.id.passworrd);
@@ -55,6 +56,14 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
                     rTextpassword.setTransformationMethod(new PasswordTransformationMethod());
 
                 }
+            }
+        });
+        al2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(wardenregisterpage.this,wardenlogin.class));
+                finish();
+
             }
         });
     }

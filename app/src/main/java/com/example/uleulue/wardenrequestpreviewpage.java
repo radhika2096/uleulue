@@ -30,11 +30,11 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
     FirebaseUser mUser;
     FirebaseAuth mAuth;
     String userid2;
-    TextView entryDateshw, Addressshw, exitDateshw,entrytimeshw, exittimeshw;
+    TextView entryDateshw, Addressshw, exitDateshw,entrytimeshw, exittimeshw,namet;
     Button accept,decline,gobacktohome;
     ImageView tick,cross;
 
-    String entrytime,entryDate, exittime,exitDate,Address,studentuserid,useridparent;
+    String entrytime,entryDate, exittime,exitDate,Address,studentuserid,useridparent,name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +45,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
 
         entryDateshw = (TextView) findViewById(R.id.edatedw);
+        namet = (TextView) findViewById(R.id.nameDw);
         exitDateshw = (TextView) findViewById(R.id.dw);
         entrytimeshw =(TextView)  findViewById(R.id.entimedw);
         exittimeshw =(TextView)  findViewById(R.id.extimedw);
@@ -98,6 +99,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
             }
         });
+
     }
 
 
@@ -161,12 +163,14 @@ accept.setVisibility(View.GONE);
                     Address = snapshot.child("address").getValue().toString();
                     studentuserid = snapshot.child("useridstudent").getValue().toString();
                     useridparent = snapshot.child("useridparents").getValue().toString();
+                    name = snapshot.child("name").getValue().toString();
 
                     entryDateshw.setText(entryDate);
                     exitDateshw.setText(exitDate);
                     entrytimeshw.setText( entrytime);
                     exittimeshw.setText(exittime);
                     Addressshw.setText(Address);
+                    namet.setText(name);
 
                 }
                 else {

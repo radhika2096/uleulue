@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 
 import android.view.View;
@@ -32,7 +33,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     String checkbox;
 
 
-    CheckBox remember;
+    CheckBox remember,c1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         register.setOnClickListener(this);
         signin = (Button) findViewById(R.id.btnLogin2);
         signin.setOnClickListener(this);
+        c1 = findViewById(R.id.c);
 
         editTextemail = (EditText) findViewById(R.id.inputEmail2);
         editTextPassword = (EditText) findViewById(R.id.inputPassword2);
@@ -77,6 +79,16 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                     editor.putString("remember","false");
                     editor.apply();
                     Toast.makeText(login.this,"Unchecked",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        c1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editTextPassword.setTransformationMethod(null);
+                } else {
+                    editTextPassword.setTransformationMethod(new PasswordTransformationMethod());
                 }
             }
         });
