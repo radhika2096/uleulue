@@ -6,32 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".wardenrequestpreviewpage">
 
-    <ImageView
-        android:id="@+id/tickw"
-        android:layout_width="113dp"
-        android:layout_height="97dp"
-        android:background="@drawable/ic_baseline_check_circle_24"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1w"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
-
-    <ImageView
-        android:id="@+id/cross"
-        android:layout_width="129dp"
-        android:layout_height="105dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout1w"
-        app:layout_constraintVertical_bias="0.98"
-        app:srcCompat="@android:drawable/ic_delete" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout1w"
         android:layout_width="410dp"
@@ -50,7 +24,7 @@
             android:id="@+id/ADw"
             android:layout_width="155dp"
             android:layout_height="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:paddingRight="10dp"
@@ -69,27 +43,32 @@
             android:id="@+id/gobacktohomew"
             android:layout_width="152dp"
             android:layout_height="69dp"
+            android:layout_marginTop="8dp"
             android:text="Go back to home"
             android:visibility="invisible"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="660dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cross"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@+id/tickw"
+            app:layout_constraintTop_toBottomOf="@+id/Declinedw" />
 
         <Button
             android:id="@+id/acceptdw"
             android:layout_width="167dp"
             android:layout_height="43dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/inpuut_bg"
             android:text="Accept"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bdw"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/bdw"
-            app:layout_constraintTop_toBottomOf="@+id/bdw"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
         <TextView
             android:id="@+id/bdw"
@@ -255,24 +234,23 @@
             android:id="@+id/Declinedw"
             android:layout_width="167dp"
             android:layout_height="43dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="36dp"
             android:background="@drawable/inpuut_bg"
             android:text="Decline"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="@color/design_default_color_primary_variant"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/addressdw"
-            app:layout_constraintHorizontal_bias="0.704"
+            app:layout_constraintHorizontal_bias="0.386"
             app:layout_constraintStart_toStartOf="@+id/addressdw"
-            app:layout_constraintTop_toBottomOf="@+id/addressdw"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/addressdw" />
 
         <TextView
             android:id="@+id/edatedw"
             android:layout_width="211dp"
             android:layout_height="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="sans-serif-condensed"
             android:hint="Entry Date"
             android:paddingLeft="10dp"
@@ -295,17 +273,17 @@
             android:layout_height="114dp"
             app:layout_constraintBottom_toTopOf="@+id/edatedw"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.835"
+            app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.352"
             app:srcCompat="@drawable/jgiicon" />
 
         <TextView
             android:id="@+id/nameDw"
             android:layout_width="246dp"
             android:layout_height="51dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="60dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
             android:paddingRight="10dp"
@@ -316,10 +294,34 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/imageView9w"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="113dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/Declinedw"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="@+id/Declinedw"
+            app:layout_constraintTop_toBottomOf="@+id/addressdw"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/tickw"
+            android:layout_width="113dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/ic_baseline_check_circle_24"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/acceptdw"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="@+id/acceptdw"
+            app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

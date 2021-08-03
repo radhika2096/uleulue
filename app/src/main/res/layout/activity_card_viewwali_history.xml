@@ -20,7 +20,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="student History"
+            android:text="Student History"
             android:textSize="34sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
@@ -28,6 +28,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/r45"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="681dp" />
 
 </LinearLayout>

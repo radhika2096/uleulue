@@ -25,6 +25,7 @@
         android:id="@+id/imageView17"
         android:layout_width="100dp"
         android:layout_height="114dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +73,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/Headline"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/Headline"
         app:layout_constraintTop_toBottomOf="@+id/Headline" />
 
@@ -81,7 +82,7 @@
         android:layout_width="350dp"
         android:layout_height="49dp"
 
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -97,7 +98,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cmeratext3"
-        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="@+id/cmeratext3"
         app:layout_constraintTop_toBottomOf="@+id/cmeratext3" />
 
@@ -105,7 +106,7 @@
         android:id="@+id/Emailadressdlabel"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="5dp"
@@ -130,7 +131,7 @@
         android:id="@+id/studentname"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_account_circle_24"
         android:drawablePadding="5dp"
@@ -154,7 +155,7 @@
         android:id="@+id/USNlabel"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_create_24"
         android:drawablePadding="5dp"
@@ -178,7 +179,7 @@
         android:id="@+id/phonenumberLabel"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_local_phone_24"
         android:drawablePadding="5dp"
@@ -212,13 +213,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttons"
         app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="@+id/buttons" />
+        app:layout_constraintStart_toStartOf="@+id/buttons"
+        app:layout_constraintTop_toBottomOf="@+id/buttons" />
 
     <Button
         android:id="@+id/buttons"
         android:layout_width="186dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:text="select student"
         android:textColor="@color/colorWhite"
@@ -226,9 +228,9 @@
         android:textStyle="bold"
         android:visibility="visible"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
-        app:layout_constraintHorizontal_bias="0.536"
-        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel" />
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

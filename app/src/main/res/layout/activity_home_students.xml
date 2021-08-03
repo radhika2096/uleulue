@@ -45,7 +45,6 @@
         android:id="@+id/logout"
         android:layout_width="169dp"
         android:layout_height="56dp"
-        android:layout_marginTop="40dp"
 
         android:background="@drawable/inpuut_bg"
         android:text="Log out"
@@ -58,13 +57,12 @@
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
         app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.533" />
 
     <Button
         android:id="@+id/outpassrequest"
         android:layout_width="169dp"
         android:layout_height="56dp"
-        android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="outpass request"
         android:textColor="@color/colorWhite"
@@ -76,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toEndOf="@+id/logout"
         app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/cmeratext2"
@@ -101,7 +99,7 @@
 
     <TextView
         android:id="@+id/pname"
-        android:layout_width="394dp"
+        android:layout_width="392dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -126,7 +124,7 @@
 
     <TextView
         android:id="@+id/Emailadressdlabel"
-        android:layout_width="394dp"
+        android:layout_width="392dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -151,7 +149,7 @@
 
     <TextView
         android:id="@+id/nameLabel"
-        android:layout_width="394dp"
+        android:layout_width="392dp"
         android:layout_height="50dp"
 
         android:layout_marginTop="32dp"
@@ -177,7 +175,7 @@
 
     <TextView
         android:id="@+id/USNlabel"
-        android:layout_width="394dp"
+        android:layout_width="392dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -202,7 +200,7 @@
 
     <TextView
         android:id="@+id/phonenumberLabel"
-        android:layout_width="394dp"
+        android:layout_width="392dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
