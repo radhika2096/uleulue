@@ -35,6 +35,7 @@
         android:layout_height="50dp"
         android:background="@drawable/btnn_bg"
         android:text="History"
+        android:textColor="#F6F0F0"
         app:backgroundTint="#3949AB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -165,10 +166,10 @@
             app:backgroundTint="@color/design_default_color_primary_variant"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Declined"
-            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintHorizontal_bias="0.216"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bdw"
-            app:layout_constraintVertical_bias="0.409" />
+            app:layout_constraintVertical_bias="0.34" />
 
         <Button
             android:id="@+id/Declined"
@@ -186,7 +187,7 @@
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addressd"
-            app:layout_constraintVertical_bias="0.267" />
+            app:layout_constraintVertical_bias="0.181" />
 
         <TextView
             android:id="@+id/d"

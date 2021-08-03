@@ -72,9 +72,9 @@
 
     <TextView
         android:id="@+id/cforgotPassword"
-        android:layout_width="186dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="167dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -85,16 +85,18 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cregister2"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/cregister2"
         app:layout_constraintTop_toBottomOf="@+id/cregister2"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cregister2"
-        android:layout_width="272dp"
-        android:layout_height="45dp"
+        android:layout_width="223dp"
+        android:layout_height="42dp"
         android:layout_marginTop="164dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -116,7 +118,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_password"
-        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
+
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="PASSWORD"
@@ -149,8 +151,8 @@
 
     <CheckBox
         android:id="@+id/r4"
-        android:layout_width="107dp"
-        android:layout_height="45dp"
+        android:layout_width="146dp"
+        android:layout_height="41dp"
         android:text="Check Box"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/clogin"
@@ -161,14 +163,16 @@
 
     <CheckBox
         android:id="@+id/checkBoxg"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
+        android:layout_width="146dp"
+        android:layout_height="41dp"
         android:layout_marginBottom="68dp"
-        android:text="CheckBox"
+        android:text="Show Password"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/clogin"
         app:layout_constraintEnd_toEndOf="@+id/cPassword3"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/cPassword3"
         app:layout_constraintTop_toTopOf="@+id/cPassword3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.951" />
 </androidx.constraintlayout.widget.ConstraintLayout>
