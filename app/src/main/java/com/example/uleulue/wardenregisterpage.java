@@ -12,19 +12,17 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class wardenregisterpage extends AppCompatActivity implements View.OnClickListener {
-    private EditText rTextname, rTextemail, rTextpassword, rTextphonenumber, rTextsharing, rTexthostelname;
+    private EditText rTextname, rTextemail, rTextpassword,rTextconpassword, rTextphonenumber, rTextsharing, rTexthostelname;
     private TextView rregister,al2;
 
     private FirebaseAuth mAuth;
@@ -45,7 +43,7 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
         c7 = findViewById(R.id.checkBoxwr);
         rTextsharing = (EditText) findViewById(R.id.sharring);
         rTexthostelname = (EditText) findViewById(R.id.hostelnamee);
-
+        rTextconpassword= (EditText) findViewById(R.id.confirmmpassword);
         c7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -86,7 +84,7 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
 
         String ppassword = rTextpassword.getText().toString();
         String hhostelname = rTexthostelname.getText().toString();
-
+        String conpass= rTextconpassword.getText().toString();
         if(nname.isEmpty()) {
             rTextname.setError("full name required");
             rTextname.requestFocus();
@@ -133,6 +131,20 @@ public class wardenregisterpage extends AppCompatActivity implements View.OnClic
         {
             rTextpassword.setError("min pass require length should be 6");
             rTextpassword.requestFocus();
+            return;
+        }
+
+
+        if(conpass.isEmpty())
+        {
+            rTextconpassword.setError("Enter Confirm Password");
+            rTextconpassword.requestFocus();
+            return;
+        }
+        if(!conpass.equals(ppassword))
+        {
+            rTextconpassword.setError("Passwords do not match.Kindly recheck");
+            rTextconpassword.requestFocus();
             return;
         }
         mAuth.createUserWithEmailAndPassword(eemail,ppassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
