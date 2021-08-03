@@ -17,14 +17,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="417dp"
-            android:layout_height="564dp">
+            android:layout_width="406dp"
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/exitDate2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginBottom="168dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_calendar_today_2421"
                 android:drawablePadding="5dp"
@@ -36,19 +36,16 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textColorHint="#0B0A0A"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/exitTime2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/exitTime2"
-                app:layout_constraintTop_toBottomOf="@+id/exitTime2"
-                app:layout_constraintVertical_bias="0.777" />
+                app:layout_constraintTop_toBottomOf="@+id/exitTime2" />
 
             <EditText
                 android:id="@+id/exitTime2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
 
-                android:layout_marginTop="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="5dp"
@@ -60,39 +57,39 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textColorHint="#0B0A0A"
-                app:layout_constraintEnd_toEndOf="@+id/entryDate2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/adress2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/entryDate2"
-                app:layout_constraintTop_toBottomOf="@+id/entryDate2" />
+                app:layout_constraintStart_toStartOf="@+id/adress2"
+                app:layout_constraintTop_toBottomOf="@+id/adress2"
+                app:layout_constraintVertical_bias="0.086" />
 
             <EditText
                 android:id="@+id/entryTime2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_access_time_24"
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:hint=" Enter Entry Time"
                 android:inputType="time"
-                android:padding="10dp"
 
+                android:padding="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textColorHint="#0B0A0A"
-                app:layout_constraintBottom_toTopOf="@+id/entryDate2"
-                app:layout_constraintEnd_toEndOf="@+id/adress2"
+                app:layout_constraintEnd_toEndOf="@+id/exitDate2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/adress2"
-                app:layout_constraintTop_toBottomOf="@+id/adress2"
-                app:layout_constraintVertical_bias="0.636" />
+                app:layout_constraintStart_toStartOf="@+id/exitDate2"
+                app:layout_constraintTop_toBottomOf="@+id/exitDate2" />
 
             <EditText
                 android:id="@+id/entryDate2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="116dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
 
@@ -108,7 +105,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/entryTime2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/entryTime2"
-                app:layout_constraintTop_toTopOf="@+id/adress2" />
+                app:layout_constraintTop_toBottomOf="@+id/entryTime2" />
 
             <EditText
                 android:id="@+id/adress2"
@@ -188,6 +185,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473" />
 
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="406dp"
+        android:layout_height="284dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+    </ListView>
+
     <TextView
         android:id="@+id/showPhone"
         android:layout_width="278dp"
@@ -215,18 +222,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86" />
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="406dp"
-        android:layout_height="284dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView">
-
-    </ListView>
 
     <TextView
         android:id="@+id/showEmail"
