@@ -315,12 +315,12 @@
             android:id="@+id/tickw"
             android:layout_width="113dp"
             android:layout_height="97dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/ic_baseline_check_circle_24"
             android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="@+id/acceptdw"
-            app:layout_constraintHorizontal_bias="0.574"
-            app:layout_constraintStart_toStartOf="@+id/acceptdw"
+            app:layout_constraintEnd_toStartOf="@+id/addressdw"
+            app:layout_constraintHorizontal_bias="0.611"
+            app:layout_constraintStart_toStartOf="@+id/bdw"
             app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
 
