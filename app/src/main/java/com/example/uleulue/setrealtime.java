@@ -81,7 +81,7 @@ public class setrealtime extends AppCompatActivity {
                 imageView.setVisibility(View.VISIBLE);
 
             }
-        });
+        }) ;
        /* mUserRef.child(userid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {

@@ -10,7 +10,7 @@ public class sabconstructorhistoryke {
         this.adress=adress;
         this.entryDate=entryDate;
         this.entryTime=entryTime;
-    this.exitDate=exitDate;
+    this.exitDate=exitDate ;
         this.exitTime=exitTime;
         this.name=name;
         this.realentrydateandtime=realentrydateandtime;

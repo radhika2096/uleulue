@@ -17,7 +17,7 @@ public class layoutHistoryHolder extends RecyclerView.ViewHolder {
         exitdateinh=itemView.findViewById(R.id.exdinh);
         entrydateinh=itemView.findViewById(R.id.entdinh);
         realeninh =itemView.findViewById(R.id.rentdinh2);
-        realexinh =itemView.findViewById(R.id.rextdinh);
+        realexinh =itemView.findViewById(R.id.rextdinh) ;
 
     }
 }

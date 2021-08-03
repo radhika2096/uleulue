@@ -44,7 +44,7 @@ public class forHistoryFindStudentsInWarden extends AppCompatActivity {
         recyclerView1.setLayoutManager(new LinearLayoutManager(this));
         mUserRef = FirebaseDatabase.getInstance().getReference().child("users");
         mAuth = FirebaseAuth.getInstance();
-        muser = mAuth.getCurrentUser();
+        muser = mAuth.getCurrentUser() ;
 
         loadUsers("");
     }

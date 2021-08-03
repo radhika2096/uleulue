@@ -9,6 +9,6 @@ public class layoutofHistory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layoutof_history);
+        setContentView(R.layout.activity_layoutof_history) ;
     }
 }
