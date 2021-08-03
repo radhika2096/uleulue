@@ -303,10 +303,10 @@
             android:id="@+id/cross"
             android:layout_width="113dp"
             android:layout_height="97dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/Declinedw"
-            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintHorizontal_bias="0.462"
             app:layout_constraintStart_toStartOf="@+id/Declinedw"
             app:layout_constraintTop_toBottomOf="@+id/addressdw"
             app:srcCompat="@android:drawable/ic_delete" />
@@ -319,7 +319,7 @@
             android:background="@drawable/ic_baseline_check_circle_24"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/acceptdw"
-            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintHorizontal_bias="0.574"
             app:layout_constraintStart_toStartOf="@+id/acceptdw"
             app:layout_constraintTop_toBottomOf="@+id/bdw" />
 
