@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
 public class cardViewwaliHistory extends AppCompatActivity {
     FirebaseRecyclerOptions<sabconstructorhistoryke> options;
     FirebaseRecyclerAdapter<sabconstructorhistoryke,layoutHistoryHolder>adapter;
-    DatabaseReference mUserRef;
+    DatabaseReference mUserRef    ;
     FirebaseAuth mAuth;
     FirebaseUser muser;
     RecyclerView recyclerView;
