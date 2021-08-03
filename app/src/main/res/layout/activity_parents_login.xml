@@ -15,10 +15,12 @@
         android:text="Remember me"
         android:textColor="#090909"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintVertical_bias="0.206" />
 
     <EditText
         android:id="@+id/inputEmail2"
@@ -58,7 +60,6 @@
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
         android:textColor="#050505"
@@ -174,6 +175,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

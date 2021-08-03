@@ -42,7 +42,7 @@
         android:id="@+id/inputUsername"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_family_restroom_24"
         android:drawablePadding="5dp"
@@ -67,7 +67,7 @@
         android:id="@+id/inputEmail3"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="5dp"
@@ -91,7 +91,7 @@
         android:id="@+id/inputConfirmPassword"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -116,7 +116,7 @@
         android:id="@+id/inputPassword"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -140,7 +140,7 @@
         android:id="@+id/inputUsn"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_create_24"
         android:drawablePadding="5dp"
@@ -215,6 +215,7 @@
         android:layout_width="190dp"
         android:layout_height="22dp"
         android:onClick="lechaloUsPaar"
+        android:paddingLeft="10dp"
         android:text="Already have an account?"
         android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
@@ -222,28 +223,27 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/preg"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/preg"
         app:layout_constraintTop_toBottomOf="@+id/preg"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <Button
         android:id="@+id/preg"
         android:layout_width="180dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="24dp"
 
+        android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="REGISTER"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
-        app:layout_constraintVertical_bias="0.632"
         app:rippleColor="@color/colorRed" />
 
     <ProgressBar
@@ -260,14 +260,15 @@
 
     <CheckBox
         android:id="@+id/checkBoxpr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="show password"
+        android:layout_width="135dp"
+        android:layout_height="32dp"
+        android:text="Show Password"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/alreadyhave"
         app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
