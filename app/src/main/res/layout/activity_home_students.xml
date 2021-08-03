@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/logout"
         android:layout_width="169dp"
-        android:layout_height="56dp"
+        android:layout_height="49dp"
 
         android:background="@drawable/inpuut_bg"
         android:text="Log out"
@@ -62,7 +62,7 @@
     <Button
         android:id="@+id/outpassrequest"
         android:layout_width="169dp"
-        android:layout_height="56dp"
+        android:layout_height="49dp"
         android:background="@drawable/inpuut_bg"
         android:text="outpass request"
         android:textColor="@color/colorWhite"
@@ -80,7 +80,7 @@
         android:id="@+id/cmeratext2"
         android:layout_width="255dp"
         android:layout_height="72dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -99,7 +99,7 @@
 
     <TextView
         android:id="@+id/pname"
-        android:layout_width="392dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/Emailadressdlabel"
-        android:layout_width="392dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -149,7 +149,7 @@
 
     <TextView
         android:id="@+id/nameLabel"
-        android:layout_width="392dp"
+        android:layout_width="391dp"
         android:layout_height="50dp"
 
         android:layout_marginTop="32dp"
@@ -175,7 +175,7 @@
 
     <TextView
         android:id="@+id/USNlabel"
-        android:layout_width="392dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
@@ -200,7 +200,7 @@
 
     <TextView
         android:id="@+id/phonenumberLabel"
-        android:layout_width="392dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"

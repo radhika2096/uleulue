@@ -30,9 +30,9 @@
 
     <TextView
         android:id="@+id/wname"
-        android:layout_width="350dp"
+        android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -48,15 +48,15 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/wdetails"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="@+id/wdetails"
         app:layout_constraintTop_toBottomOf="@+id/wdetails" />
 
     <TextView
         android:id="@+id/wemail"
-        android:layout_width="350dp"
+        android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="5dp"
@@ -78,9 +78,9 @@
 
     <TextView
         android:id="@+id/wnum"
-        android:layout_width="350dp"
+        android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_local_phone_24"
         android:drawablePadding="5dp"
@@ -96,15 +96,15 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/wshar"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/wshar"
         app:layout_constraintTop_toBottomOf="@+id/wshar" />
 
     <TextView
         android:id="@+id/wshar"
-        android:layout_width="350dp"
+        android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_text_fields_24"
         android:drawablePadding="5dp"
@@ -126,9 +126,9 @@
 
     <TextView
         android:id="@+id/whostname"
-        android:layout_width="350dp"
+        android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_apartment_24"
         android:drawablePadding="5dp"
@@ -143,17 +143,15 @@
         android:textColorLink="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/wnum"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/wnum"
-        app:layout_constraintTop_toBottomOf="@+id/wnum"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/wnum" />
 
     <Button
         android:id="@+id/wbutton"
         android:layout_width="169dp"
-        android:layout_height="56dp"
+        android:layout_height="49dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="LOGOUT"
@@ -171,10 +169,10 @@
     <Button
         android:id="@+id/viewreq"
         android:layout_width="174dp"
-        android:layout_height="52dp"
+        android:layout_height="49dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
-        android:text="ViewRequest"
+        android:text="View Request"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -201,7 +199,7 @@
     <Button
         android:id="@+id/his"
         android:layout_width="172dp"
-        android:layout_height="51dp"
+        android:layout_height="49dp"
         android:layout_marginTop="12dp"
 
         android:background="@drawable/inpuut_bg"

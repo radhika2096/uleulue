@@ -199,6 +199,7 @@
         android:layout_width="192dp"
         android:layout_height="22dp"
         android:layout_marginTop="12dp"
+        android:paddingLeft="7dp"
         android:text=" Already have an account?"
         android:textColor="@color/colorBlack"
         android:textSize="14sp"
