@@ -222,7 +222,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/showPhone"
         app:layout_constraintTop_toBottomOf="@+id/showPhone"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/showPhone"
