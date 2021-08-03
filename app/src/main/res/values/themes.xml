@@ -5,6 +5,7 @@
         <item name="colorPrimaryVariant">@color/purple_500</item>
         <item name="colorOnPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/design_default_color_primary_dark</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorPrimaryDark</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
