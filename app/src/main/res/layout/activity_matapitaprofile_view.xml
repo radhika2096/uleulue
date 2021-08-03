@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="417dp"
-        android:layout_height="402dp"
+        android:layout_width="407dp"
+        android:layout_height="421dp"
         android:visibility="visible"
         app:cardBackgroundColor="#C0CDD8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="406dp"
-            android:layout_height="match_parent">
+            android:layout_height="413dp">
 
             <EditText
                 android:id="@+id/exitDate2"
@@ -180,10 +180,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.128" />
 
     <ListView
         android:id="@+id/list"
@@ -222,7 +222,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/showPhone"
         app:layout_constraintTop_toBottomOf="@+id/showPhone"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/showPhone"
@@ -241,8 +241,10 @@
         android:layout_height="114dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toEndOf="@+id/showPhone"
         app:layout_constraintTop_toTopOf="@+id/usernameparentsshow"
+        app:layout_constraintVertical_bias="0.028"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
