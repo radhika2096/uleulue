@@ -180,10 +180,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <ListView
         android:id="@+id/list"
@@ -231,8 +231,9 @@
         android:text="Phone No:"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="106dp" />
+        app:layout_constraintEnd_toEndOf="@+id/usernameparentsshow"
+        app:layout_constraintStart_toStartOf="@+id/usernameparentsshow"
+        app:layout_constraintTop_toBottomOf="@+id/usernameparentsshow" />
 
     <ImageView
         android:id="@+id/imageView8"
