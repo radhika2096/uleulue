@@ -157,6 +157,7 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="LOGOUT"
+        android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
@@ -174,6 +175,7 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="ViewRequest"
+        android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
@@ -200,16 +202,18 @@
         android:id="@+id/his"
         android:layout_width="172dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/btnn_bg"
+        android:layout_marginTop="12dp"
 
+        android:background="@drawable/inpuut_bg"
         android:text="history"
-        app:backgroundTint="@color/design_default_color_primary"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/viewreq"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/wbutton"
-        app:layout_constraintTop_toBottomOf="@+id/whostname"
-        app:layout_constraintVertical_bias="0.90999997" />
+        app:layout_constraintTop_toBottomOf="@+id/viewreq"
+        app:layout_constraintVertical_bias="0.133" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
