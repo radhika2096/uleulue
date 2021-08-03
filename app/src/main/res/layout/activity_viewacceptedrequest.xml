@@ -55,10 +55,10 @@
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/toolbar5"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/jgiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
