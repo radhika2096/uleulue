@@ -10,7 +10,7 @@
         android:id="@+id/edate"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -20,7 +20,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -108,10 +108,10 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.052"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
@@ -126,10 +126,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/realcamebacktimeanddate"
         app:layout_constraintTop_toBottomOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.166" />
 
     <Button
         android:id="@+id/realcamebacktimeanddate"
@@ -143,10 +143,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aaddress"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="@+id/eaddress"
         app:layout_constraintTop_toBottomOf="@+id/aaddress"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <TextView
         android:id="@+id/eextime"
@@ -156,6 +156,8 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="104dp"
         android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/aaddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -167,10 +169,12 @@
         android:id="@+id/eedate"
         android:layout_width="219dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/edate"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -182,6 +186,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/eedate"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/etime"
@@ -195,6 +201,8 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/eextime"
         app:layout_constraintEnd_toEndOf="@+id/eedate"
         app:layout_constraintHorizontal_bias="0.0"
@@ -210,12 +218,14 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="160dp"
         android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/eextime"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/eaddress"
         app:layout_constraintTop_toBottomOf="@+id/eetime"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <ImageView
         android:id="@+id/i"

@@ -9,14 +9,14 @@
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="114dp"
-        android:layout_height="100dp"
+        android:layout_width="89dp"
+        android:layout_height="81dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
+        app:layout_constraintVertical_bias="0.006"
         app:srcCompat="@drawable/jgiicon" />
 
     <TextView
@@ -32,10 +32,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView20"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.361"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <EditText
         android:id="@+id/enterParentsName"
@@ -65,7 +65,7 @@
         android:id="@+id/nameStud2"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -202,7 +202,7 @@
         app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword21"
-        app:layout_constraintVertical_bias="0.054"
+        app:layout_constraintVertical_bias="0.0"
         app:rippleColor="@color/colorRed" />
 
     <Button
@@ -217,10 +217,10 @@
         app:backgroundTint="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/preg2"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="@+id/preg2"
         app:layout_constraintTop_toBottomOf="@+id/preg2"
-        app:layout_constraintVertical_bias="0.405"
+        app:layout_constraintVertical_bias="0.055"
         tools:ignore="MissingConstraints" />
 
     <EditText

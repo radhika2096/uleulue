@@ -125,7 +125,7 @@
         android:id="@+id/chistories"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/inpuut_bg"
         android:text="HISTORY"
         android:textColor="@color/colorWhite"
@@ -133,7 +133,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
         app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
@@ -141,7 +141,7 @@
         android:id="@+id/crequests"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/inpuut_bg"
         android:text="LogOut"
         android:textColor="@color/colorWhite"
@@ -149,7 +149,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
         app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
@@ -166,10 +166,9 @@
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/chistories"
-        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="@+id/crequests"
         app:layout_constraintTop_toBottomOf="@+id/crequests"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView15"
