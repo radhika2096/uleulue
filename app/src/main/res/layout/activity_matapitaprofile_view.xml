@@ -8,30 +8,23 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_width="417dp"
+        android:layout_height="402dp"
         android:visibility="visible"
         app:cardBackgroundColor="#C0CDD8"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="397dp"
-            android:layout_height="match_parent">
+            android:layout_width="417dp"
+            android:layout_height="564dp">
 
             <EditText
                 android:id="@+id/exitDate2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="168dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_calendar_today_2421"
                 android:drawablePadding="5dp"
@@ -42,18 +35,20 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="#090909"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/exitTime2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/exitTime2" />
+                app:layout_constraintStart_toStartOf="@+id/exitTime2"
+                app:layout_constraintTop_toBottomOf="@+id/exitTime2"
+                app:layout_constraintVertical_bias="0.777" />
 
             <EditText
                 android:id="@+id/exitTime2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
 
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="5dp"
@@ -64,17 +59,16 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="#0E0E0E"
-                app:layout_constraintBottom_toTopOf="@+id/exitDate2"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintEnd_toEndOf="@+id/entryDate2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/entryDate2" />
+                app:layout_constraintStart_toStartOf="@+id/entryDate2"
+                app:layout_constraintTop_toBottomOf="@+id/entryDate2" />
 
             <EditText
                 android:id="@+id/entryTime2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginBottom="12dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_access_time_24"
                 android:drawablePadding="5dp"
@@ -86,21 +80,23 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="#151515"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintBottom_toTopOf="@+id/entryDate2"
                 app:layout_constraintEnd_toEndOf="@+id/adress2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/adress2" />
+                app:layout_constraintStart_toStartOf="@+id/adress2"
+                app:layout_constraintTop_toBottomOf="@+id/adress2"
+                app:layout_constraintVertical_bias="0.636" />
 
             <EditText
                 android:id="@+id/entryDate2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="116dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
-                android:drawablePadding="5dp"
 
+                android:drawablePadding="5dp"
                 android:ems="10"
                 android:hint="Enter Entry date"
                 android:inputType="date"
@@ -108,16 +104,17 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="#101010"
-                app:layout_constraintBottom_toTopOf="@+id/exitTime2"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintEnd_toEndOf="@+id/entryTime2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/entryTime2" />
+                app:layout_constraintStart_toStartOf="@+id/entryTime2"
+                app:layout_constraintTop_toTopOf="@+id/adress2" />
 
             <EditText
                 android:id="@+id/adress2"
                 android:layout_width="350dp"
                 android:layout_height="47dp"
+                android:layout_marginTop="124dp"
                 android:background="@drawable/inpuut_bg"
                 android:drawableLeft="@drawable/ic_baseline_add_location_24"
                 android:drawablePadding="5dp"
@@ -128,30 +125,29 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="#0C0C0C"
-                app:layout_constraintBottom_toTopOf="@+id/entryTime2"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintEnd_toEndOf="@+id/nameinstudentutpass"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/nameinstudentutpass"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.93" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="346dp"
-                android:layout_height="52dp"
+                android:layout_width="337dp"
+                android:layout_height="42dp"
                 android:layout_marginTop="8dp"
                 android:text=" Student OutPass"
                 android:textAllCaps="true"
-                android:textColor="#420707"
+                android:textColor="#0C276A"
+                android:textColorHint="#0E0E0E"
                 android:textSize="34sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/nameinstudentutpass"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.588"
+                app:layout_constraintHorizontal_bias="0.574"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.4" />
 
             <EditText
                 android:id="@+id/nameinstudentutpass"
@@ -165,13 +161,13 @@
                 android:hint="Name"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                android:textColorHint="#101010"
+                android:textColorHint="#0B0A0A"
                 app:layout_constraintBottom_toTopOf="@+id/adress2"
                 app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.985" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,10 +183,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.473" />
 
     <TextView
         android:id="@+id/showPhone"
@@ -204,7 +200,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/usernameparentsshow"
         app:layout_constraintTop_toBottomOf="@+id/usernameparentsshow"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.204" />
 
     <Button
         android:id="@+id/request9810"
@@ -212,24 +208,23 @@
         android:layout_height="53dp"
         android:background="@drawable/btnn_bg"
         android:text="request"
+        android:textColor="@color/colorWhite"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintVertical_bias="0.86" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="398dp"
-        android:layout_height="353dp"
+        android:layout_width="406dp"
+        android:layout_height="284dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38">
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
 
     </ListView>
 
@@ -246,48 +241,44 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/showPhone"
         app:layout_constraintTop_toBottomOf="@+id/showPhone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="100dp"
         android:layout_height="114dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toEndOf="@+id/usernameparentsshow"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/showPhone"
+        app:layout_constraintTop_toTopOf="@+id/usernameparentsshow"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
         android:id="@+id/ViewbacchokiHistory"
-        android:layout_width="183dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="197dp"
+        android:layout_height="53dp"
         android:background="@drawable/btnn_bg"
         android:text="History"
-        app:backgroundTint="@color/design_default_color_primary"
+        android:textColor="@color/colorWhite"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelRequest"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelRequest"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/cancelRequest"
+        app:layout_constraintTop_toTopOf="@+id/cancelRequest" />
 
     <Button
         android:id="@+id/cancelRequest"
         android:layout_width="176dp"
         android:layout_height="53dp"
         android:background="@drawable/btnn_bg"
-        android:text="cancel or new Request"
+        android:text="cancel/new Request"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.948" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
