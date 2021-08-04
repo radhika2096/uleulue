@@ -104,8 +104,8 @@
 
             <TextView
                 android:id="@+id/exdinh"
-                android:layout_width="394dp"
-                android:layout_height="43dp"
+                android:layout_width="408dp"
+                android:layout_height="50dp"
                 android:layout_marginEnd="64dp"
                 android:layout_marginRight="64dp"
                 android:text="exit Date"
@@ -120,7 +120,7 @@
             <TextView
                 android:id="@+id/rextdinh"
                 android:layout_width="match_parent"
-                android:layout_height="59dp"
+                android:layout_height="61dp"
                 android:text="real exit time and date"
                 android:textColor="#D81B60"
                 android:textSize="24sp"
@@ -133,7 +133,7 @@
             <TextView
                 android:id="@+id/rentdinh2"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="73dp"
                 android:text="real entry time and date"
                 android:textColor="#D81B60"
                 android:textSize="24sp"
