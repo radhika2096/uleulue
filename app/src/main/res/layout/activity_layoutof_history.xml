@@ -10,8 +10,8 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="412dp"
-        android:layout_height="502dp"
+        android:layout_width="399dp"
+        android:layout_height="639dp"
         android:background="#221F1F"
         app:cardBackgroundColor="#FAF8F8"
         app:cardCornerRadius="5dp"
@@ -23,25 +23,25 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:layout_width="418dp"
+            android:layout_width="422dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="94dp"
+                android:layout_width="128dp"
+                android:layout_height="110dp"
+                android:background="@drawable/ic_face"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_face" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/nmaeinhistory"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:text="name"
-                android:textColor="#D81B60"
+                android:layout_height="53dp"
+                android:text="Name:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -54,10 +54,10 @@
             <TextView
                 android:id="@+id/Addressinh"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:text="Address"
-                android:textColor="#D81B60"
-                android:textSize="20sp"
+                android:layout_height="57dp"
+                android:text="Address:"
+                android:textColor="#673AB7"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/nmaeinhistory"
                 app:layout_constraintStart_toStartOf="@+id/nmaeinhistory"
@@ -66,11 +66,11 @@
             <TextView
                 android:id="@+id/entinh"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="53dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginRight="1dp"
-                android:text="entry time"
-                android:textColor="#D81B60"
+                android:text="Entry Time:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/rextdinh"
@@ -80,9 +80,9 @@
             <TextView
                 android:id="@+id/entdinh"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:text="entry date"
-                android:textColor="#D81B60"
+                android:layout_height="53dp"
+                android:text="Entry Date:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/exdinh"
@@ -92,9 +92,9 @@
             <TextView
                 android:id="@+id/extinh"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:text="exit time"
-                android:textColor="#D81B60"
+                android:layout_height="48dp"
+                android:text="Exit Time:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/entinh"
@@ -104,12 +104,12 @@
 
             <TextView
                 android:id="@+id/exdinh"
-                android:layout_width="408dp"
-                android:layout_height="50dp"
+                android:layout_width="409dp"
+                android:layout_height="52dp"
                 android:layout_marginEnd="64dp"
                 android:layout_marginRight="64dp"
-                android:text="exit Date"
-                android:textColor="#D81B60"
+                android:text="Exit Date:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/entdinh"
@@ -121,8 +121,8 @@
                 android:id="@+id/rextdinh"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:text="real exit time and date"
-                android:textColor="#D81B60"
+                android:text="Real Exit Time And Date:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -133,9 +133,9 @@
             <TextView
                 android:id="@+id/rentdinh2"
                 android:layout_width="match_parent"
-                android:layout_height="73dp"
-                android:text="real entry time and date"
-                android:textColor="#D81B60"
+                android:layout_height="64dp"
+                android:text="Real Entry Time And Date:"
+                android:textColor="#673AB7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
