@@ -62,11 +62,11 @@ public class viewacceptedrequest extends AppCompatActivity {
         adapter = new FirebaseRecyclerAdapter<acceptedrequestdhundo, matapitadhundoHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull matapitadhundoHolder holder, @SuppressLint("RecyclerView") int position, @NonNull acceptedrequestdhundo model) {
-                if(model.getStatus2().toString().equals("Accepted By Warden")){
+                if(model.getStatus().toString().equals("AcceptedByParents")){
 
                 holder.username.setText(model.getAddress());
                 holder.profession.setText(model.getName());
-                holder.studentsname.setText(model.getStatus2());
+                holder.studentsname.setText(model.getStatus());
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override

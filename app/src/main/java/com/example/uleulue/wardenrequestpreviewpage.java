@@ -61,7 +61,18 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                perfromaction1(userid2,studentuserid,useridparent);
+                perfromaction34(userid2,studentuserid,useridparent);
+                HashMap hashMap67 = new HashMap();
+                hashMap67.put("status2","Accepted By Warden");
+
+                mUserRef2.child(userid2).updateChildren(hashMap67).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task task) {
+                        Toast.makeText(wardenrequestpreviewpage.this,"you accepted child request",Toast.LENGTH_LONG);
+
+                    }
+                });
+
 
             }
         });
@@ -73,7 +84,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
             }
         });
-        mUserRef2.child(userid2).addValueEventListener(new ValueEventListener() {
+      dalo.child(studentuserid).child(useridparent).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if (snapshot.exists())
@@ -103,17 +114,8 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
     }
 
 
-    private void perfromaction1(String userid2, String studentuserid, String useridparent) {
-        HashMap hashMap67 = new HashMap();
-        hashMap67.put("status2","Accepted By Warden");
+    private void perfromaction34(String userid2, String studentuserid, String useridparent) {
 
-        mUserRef2.child(userid2).updateChildren(hashMap67).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(wardenrequestpreviewpage.this,"you accepted child request",Toast.LENGTH_LONG);
-
-            }
-        });
 
         HashMap hashMap = new HashMap();
         hashMap.put("status2","Accepted By Warden");

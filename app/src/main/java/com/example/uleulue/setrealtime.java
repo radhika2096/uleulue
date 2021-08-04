@@ -38,7 +38,7 @@ public class setrealtime extends AppCompatActivity {
     SimpleDateFormat simpleDateFormat,s2;
     TextView entryDatesh, Addresssh, exitDatesh,entrytimesh, exittimesh;
     Button realexittimeanddate,realentrytimeanddate;
-    String entrytime,entryDate,exittime,exitDate,Address,studentuserid,useridparent,userid,date,d2,name;
+    String entrytime,entryDate, exittime,exitDate,Address,studentuserid,useridparent,userid,date,d2,name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +82,12 @@ public class setrealtime extends AppCompatActivity {
 
             }
         }) ;
-       /* mUserRef.child(userid).addValueEventListener(new ValueEventListener() {
+       // check();
+
+    }
+
+    private void check() {
+        mUserRef.child(userid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if(snapshot.child("realentrydateandtime").getValue().toString()!=null)
@@ -102,7 +107,7 @@ public class setrealtime extends AppCompatActivity {
                 Toast.makeText(setrealtime.this,"error occured",Toast.LENGTH_LONG).show();
 
             }
-        });*/
+        });
     }
 
     private void perfromaction2(String userid, String studentuserid, String useridparent) {
@@ -198,7 +203,7 @@ public class setrealtime extends AppCompatActivity {
 
                         entryDatesh.setText(entryDate);
                         exitDatesh.setText(exitDate);
-                        entrytimesh.setText(entrytime);
+                        entrytimesh.setText( entrytime);
                         exittimesh.setText(exittime);
                         Addresssh.setText(Address);
 
