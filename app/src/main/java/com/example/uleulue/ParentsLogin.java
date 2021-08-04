@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ParentsLogin extends AppCompatActivity implements View.OnClickListener {
     private EditText dTextemail, dTextPassword;
-    private TextView  dregister;
+    private TextView  dregister,dforgotpassword;
     private Button signin;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
@@ -37,6 +37,15 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_parents_login);
         dregister = (TextView) findViewById(R.id.register);
         dregister.setOnClickListener(this);
+        dforgotpassword = (TextView) findViewById(R.id.forgotPassword2);
+        dforgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ParentsLogin.this, forgotpassword.class));
+            }
+        });
+
+
         signin = (Button) findViewById(R.id.btnLogin2);
         signin.setOnClickListener(this);
         c4 = findViewById(R.id.checkBoxp);
@@ -102,6 +111,10 @@ public class ParentsLogin extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btnLogin2:
                 userLogin();
+                break;
+
+            case R.id.forgotPassword2:
+                startActivity(new Intent(this,forgotpassword.class));
                 break;
         }
 

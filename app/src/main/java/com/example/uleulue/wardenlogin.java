@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class wardenlogin extends AppCompatActivity  implements View.OnClickListener{
     private EditText edTextemail, edTextPassword;
-    private TextView edregister;
+    private TextView edregister,edforgotpassword;
     private Button edsignin;
     private FirebaseAuth mAuth;
     private ProgressBar edprogressBar;
@@ -38,6 +38,14 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
         setContentView(R.layout.activity_wardenlogin);
         edregister = (TextView) findViewById(R.id.lreg);
         edregister.setOnClickListener(this);
+
+        edforgotpassword = (TextView) findViewById(R.id.lforpass);
+        edforgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(wardenlogin.this, forgotpassword.class));
+            }
+        });
         edsignin= (Button) findViewById(R.id.lbutton);
         edsignin.setOnClickListener(this);
         remember3 = findViewById(R.id.remember3);
@@ -104,6 +112,10 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
 
             case R.id.lbutton:
                 userLogin();
+                break;
+
+            case R.id.lforpass:
+                startActivity(new Intent(this,forgotpassword.class));
                 break;
         }
 
