@@ -48,24 +48,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
 
+
     <Button
         android:id="@+id/btnLogin2"
         android:layout_width="232dp"
         android:layout_height="49dp"
 
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/inpuut_bg"
         android:text="LOGIN"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/c"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/remember2"
+        app:layout_constraintTop_toBottomOf="@+id/c"
         app:rippleColor="@color/colorRed" />
-
 
     <TextView
         android:id="@+id/register"
@@ -81,7 +81,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnLogin2"
         app:layout_constraintTop_toBottomOf="@+id/progressBar2"
         tools:ignore="MissingConstraints" />
@@ -138,7 +138,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="93dp"
         android:layout_height="103dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin2"
@@ -155,24 +155,21 @@
         android:text="Remember Me"
         android:textColor="#090909"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
 
     <CheckBox
         android:id="@+id/c"
         android:layout_width="141dp"
         android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:text="Show Password"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
-        app:layout_constraintStart_toEndOf="@+id/remember2"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
