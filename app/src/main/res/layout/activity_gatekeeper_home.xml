@@ -125,7 +125,7 @@
         android:id="@+id/chistories"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/inpuut_bg"
         android:text="HISTORY"
         android:textColor="@color/colorWhite"
@@ -141,7 +141,7 @@
         android:id="@+id/crequests"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/inpuut_bg"
         android:text="LogOut"
         android:textColor="@color/colorWhite"
@@ -157,7 +157,6 @@
         android:id="@+id/cviewaccepted"
         android:layout_width="229dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
         android:background="@drawable/btnn_bg"
         android:text="View Accepted Request"
         android:textColor="@color/colorWhite"
@@ -166,10 +165,10 @@
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/chistories"
-        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/crequests"
-        app:layout_constraintTop_toBottomOf="@+id/crequests"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/chistories"
+        app:layout_constraintVertical_bias="0.209" />
 
     <ImageView
         android:id="@+id/imageView15"
