@@ -97,6 +97,12 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GatekeeperLogin.this,forgotpassword.class));
+            }
+        });
 
     }
 
@@ -110,9 +116,7 @@ public class GatekeeperLogin extends AppCompatActivity implements View.OnClickLi
             case R.id.clogin:
                 userLoginn();
                 break;
-            case R.id.cforgotPassword:
-                startActivity(new Intent(this,forgotpassword.class));
-                break;
+
 
         }
 

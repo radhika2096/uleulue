@@ -41,7 +41,7 @@ public class HomeStudents extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
 
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("remember","false");
+                editor.putString("remember","false") ;
                 editor.apply();
                 finish();
 

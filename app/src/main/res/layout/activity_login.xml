@@ -150,7 +150,7 @@
     <CheckBox
         android:id="@+id/remember2"
         android:layout_width="141dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:text="Remember Me"
         android:textColor="#090909"
@@ -163,7 +163,7 @@
     <CheckBox
         android:id="@+id/c"
         android:layout_width="141dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:text="Show Password"
         android:textStyle="bold"
