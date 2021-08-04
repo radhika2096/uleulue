@@ -257,10 +257,8 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/checkBoxsr"
-        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toEndOf="@+id/preg2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxsr"
-        app:layout_constraintVertical_bias="0.438" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxsr" />
 
     <CheckBox
         android:id="@+id/checkBoxsr"

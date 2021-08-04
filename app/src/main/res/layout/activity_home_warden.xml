@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/wname"
-        android:layout_width="390dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/inpuut_bg"
@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/wemail"
-        android:layout_width="390dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
@@ -78,7 +78,7 @@
 
     <TextView
         android:id="@+id/wnum"
-        android:layout_width="390dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
@@ -102,7 +102,7 @@
 
     <TextView
         android:id="@+id/wshar"
-        android:layout_width="390dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
@@ -126,7 +126,7 @@
 
     <TextView
         android:id="@+id/whostname"
-        android:layout_width="390dp"
+        android:layout_width="391dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
