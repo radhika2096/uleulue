@@ -18,16 +18,16 @@ public class regselectionpage extends AppCompatActivity {
         int a =1 , b=2, c=3,d=4;
         if(view.getTag().toString().equals(Integer.toString(a)))
         { startActivity(new Intent(regselectionpage.this,login.class));
-             finish();}
+             }
         if(view.getTag().toString().equals(Integer.toString(b))){
             startActivity(new Intent(regselectionpage.this,ParentsLogin.class));
-        finish();}
+        }
         if(view.getTag().toString().equals(Integer.toString(c))){
            startActivity(new Intent(regselectionpage.this,GatekeeperLogin.class));
-    finish();}
+   }
         if(view.getTag().toString().equals(Integer.toString(d))){
           startActivity(new Intent(regselectionpage.this,wardenlogin.class));
-        finish();}
+        }
 
 
     }

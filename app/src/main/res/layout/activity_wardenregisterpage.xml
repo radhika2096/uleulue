@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <ImageView
         android:id="@+id/imageView21"
@@ -195,7 +195,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/registeer"
         app:layout_constraintTop_toBottomOf="@+id/registeer"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/registeer"
@@ -217,10 +217,10 @@
 
     <CheckBox
         android:id="@+id/checkBoxwr"
-        android:layout_width="143dp"
-        android:layout_height="43dp"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
         android:text="Show Password"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/confirmmpassword"
         app:layout_constraintHorizontal_bias="1.0"

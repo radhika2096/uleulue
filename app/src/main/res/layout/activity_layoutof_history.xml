@@ -13,7 +13,7 @@
         android:layout_width="412dp"
         android:layout_height="502dp"
         android:background="#221F1F"
-        app:cardBackgroundColor="#B5ABAB"
+        app:cardBackgroundColor="#FAF8F8"
         app:cardCornerRadius="5dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"

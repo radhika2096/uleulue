@@ -107,10 +107,10 @@ public class setrealtime extends AppCompatActivity {
 
     private void perfromaction2(String userid, String studentuserid, String useridparent) {
         imageView.setVisibility(View.VISIBLE);
-        HashMap hashMap2 = new HashMap();
-        hashMap2.put("realentrydateandtime",d2);
-        hashMap2.put("status","journey completed succesfully");
-        dalo.child(studentuserid).child(useridparent).updateChildren(hashMap2).addOnCompleteListener(new OnCompleteListener() {
+        HashMap hashMap8 = new HashMap();
+        hashMap8.put("realentrydateandtime",d2);
+        hashMap8.put("status","journey completed succesfully");
+        dalo.child(studentuserid).child(useridparent).updateChildren(hashMap8).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG).show();
@@ -118,7 +118,7 @@ public class setrealtime extends AppCompatActivity {
 
             }
         });
-        mUserRef.child(userid).updateChildren(hashMap2).addOnCompleteListener(new OnCompleteListener() {
+        mUserRef.child(userid).updateChildren(hashMap8).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG);
@@ -158,16 +158,16 @@ public class setrealtime extends AppCompatActivity {
     }
 
     private void perfromaction1(String userid, String studentuserid, String useridparent) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("realexitdateandtime",date);
-        dalo.child(studentuserid).child(useridparent).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+        HashMap hashMap7 = new HashMap();
+        hashMap7.put("realexitdateandtime",date);
+        dalo.child(userid).child(useridparent).updateChildren(hashMap7).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"you gave the real exit time",Toast.LENGTH_LONG).show();
 
             }
         });
-        mUserRef.child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+        mUserRef.child(userid).updateChildren(hashMap7).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 Toast.makeText(setrealtime.this,"you gave the real exit time",Toast.LENGTH_LONG).show();
