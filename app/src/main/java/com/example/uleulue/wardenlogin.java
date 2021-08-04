@@ -36,7 +36,7 @@ public class wardenlogin extends AppCompatActivity  implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wardenlogin);
-        edregister = (TextView) findViewById(R.id.lreg);
+        edregister =(TextView) findViewById(R.id.lreg);
         edregister.setOnClickListener(this);
 
         edforgotpassword = (TextView) findViewById(R.id.lforpass);

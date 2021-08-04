@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ParentsLogin extends AppCompatActivity implements View.OnClickListener {
     private EditText dTextemail, dTextPassword;
-    private TextView  dregister,dforgotpassword;
+    private TextView  dregister, dforgotpassword;
     private Button signin;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
