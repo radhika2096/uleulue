@@ -10,7 +10,7 @@
         android:id="@+id/edate"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -19,18 +19,16 @@
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <TextView
         android:id="@+id/eaddress"
         android:layout_width="155dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -39,18 +37,14 @@
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintEnd_toEndOf="@+id/extime"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/extime"
-        app:layout_constraintTop_toBottomOf="@+id/extime"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/extime" />
 
     <TextView
         android:id="@+id/extime"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -59,18 +53,14 @@
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintEnd_toEndOf="@+id/exdate"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/exdate"
-        app:layout_constraintTop_toBottomOf="@+id/exdate"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/exdate" />
 
     <TextView
         android:id="@+id/etime"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -79,8 +69,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edate"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edate"
         app:layout_constraintTop_toBottomOf="@+id/edate" />
 
@@ -88,7 +76,7 @@
         android:id="@+id/exdate"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -97,8 +85,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/etime"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etime"
         app:layout_constraintTop_toBottomOf="@+id/etime" />
 
@@ -108,10 +94,10 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
@@ -126,108 +112,112 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/realcamebacktimeanddate"
         app:layout_constraintTop_toBottomOf="@+id/realcamebacktimeanddate"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.288" />
 
     <Button
         android:id="@+id/realcamebacktimeanddate"
-        android:layout_width="327dp"
-        android:layout_height="48dp"
+        android:layout_width="382dp"
+        android:layout_height="51dp"
         android:background="@drawable/inpuut_bg"
         android:text="press to set time and date of entry"
         android:textColor="@color/colorWhite"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aaddress"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="@+id/eaddress"
-        app:layout_constraintTop_toBottomOf="@+id/aaddress"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintTop_toBottomOf="@+id/eaddress"
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/eextime"
-        android:layout_width="219dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/aaddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/extime"
+        app:layout_constraintEnd_toEndOf="@+id/eexdate"
         app:layout_constraintStart_toEndOf="@+id/extime"
-        app:layout_constraintTop_toBottomOf="@+id/eetime"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toTopOf="@+id/extime"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/eedate"
-        android:layout_width="219dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edate"
+        app:layout_constraintEnd_toEndOf="@+id/i"
         app:layout_constraintStart_toEndOf="@+id/edate"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toTopOf="@+id/edate"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/eetime"
-        android:layout_width="219dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etime"
         app:layout_constraintEnd_toEndOf="@+id/eedate"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/etime"
-        app:layout_constraintTop_toBottomOf="@+id/eedate" />
+        app:layout_constraintTop_toTopOf="@+id/etime"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/eexdate"
-        android:layout_width="219dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/eextime"
-        app:layout_constraintEnd_toEndOf="@+id/eedate"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exdate"
+        app:layout_constraintEnd_toEndOf="@+id/eetime"
         app:layout_constraintStart_toEndOf="@+id/exdate"
-        app:layout_constraintTop_toBottomOf="@+id/eetime"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintTop_toTopOf="@+id/exdate"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/aaddress"
-        android:layout_width="204dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="160dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/eaddress"
         app:layout_constraintEnd_toEndOf="@+id/eextime"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/eaddress"
-        app:layout_constraintTop_toBottomOf="@+id/eetime"
+        app:layout_constraintTop_toTopOf="@+id/eaddress"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/i"
-        android:layout_width="127dp"
-        android:layout_height="122dp"
+        android:layout_width="116dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/ic_baseline_check_circle_24"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/eedate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.988" />
+        app:layout_constraintVertical_bias="0.375" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

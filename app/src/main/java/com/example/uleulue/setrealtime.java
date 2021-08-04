@@ -38,7 +38,7 @@ public class setrealtime extends AppCompatActivity {
     SimpleDateFormat simpleDateFormat,s2;
     TextView entryDatesh, Addresssh, exitDatesh,entrytimesh, exittimesh;
     Button realexittimeanddate,realentrytimeanddate;
-    String entrytime,entryDate, exittime,exitDate,Address,studentuserid,useridparent,userid,date,d2,name;
+    String entrytime,entryDate,exittime,exitDate,Address,studentuserid,useridparent,userid,date,d2,name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -198,7 +198,7 @@ public class setrealtime extends AppCompatActivity {
 
                         entryDatesh.setText(entryDate);
                         exitDatesh.setText(exitDate);
-                        entrytimesh.setText( entrytime);
+                        entrytimesh.setText(entrytime);
                         exittimesh.setText(exittime);
                         Addresssh.setText(Address);
 
