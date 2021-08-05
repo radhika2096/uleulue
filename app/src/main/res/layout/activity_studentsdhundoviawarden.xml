@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".studentsdhundoviawarden">
 
     <androidx.appcompat.widget.Toolbar
@@ -14,52 +16,37 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+         >
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="263dp"
+            android:layout_height="71dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="Requests of students"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="109dp"
+            android:layout_height="86dp"
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="263dp"
-        android:layout_height="71dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:text="Requests of students"
-        android:textAllCaps="true"
-        android:textColor="@color/colorWhite"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.638"
-        app:layout_constraintStart_toStartOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+            app:srcCompat="@drawable/jgiicon" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="109dp"
-        android:layout_height="86dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:layout_constraintVertical_bias="0.829"
-        app:srcCompat="@drawable/jgiicon" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="405dp"
         android:layout_height="567dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:layout_constraintVertical_bias="0.0" />
+      />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

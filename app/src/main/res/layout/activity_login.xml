@@ -102,7 +102,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/register"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="@+id/register"
         app:layout_constraintTop_toBottomOf="@+id/register"
         app:layout_constraintVertical_bias="0.0"
@@ -162,8 +162,8 @@
 
     <CheckBox
         android:id="@+id/c"
-        android:layout_width="141dp"
-        android:layout_height="48dp"
+        android:layout_width="158dp"
+        android:layout_height="61dp"
         android:layout_marginTop="16dp"
         android:text="Show Password"
         android:textStyle="bold"
