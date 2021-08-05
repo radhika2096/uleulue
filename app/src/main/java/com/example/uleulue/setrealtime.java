@@ -51,8 +51,8 @@ public class setrealtime extends AppCompatActivity {
         completedrequestkadb = FirebaseDatabase.getInstance().getReference().child("completedjourneysDetails");
         calendar = Calendar.getInstance();
         c2 = Calendar.getInstance();
-        simpleDateFormat = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
-        s2 = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
+        simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        s2 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         date = simpleDateFormat.format(calendar.getTime());
         d2 = simpleDateFormat.format(calendar.getTime());
         rn= new Random();
@@ -123,14 +123,7 @@ public class setrealtime extends AppCompatActivity {
 
             }
         });
-        mUserRef.child(userid).updateChildren(hashMap8).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG);
-                Toast.makeText(setrealtime.this,"trip completed",Toast.LENGTH_LONG);
-
-            }
-        });
+        mUserRef.child(studentuserid).child("status").setValue("journey completed succesfully");
 
 
        realentrytimeanddate.setVisibility(View.GONE);

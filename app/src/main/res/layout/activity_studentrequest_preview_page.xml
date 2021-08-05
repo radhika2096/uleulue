@@ -29,10 +29,25 @@
         app:layout_constraintStart_toStartOf="@+id/tick"
         app:layout_constraintTop_toBottomOf="@+id/tick" />
 
+    <Button
+        android:id="@+id/history2"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inpuut_bg"
+        android:text="History"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout1"
-        android:layout_width="410dp"
-        android:layout_height="730dp"
+        android:layout_width="413dp"
+        android:layout_height="629dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -152,10 +167,10 @@
             app:backgroundTint="@color/design_default_color_primary_variant"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Declined"
-            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintHorizontal_bias="0.142"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bdw"
-            app:layout_constraintVertical_bias="0.409" />
+            app:layout_constraintVertical_bias="0.608" />
 
         <Button
             android:id="@+id/Declined"
@@ -173,7 +188,7 @@
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addressd"
-            app:layout_constraintVertical_bias="0.267" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/d"
@@ -284,24 +299,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.03"
             app:srcCompat="@drawable/jgiicon" />
-
-        <Button
-            android:id="@+id/history2"
-            android:layout_width="135dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/inpuut_bg"
-            android:text="History"
-            android:textColor="@color/colorWhite"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/design_default_color_primary_variant"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/Declined"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="@+id/acceptd"
-            app:layout_constraintTop_toBottomOf="@+id/Declined"
-            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

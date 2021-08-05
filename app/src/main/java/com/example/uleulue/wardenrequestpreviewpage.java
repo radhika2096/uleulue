@@ -31,7 +31,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
     FirebaseAuth mAuth;
     String userid2;
     TextView entryDateshw, Addressshw, exitDateshw,entrytimeshw, exittimeshw,namet;
-    Button accept,decline,gobacktohome;
+    Button accept1,decline1;
     ImageView tick,cross;
 
     String entrytime,entryDate, exittime,exitDate,Address,studentuserid,useridparent,name;
@@ -52,31 +52,21 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
         Addressshw = (TextView) findViewById(R.id.addressdw);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-        accept = findViewById(R.id.acceptdw);
-        decline = findViewById(R.id.Declinedw);
+        accept1 = findViewById(R.id.acceptdw);
+        decline1 = findViewById(R.id.Declinedw);
         tick = findViewById(R.id.tickw);
         cross = findViewById(R.id.cross);
 
         loaduser();
-        accept.setOnClickListener(new View.OnClickListener() {
+        accept1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                perfromaction34(userid2,studentuserid,useridparent);
-                HashMap hashMap67 = new HashMap();
-                hashMap67.put("status2","Accepted By Warden");
-
-                mUserRef2.child(userid2).updateChildren(hashMap67).addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task task) {
-                        Toast.makeText(wardenrequestpreviewpage.this,"you accepted child request",Toast.LENGTH_LONG);
-
-                    }
-                });
-
+                mUserRef2.child(userid2).child("status2").setValue("Accepted By Warden");
+                dalo.child(studentuserid).child(useridparent).child("status2").setValue("Accepted By Warden");
 
             }
         });
-        decline.setOnClickListener(new View.OnClickListener() {
+        decline1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cross.setVisibility(View.VISIBLE);
@@ -84,7 +74,7 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
 
             }
         });
-      dalo.child(studentuserid).child(useridparent).addValueEventListener(new ValueEventListener() {
+       mUserRef2.child(userid2).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if (snapshot.exists())
@@ -92,14 +82,14 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
                     if(snapshot.child("status2").getValue().toString().equals("Accepted By Warden"))
                     {
                         tick.setVisibility(View.VISIBLE);
-                        accept.setVisibility(View.GONE);
-                        decline.setVisibility(View.GONE);
+                        accept1.setVisibility(View.GONE);
+                        decline1.setVisibility(View.GONE);
                     }
                     else if(snapshot.child("status2").getValue().toString().equals("Declined By Warden"))
                     {
                         tick.setVisibility(View.GONE);
-                        accept.setVisibility(View.GONE);
-                        decline.setVisibility(View.GONE);
+                        accept1.setVisibility(View.GONE);
+                        decline1.setVisibility(View.GONE);
                         cross.setVisibility(View.VISIBLE);
                     }
                 }
@@ -112,27 +102,9 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
         });
 
     }
-
-
-    private void perfromaction34(String userid2, String studentuserid, String useridparent) {
-
-
-        HashMap hashMap = new HashMap();
-        hashMap.put("status2","Accepted By Warden");
-        dalo.child(studentuserid).child(useridparent).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(wardenrequestpreviewpage.this,"you accepted child reques",Toast.LENGTH_LONG);
-
-            }
-        });
-
-
-
-    }
     private void perfromaction2(String userid2, String studentuserid, String useridparent) {
-decline.setVisibility(View.GONE);
-accept.setVisibility(View.GONE);
+decline1.setVisibility(View.GONE);
+accept1.setVisibility(View.GONE);
         HashMap hashMap = new HashMap();
         hashMap.put("status2","Declined By Warden");
         dalo.child(studentuserid).child(useridparent).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {

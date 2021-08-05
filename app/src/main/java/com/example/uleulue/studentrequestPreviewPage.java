@@ -176,7 +176,7 @@ public class studentrequestPreviewPage extends AppCompatActivity {
                     hashMap.put("name",snapshot.child("Name").getValue());
                     hashMap.put("useridstudent",userid1);
                     hashMap.put("status", "AcceptedByParents");
-                    hashMap.put("status2", "pendingbywarden");
+                    hashMap.put("status2", "pending");
                     hashMap.put("useridparents", mUser.getUid().toString());
                     databaseofwarden.child(userid1).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                         @Override

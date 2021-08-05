@@ -68,8 +68,8 @@
 
     <TextView
         android:id="@+id/lforpass"
-        android:layout_width="167dp"
-        android:layout_height="46dp"
+        android:layout_width="196dp"
+        android:layout_height="44dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -90,8 +90,8 @@
 
     <TextView
         android:id="@+id/lreg"
-        android:layout_width="223dp"
-        android:layout_height="42dp"
+        android:layout_width="245dp"
+        android:layout_height="51dp"
         android:layout_marginTop="24dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"

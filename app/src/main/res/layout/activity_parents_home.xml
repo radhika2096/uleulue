@@ -58,8 +58,8 @@
 
     <TextView
         android:id="@+id/cmeratext3"
-        android:layout_width="178dp"
-        android:layout_height="73dp"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
         android:layout_marginTop="28dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
@@ -82,7 +82,7 @@
         android:layout_width="391dp"
         android:layout_height="49dp"
 
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -98,7 +98,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cmeratext3"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toStartOf="@+id/cmeratext3"
         app:layout_constraintTop_toBottomOf="@+id/cmeratext3" />
 
@@ -203,7 +203,6 @@
         android:id="@+id/logout"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/btnn_bg"
         android:text="LOGOUT"
         android:textColor="@color/colorWhite"
@@ -211,16 +210,15 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttons"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="@+id/buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttons" />
 
     <Button
         android:id="@+id/buttons"
         android:layout_width="186dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/inpuut_bg"
         android:text="select student"
         android:textColor="@color/colorWhite"
@@ -228,9 +226,11 @@
         android:textStyle="bold"
         android:visibility="visible"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="@+id/phonenumberLabel"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="@+id/phonenumberLabel"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberLabel"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

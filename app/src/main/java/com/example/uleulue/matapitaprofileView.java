@@ -235,7 +235,7 @@ public class matapitaprofileView extends AppCompatActivity {
         hashMap.put("entryTime", stentrytime);
         hashMap.put("entryDate", stentryDate);
         hashMap.put("Name",nameinstudentutpass);
-        hashMap.put("status2","pendingbywarden");
+        hashMap.put("status2","pending");
 
 
         requestRef.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {

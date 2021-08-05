@@ -57,15 +57,15 @@ public class viewacceptedrequest extends AppCompatActivity {
     private void loadUsers(String s) {
 
 
-        Query query = mUserRef.orderByChild("address").startAt(s).endAt(s+ "\uf8ff");
+        Query query = mUserRef.orderByChild("name").startAt(s).endAt(s+ "\uf8ff");
         options = new FirebaseRecyclerOptions.Builder<acceptedrequestdhundo>().setQuery(query,acceptedrequestdhundo.class).build();
         adapter = new FirebaseRecyclerAdapter<acceptedrequestdhundo, matapitadhundoHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull matapitadhundoHolder holder, @SuppressLint("RecyclerView") int position, @NonNull acceptedrequestdhundo model) {
                 if(model.getStatus().toString().equals("AcceptedByParents")){
 
-                holder.username.setText(model.getAddress());
-                holder.profession.setText(model.getName());
+                holder.username.setText(model.getName());
+                holder.profession.setText(model.getAddress());
                 holder.studentsname.setText(model.getStatus());
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {

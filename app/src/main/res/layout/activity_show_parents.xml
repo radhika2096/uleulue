@@ -39,7 +39,7 @@
                 android:layout_width="314dp"
                 android:layout_height="19dp"
                 android:text="User Name:"
-                android:textAllCaps="true"
+                android:textAllCaps="false"
                 android:textColor="@color/design_default_color_error"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
