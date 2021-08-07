@@ -187,8 +187,8 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="417dp"
-        android:layout_height="402dp"
+        android:layout_width="412dp"
+        android:layout_height="305dp"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView">
@@ -287,15 +287,15 @@
         android:id="@+id/status2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pending"
+        android:text="Pending by Warden"
         android:textColor="#090909"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintVertical_bias="0.78" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
