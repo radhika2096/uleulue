@@ -167,18 +167,20 @@ public class studentrequestPreviewPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    HashMap hashMap = new HashMap();
-                    hashMap.put("address", snapshot.child("address").getValue());
-                    hashMap.put("exitDate", snapshot.child("exitDate").getValue());
-                    hashMap.put("exitTime", snapshot.child("exitTime").getValue());
-                    hashMap.put("entryTime", snapshot.child("entryTime").getValue());
-                    hashMap.put("entryDate", snapshot.child("entryDate").getValue());
-                    hashMap.put("name",snapshot.child("Name").getValue());
-                    hashMap.put("useridstudent",userid1);
-                    hashMap.put("status", "AcceptedByParents");
-                    hashMap.put("status2", "pending");
-                    hashMap.put("useridparents", mUser.getUid().toString());
-                    databaseofwarden.child(userid1).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                    HashMap hashMap12 = new HashMap();
+                    hashMap12.put("address", snapshot.child("address").getValue());
+                    hashMap12.put("exitDate", snapshot.child("exitDate").getValue());
+                    hashMap12.put("exitTime", snapshot.child("exitTime").getValue());
+                    hashMap12.put("entryTime", snapshot.child("entryTime").getValue());
+                    hashMap12.put("entryDate", snapshot.child("entryDate").getValue());
+                    hashMap12.put("name",snapshot.child("Name").getValue());
+                    hashMap12.put("useridstudent",userid1);
+                    hashMap12.put("status", "AcceptedByParents");
+                    hashMap12.put("status2", "pending");
+                    hashMap12.put("useridparents", mUser.getUid().toString());
+                    hashMap12.put("realentrydateandtime","not set");
+                    hashMap12.put("realexitdateandtime","not set");
+                    databaseofwarden.child(userid1).updateChildren(hashMap12).addOnCompleteListener(new OnCompleteListener() {
                         @Override
                         public void onComplete(@NonNull @NotNull Task task) {
                             Toast.makeText(studentrequestPreviewPage.this,"you succesfully sent request to warden",Toast.LENGTH_LONG).show();

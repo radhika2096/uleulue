@@ -61,8 +61,9 @@ public class wardenrequestpreviewpage extends AppCompatActivity {
         accept1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mUserRef2.child(userid2).child("status2").setValue("Accepted By Warden");
-                dalo.child(studentuserid).child(useridparent).child("status2").setValue("Accepted By Warden");
+
 
             }
         });

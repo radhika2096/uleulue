@@ -21,7 +21,7 @@
         android:textColorHighlight="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         android:textColorLink="@color/colorBlack"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"

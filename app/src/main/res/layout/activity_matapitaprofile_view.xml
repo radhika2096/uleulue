@@ -62,7 +62,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/adress2"
                 app:layout_constraintTop_toBottomOf="@+id/adress2"
-                app:layout_constraintVertical_bias="0.056" />
+                app:layout_constraintVertical_bias="0.086" />
 
             <EditText
                 android:id="@+id/entryTime2"
@@ -75,7 +75,7 @@
                 android:ems="10"
                 android:hint=" Enter Entry Time"
 
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|time"
                 android:padding="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
@@ -282,5 +282,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.963" />
+
+    <TextView
+        android:id="@+id/status2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status By Warden"
+        android:textColor="#090909"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

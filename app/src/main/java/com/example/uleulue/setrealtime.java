@@ -82,7 +82,7 @@ public class setrealtime extends AppCompatActivity {
 
             }
         }) ;
-       // check();
+        check();
 
     }
 
@@ -90,15 +90,19 @@ public class setrealtime extends AppCompatActivity {
         mUserRef.child(userid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                if(snapshot.child("realentrydateandtime").getValue().toString()!=null)
+                if(snapshot.exists()) {
+                    if (!snapshot.child("realentrydateandtime").getValue().toString().equals("not set")) {
+                        realentrytimeanddate.setVisibility(View.GONE);
+                        imageView.setVisibility(View.VISIBLE);
+                    }
+                    if (!snapshot.child("realexitdateandtime").getValue().toString().equals("not set")) {
+                        realexittimeanddate.setVisibility(View.GONE);
+                    }
+                }
+                else
                 {
-                    realentrytimeanddate.setVisibility(View.GONE);
-                    imageView.setVisibility(View.VISIBLE);
+                    Toast.makeText(setrealtime.this,"nothing to load",Toast.LENGTH_LONG).show();
                 }
-                if(snapshot.child("realexitdateandtime").getValue().toString()!=null)
-                { realexittimeanddate.setVisibility(View.GONE);
-                }
-
 
             }
 
@@ -115,15 +119,9 @@ public class setrealtime extends AppCompatActivity {
         HashMap hashMap8 = new HashMap();
         hashMap8.put("realentrydateandtime",d2);
         hashMap8.put("status","journey completed succesfully");
-        dalo.child(studentuserid).child(useridparent).updateChildren(hashMap8).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(setrealtime.this,"you gave the real entry time",Toast.LENGTH_LONG).show();
-                Toast.makeText(setrealtime.this,"trip completed",Toast.LENGTH_LONG).show();
 
-            }
-        });
         mUserRef.child(studentuserid).child("status").setValue("journey completed succesfully");
+        mUserRef.child(studentuserid).child("realentrydateandtime").setValue(d2);
 
 
        realentrytimeanddate.setVisibility(View.GONE);
@@ -158,13 +156,7 @@ public class setrealtime extends AppCompatActivity {
     private void perfromaction1(String userid, String studentuserid, String useridparent) {
         HashMap hashMap7 = new HashMap();
         hashMap7.put("realexitdateandtime",date);
-        dalo.child(userid).child(useridparent).updateChildren(hashMap7).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                Toast.makeText(setrealtime.this,"you gave the real exit time",Toast.LENGTH_LONG).show();
 
-            }
-        });
         mUserRef.child(userid).updateChildren(hashMap7).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {

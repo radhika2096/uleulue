@@ -37,7 +37,7 @@ public class matapitaprofileView extends AppCompatActivity {
     FirebaseUser mUser;
     ListView listView;
     String username, phone,email,staddress,stexitDate,stentryDate,stentrytime,  stexittime ,nameinstudentutpass;
-    TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime,nameinoutpass;
+    TextView username9810,phone9810,email9810,adress,exitdate,entrydate,exittime,entrytime,nameinoutpass,status2;
     Button btnperfrom,btndecline,historyofstudents;
     CardView cardView;
 
@@ -67,6 +67,8 @@ public class matapitaprofileView extends AppCompatActivity {
         nameinoutpass = findViewById(R.id.nameinstudentutpass);
         exittime = findViewById(R.id.exitTime2);
         cardView = findViewById(R.id.cardView);
+        status2 = findViewById(R.id.status2);
+
 
 
 
@@ -128,7 +130,7 @@ public class matapitaprofileView extends AppCompatActivity {
                         listView.setVisibility(View.VISIBLE);
 
                         listView.setBackgroundColor(Color.GRAY);
-                       // pushreqtoparent.setVisibility(View.GONE);
+                         status2.setVisibility(View.VISIBLE);
 
                     }
                     else if(snapshot.child("status").getValue().toString().equals("Declined"))
@@ -136,6 +138,9 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
+                        status2.setVisibility(View.VISIBLE);
+
+
 
                         listView.setBackgroundColor(Color.RED);
                       //  pushreqtoparent.setVisibility(View.GONE);
@@ -147,6 +152,7 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
+                        status2.setVisibility(View.VISIBLE);
 
                         listView.setBackgroundColor(Color.MAGENTA);
 
@@ -157,6 +163,8 @@ public class matapitaprofileView extends AppCompatActivity {
                         cardView.setVisibility(View.GONE);
                         btnperfrom.setVisibility(View.GONE);
                         listView.setVisibility(View.VISIBLE);
+                        status2.setVisibility(View.VISIBLE);
+
                          listView.setBackgroundColor(Color.GREEN);
                        // pushreqtoparent.setVisibility(View.VISIBLE);
                      /*   pushreqtoparent.setOnClickListener(new View.OnClickListener() {
@@ -189,6 +197,21 @@ public class matapitaprofileView extends AppCompatActivity {
 
         });
 
+        warden.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists())
+                {
+                    status2.setText("status- "+snapshot.child("status2").getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
     }
@@ -201,7 +224,10 @@ public class matapitaprofileView extends AppCompatActivity {
                 {Toast.makeText(matapitaprofileView.this, "request removed" , Toast.LENGTH_LONG).show();
                 cardView.setVisibility(View.VISIBLE);
                 btnperfrom.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);}
+                listView.setVisibility(View.GONE);
+                    status2.setVisibility(View.GONE);
+
+                }
                 else
                 {
                     Toast.makeText(matapitaprofileView.this, "error in cancelling the request" , Toast.LENGTH_LONG).show();
@@ -235,7 +261,7 @@ public class matapitaprofileView extends AppCompatActivity {
         hashMap.put("entryTime", stentrytime);
         hashMap.put("entryDate", stentryDate);
         hashMap.put("Name",nameinstudentutpass);
-        hashMap.put("status2","pending");
+
 
 
         requestRef.child(mUser.getUid()).child(userid).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
