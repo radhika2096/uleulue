@@ -83,10 +83,10 @@ public class HomeWarden extends AppCompatActivity {
 
 
                     fullnameText.setText("Name - " + ffullname);
-                    emailText.setText("email - " + eemail);
-                    phonenumberText.setText("phoneNumber- " + phone);
-                    sharingText.setText("sharing- " +  sharing);
-                    hostelnameText.setText("hostelname- " +  hostelname);
+                    emailText.setText("Email - " + eemail);
+                    phonenumberText.setText("PhoneNumber- " + phone);
+                    sharingText.setText("Sharing- " +  sharing);
+                    hostelnameText.setText("HostelName- " +  hostelname);
                 }
             }
 
