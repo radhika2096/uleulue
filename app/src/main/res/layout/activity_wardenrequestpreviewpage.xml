@@ -229,7 +229,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintEnd_toEndOf="@+id/addressdw"
-        app:layout_constraintHorizontal_bias="0.386"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="@+id/addressdw"
         app:layout_constraintTop_toBottomOf="@+id/addressdw" />
 

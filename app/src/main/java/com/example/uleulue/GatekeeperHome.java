@@ -85,9 +85,9 @@ public class GatekeeperHome extends AppCompatActivity {
 
 
                     greetingTextView.setText("WELCOME " + fullname1.toUpperCase());
-                    fullnameTextView.setText("NAME - " + fullname1.toUpperCase());
-                    emailTextView.setText("EMAIL - " + email1);
-                    phonenumberTextView.setText("PHONE NUMBER - " + phonenumber1);
+                    fullnameTextView.setText("Name - " + fullname1.toUpperCase());
+                    emailTextView.setText("Email - " + email1);
+                    phonenumberTextView.setText("Phone Number - " + phonenumber1);
                     adress.setText("Address: " + address1);
 
                 }
