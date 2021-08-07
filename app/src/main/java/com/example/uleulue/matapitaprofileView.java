@@ -47,7 +47,7 @@ public class matapitaprofileView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matapitaprofile_view);
         String userid = getIntent().getStringExtra("userkey");
-        Toast.makeText(this , "" + userid, Toast.LENGTH_LONG).show();
+
         mUserRef = FirebaseDatabase.getInstance().getReference().child("pusers").child(userid);
         requestRef = FirebaseDatabase.getInstance().getReference().child("OutpassRequesttoParent");
         warden = FirebaseDatabase.getInstance().getReference().child("databaseofwarden");
