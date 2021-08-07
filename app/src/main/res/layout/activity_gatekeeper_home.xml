@@ -5,7 +5,7 @@
     android:id="@+id/chistory"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/p"
+    android:background="@color/colorWhite"
     tools:context=".GatekeeperHome">
 
     <TextView
