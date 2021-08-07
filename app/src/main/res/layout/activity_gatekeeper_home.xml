@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/cmeratext"
-        android:layout_width="239dp"
-        android:layout_height="109dp"
+        android:layout_width="251dp"
+        android:layout_height="119dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -21,14 +21,14 @@
         android:textColorHighlight="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         android:textColorLink="@color/colorBlack"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <TextView
         android:id="@+id/cemailadressdlabel"
