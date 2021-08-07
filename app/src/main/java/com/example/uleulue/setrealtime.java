@@ -185,14 +185,14 @@ public class setrealtime extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists())
                     {
-                        entrytime = snapshot.child("entryTime").getValue().toString();
-                        entryDate = snapshot.child("entryDate").getValue().toString();
-                        exittime = snapshot.child("exitTime").getValue().toString();
-                        exitDate = snapshot.child("exitDate").getValue().toString();
-                        Address = snapshot.child("address").getValue().toString();
+                        entrytime = snapshot.child("EntryTime").getValue().toString();
+                        entryDate = snapshot.child("EntryDate").getValue().toString();
+                        exittime = snapshot.child("ExitTime").getValue().toString();
+                        exitDate = snapshot.child("ExitDate").getValue().toString();
+                        Address = snapshot.child("Address").getValue().toString();
                         studentuserid = snapshot.child("useridstudent").getValue().toString();
                         useridparent = snapshot.child("useridparents").getValue().toString();
-                        name = snapshot.child("name").getValue().toString();
+                        name = snapshot.child("Name").getValue().toString();
 
                         entryDatesh.setText(entryDate);
                         exitDatesh.setText(exitDate);

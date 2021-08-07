@@ -10,9 +10,9 @@
 
     <EditText
         android:id="@+id/chname"
-        android:layout_width="391dp"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -29,22 +29,22 @@
         android:textColorLink="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/chregisteration"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="@+id/chregisteration"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chregisteration" />
 
     <EditText
-        android:id="@+id/chphoneno"
-        android:layout_width="391dp"
+        android:id="@+id/chemail"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Valid Phone No:"
-        android:inputType="number"
+        android:hint="Email:"
+        android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -52,16 +52,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/chemail"
+        app:layout_constraintEnd_toEndOf="@+id/chname"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/chemail"
-        app:layout_constraintTop_toBottomOf="@+id/chemail" />
+        app:layout_constraintStart_toStartOf="@+id/chname"
+        app:layout_constraintTop_toBottomOf="@+id/chname" />
 
     <EditText
         android:id="@+id/cAddress"
-        android:layout_width="391dp"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_apartment_24"
         android:drawablePadding="5dp"
@@ -81,9 +81,9 @@
 
     <EditText
         android:id="@+id/chpassword"
-        android:layout_width="391dp"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -105,9 +105,9 @@
 
     <EditText
         android:id="@+id/chpassword2"
-        android:layout_width="391dp"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -128,16 +128,16 @@
         app:layout_constraintTop_toBottomOf="@+id/chpassword" />
 
     <EditText
-        android:id="@+id/chemail"
-        android:layout_width="391dp"
+        android:id="@+id/chphoneno"
+        android:layout_width="353dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
         android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Email:"
-        android:inputType="textEmailAddress"
+        android:hint="Valid Phone No:"
+        android:inputType="number"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -145,16 +145,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/chname"
+        app:layout_constraintEnd_toEndOf="@+id/chemail"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/chname"
-        app:layout_constraintTop_toBottomOf="@+id/chname" />
+        app:layout_constraintStart_toStartOf="@+id/chemail"
+        app:layout_constraintTop_toBottomOf="@+id/chemail" />
 
     <TextView
         android:id="@+id/chregisteration"
         android:layout_width="234dp"
         android:layout_height="81dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:paddingLeft="25dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -164,6 +164,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -173,17 +174,17 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.02"
         app:srcCompat="@drawable/jgiicon" />
 
     <Button
         android:id="@+id/chregister"
         android:layout_width="179dp"
         android:layout_height="49dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/inpuut_bg"
         android:text="Register"
         android:textColor="@color/colorWhite"
@@ -191,7 +192,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/chpassword2"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="@+id/chpassword2"
         app:layout_constraintTop_toBottomOf="@+id/chpassword2" />
 

@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/cmeratext"
-        android:layout_width="239dp"
-        android:layout_height="109dp"
+        android:layout_width="238dp"
+        android:layout_height="122dp"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -21,7 +21,7 @@
         android:textColorHighlight="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
         android:textColorLink="@color/colorBlack"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/cemailadressdlabel"
-        android:layout_width="392dp"
+        android:layout_width="355dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
@@ -55,9 +55,9 @@
 
     <TextView
         android:id="@+id/cnameLabel2"
-        android:layout_width="392dp"
+        android:layout_width="352dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_face"
         android:drawablePadding="5dp"
@@ -71,16 +71,16 @@
         android:textColorHint="@color/colorBlack"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cmeratext"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="@+id/cmeratext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cmeratext" />
 
     <TextView
         android:id="@+id/cphonenumberLabel2"
-        android:layout_width="385dp"
+        android:layout_width="355dp"
         android:layout_height="52dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_local_phone_24"
         android:drawablePadding="5dp"
@@ -95,13 +95,13 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/caddress"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/caddress"
         app:layout_constraintTop_toBottomOf="@+id/caddress" />
 
     <TextView
         android:id="@+id/caddress"
-        android:layout_width="391dp"
+        android:layout_width="355dp"
         android:layout_height="52dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/inpuut_bg"
@@ -126,7 +126,7 @@
         android:id="@+id/chistories"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/inpuut_bg"
         android:text="HISTORY"
         android:textColor="@color/colorWhite"
@@ -134,7 +134,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
         app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
@@ -142,7 +142,7 @@
         android:id="@+id/crequests"
         android:layout_width="167dp"
         android:layout_height="43dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/inpuut_bg"
         android:text="LogOut"
         android:textColor="@color/colorWhite"
@@ -150,7 +150,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
         app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
@@ -166,10 +166,10 @@
         app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/chistories"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/crequests"
         app:layout_constraintTop_toBottomOf="@+id/chistories"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.324" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -177,10 +177,10 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/cnameLabel2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
+        app:layout_constraintVertical_bias="0.231"
         app:srcCompat="@drawable/jgiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

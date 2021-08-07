@@ -20,7 +20,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -102,7 +102,7 @@
 
     <Button
         android:id="@+id/realexittimeanddate"
-        android:layout_width="382dp"
+        android:layout_width="355dp"
         android:layout_height="51dp"
         android:background="@drawable/inpuut_bg"
         android:text="press to get exit time and date"
@@ -119,7 +119,7 @@
 
     <Button
         android:id="@+id/realcamebacktimeanddate"
-        android:layout_width="382dp"
+        android:layout_width="355dp"
         android:layout_height="51dp"
         android:background="@drawable/inpuut_bg"
         android:text="press to set time and date of entry"
@@ -129,10 +129,10 @@
         app:backgroundTint="@color/design_default_color_primary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aaddress"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="@+id/eaddress"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eaddress"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/eextime"
