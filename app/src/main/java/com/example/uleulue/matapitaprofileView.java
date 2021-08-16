@@ -203,6 +203,16 @@ public class matapitaprofileView extends AppCompatActivity {
                 if (snapshot.exists())
                 {
                     status2.setText("status- "+snapshot.child("status2").getValue().toString());
+                    if(snapshot.child("status").getValue().toString().equals("journey completed succesfully"))
+                    {
+                        cardView.setVisibility(View.GONE);
+                        btnperfrom.setVisibility(View.GONE);
+                        listView.setVisibility(View.VISIBLE);
+                        status2.setVisibility(View.VISIBLE);
+
+                        listView.setBackgroundColor(Color.MAGENTA);
+
+                    }
                 }
             }
 

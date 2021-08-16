@@ -124,6 +124,7 @@ public class setrealtime extends AppCompatActivity {
         mUserRef.child(studentuserid).child("realentrydateandtime").setValue(d2);
 
 
+
        realentrytimeanddate.setVisibility(View.GONE);
        int requesuniqueid = rn.nextInt(range)+0;
 
