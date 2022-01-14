@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
     android:tag="2"
     tools:context=".regselectionpage">
 
@@ -64,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/w"
         app:layout_constraintTop_toBottomOf="@+id/p"
-        app:layout_constraintVertical_bias="0.455"
+        app:layout_constraintVertical_bias="0.34"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -84,18 +85,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/p"
         app:layout_constraintTop_toBottomOf="@+id/p"
-        app:layout_constraintVertical_bias="0.179"
+        app:layout_constraintVertical_bias="0.117"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="222dp"
-        android:layout_height="204dp"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
         app:layout_constraintBottom_toTopOf="@+id/s"
         app:layout_constraintEnd_toEndOf="@+id/s"
         app:layout_constraintStart_toStartOf="@+id/s"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.431"
         app:srcCompat="@drawable/jgiicon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
