@@ -44,7 +44,9 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_margin="@dimen/_5sdp"
             android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:backgroundTint="#ECE4FB"
             android:ems="20"
             android:hint="Email"
             android:includeFontPadding="false"
@@ -62,6 +64,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             app:passwordToggleEnabled="true"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="5dp"
             tools:layout_editor_absoluteX="92dp"
             tools:layout_editor_absoluteY="238dp">
 
@@ -70,8 +74,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textviewbg"
-                android:backgroundTint="#F4F4F6"
+                android:backgroundTint="#ECE4FB"
                 android:ems="50"
+
                 android:fontFamily="@font/roboto"
                 android:hint="Password"
                 android:inputType="textPassword"
