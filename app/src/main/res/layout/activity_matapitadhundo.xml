@@ -24,7 +24,7 @@
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginBottom="2dp"
-            android:background="#EB843CEA">
+            android:background="#EB955AE8">
 
             <TextView
                 android:id="@+id/textView2"
