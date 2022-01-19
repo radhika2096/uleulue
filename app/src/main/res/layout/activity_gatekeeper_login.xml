@@ -1,177 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/p"
-    tools:context=".GatekeeperLogin">
+    android:background="@drawable/backgroundd"
+    tools:context=".login">\
 
-    <EditText
-        android:id="@+id/Cemail"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
 
-        android:layout_marginTop="28dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_login_email_24"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="EMAIL"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textColorLink="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cLogin3"
-        app:layout_constraintStart_toStartOf="@+id/cLogin3"
-        app:layout_constraintTop_toBottomOf="@+id/cLogin3"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/cLogin3"
-        android:layout_width="290dp"
-        android:layout_height="63dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="GUARD'S LOG IN"
-        android:textColor="@color/colorBlack"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
 
-    <Button
-        android:id="@+id/clogin"
-        android:layout_width="232dp"
-        android:layout_height="49dp"
 
-        android:layout_marginTop="28dp"
+        <TextView
+            android:id="@+id/cLogin3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="GateKeeper's Log In"
+            android:textColor="#030E2E"
+            android:textSize="30sp"
+            android:textStyle="normal" />
 
-        android:background="@drawable/inpuut_bg"
-        android:text="LOGIN"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_variant"
-        app:layout_constraintEnd_toEndOf="@+id/cPassword3"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/r4"
-        app:rippleColor="@color/colorRed" />
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
 
-    <TextView
-        android:id="@+id/cforgotPassword"
-        android:layout_width="183dp"
-        android:layout_height="52dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:shadowColor="@color/colorBlack"
-        android:text="Forgot Password?"
-        android:textColor="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cregister2"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="@+id/cregister2"
-        app:layout_constraintTop_toBottomOf="@+id/cregister2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/cregister2"
-        android:layout_width="227dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Dont have an Account?"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/clogin"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/clogin"
-        app:layout_constraintTop_toBottomOf="@+id/cprogressBar3"
-        tools:ignore="MissingConstraints" />
+            android:src="@drawable/parentslogin">
 
-    <EditText
-        android:id="@+id/cPassword3"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_password"
+        </ImageView>
 
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="PASSWORD"
-        android:inputType="textPassword"
+        <EditText
+            android:id="@+id/Cemail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:ems="20"
+            android:hint="Email"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:shadowColor="#FBFBFB"
+            android:textColor="#0A0B0B"
+            android:textColorHighlight="#090909"
+            android:textColorHint="#777575"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="normal" />
 
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textColorLink="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/Cemail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Cemail"
-        app:layout_constraintTop_toBottomOf="@+id/Cemail" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="238dp">
 
-    <ProgressBar
-        android:id="@+id/cprogressBar3"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="93dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="10dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/clogin"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="@+id/clogin"
-        app:layout_constraintTop_toBottomOf="@+id/clogin" />
+            <EditText
+                android:id="@+id/cpassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F4F4F6"
+                android:ems="50"
+                android:fontFamily="@font/roboto"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_8sdp"
+                android:textColor="#0F0F10" />
 
-    <CheckBox
-        android:id="@+id/r4"
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="Remember Me"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/checkBoxg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/cPassword3" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxg"
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="Show Password"
-        android:textColor="#050505"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cPassword3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/cPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/cPassword3" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            \
+
+            <CheckBox
+                android:id="@+id/r4"
+                android:layout_width="146dp"
+                android:layout_height="41dp"
+
+                android:text="Remember me"
+                android:textColor="#090909"
+
+                />
+
+            <CheckBox
+                android:id="@+id/checkBoxg"
+                android:layout_width="146dp"
+                android:layout_height="41dp"
+
+                android:text="Show Password"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin2"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/inpuut_bg"
+            android:text="Login"
+
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#EB5B1FAF"
+            app:layout_constraintEnd_toEndOf="@+id/checkBoxp"
+            app:layout_constraintStart_toStartOf="@+id/remember2"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxp"
+            app:rippleColor="@color/colorRed" />
+
+
+        <ProgressBar
+            android:id="@+id/cprogressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/cregister2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+
+            android:text="Don't have an Account?"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/forgotPassword2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:shadowColor="@color/colorBlack"
+            android:text="Forgot Password?"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

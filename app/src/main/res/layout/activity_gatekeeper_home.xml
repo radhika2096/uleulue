@@ -1,186 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/chistory"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     tools:context=".GatekeeperHome">
 
-    <TextView
-        android:id="@+id/cmeratext"
-        android:layout_width="239dp"
-        android:layout_height="109dp"
-        android:paddingLeft="30dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="DETAILS"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textColorLink="@color/colorBlack"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EB9D5FF4"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/cemailadressdlabel"
-        android:layout_width="392dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:drawablePadding="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Email Address:"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cnameLabel2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cnameLabel2"
-        app:layout_constraintTop_toBottomOf="@+id/cnameLabel2" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:background="#EBA16AEF"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
 
-    <TextView
-        android:id="@+id/cnameLabel2"
-        android:layout_width="392dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_face"
-        android:drawablePadding="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Name:"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cmeratext"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="@+id/cmeratext"
-        app:layout_constraintTop_toBottomOf="@+id/cmeratext" />
 
-    <TextView
-        android:id="@+id/cphonenumberLabel2"
-        android:layout_width="385dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-        android:drawablePadding="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="PhoneNumber:"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/caddress"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/caddress"
-        app:layout_constraintTop_toBottomOf="@+id/caddress" />
+            <TextView
+                android:id="@+id/cmeratext7"
+                android:layout_width="250dp"
+                android:layout_height="49dp"
 
-    <TextView
-        android:id="@+id/caddress"
-        android:layout_width="391dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_home_24"
-        android:drawablePadding="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Address:"
-        android:textColor="@color/colorBlack"
-        android:textColorHighlight="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cemailadressdlabel"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cemailadressdlabel"
-        app:layout_constraintTop_toBottomOf="@+id/cemailadressdlabel" />
+                android:padding="@dimen/_10sdp"
+                android:text="Welcome Gatekeeper"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/chistories"
-        android:layout_width="167dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/inpuut_bg"
-        android:text="HISTORY"
-        android:textColor="@color/colorWhite"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
-        app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="100dp"
+                android:layout_height="114dp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
 
-    <Button
-        android:id="@+id/crequests"
-        android:layout_width="167dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/inpuut_bg"
-        android:text="LogOut"
-        android:textColor="@color/colorWhite"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="@+id/cphonenumberLabel2"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="@+id/cphonenumberLabel2"
-        app:layout_constraintTop_toBottomOf="@+id/cphonenumberLabel2" />
 
-    <Button
-        android:id="@+id/cviewaccepted"
-        android:layout_width="229dp"
-        android:layout_height="43dp"
-        android:background="@drawable/btnn_bg"
-        android:text="View Accepted Request"
-        android:textColor="@color/colorWhite"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/chistories"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/crequests"
-        app:layout_constraintTop_toBottomOf="@+id/chistories"
-        app:layout_constraintVertical_bias="0.209" />
+                app:srcCompat="@drawable/jgiicon" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="114dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/cnameLabel2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
-        app:srcCompat="@drawable/jgiicon" />
+        </androidx.appcompat.widget.Toolbar>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundd"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/cmeratext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/_5sdp"
+                android:text="Details"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:textColorLink="@color/colorWhite"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/Headline"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/Headline"
+                app:layout_constraintTop_toBottomOf="@+id/Headline" />
+
+            <TextView
+                android:id="@+id/cnameLabel2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#ECE4FB"
+                android:drawableLeft="@drawable/ic_face"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="Name"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:shadowColor="#FBFBFB"
+                android:textColor="#0A0B0B"
+                android:textColorHighlight="#090909"
+                android:textColorHint="#777575"
+                android:textColorLink="#FAF3F3"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/cemailadressdlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#ECE4FB"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="5dp"
+                android:ems="20"
+                android:hint="Email Address:"
+                android:includeFontPadding="false"
+
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:shadowColor="#FBFBFB"
+                android:textColor="#0A0B0B"
+                android:textColorHighlight="#090909"
+                android:textColorHint="#777575"
+                android:textColorLink="#FAF3F3"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/cphonenumberLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#ECE4FB"
+                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                android:drawablePadding="5dp"
+                android:ems="20"
+                android:hint="Phone Number:"
+                android:includeFontPadding="false"
+
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:shadowColor="#FBFBFB"
+                android:textColor="#0A0B0B"
+                android:textColorHighlight="#090909"
+                android:textColorHint="#777575"
+                android:textColorLink="#FAF3F3"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/caddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#ECE4FB"
+                android:drawableLeft="@drawable/ic_baseline_home_24"
+                android:drawablePadding="5dp"
+                android:ems="20"
+                android:hint="Address"
+                android:includeFontPadding="false"
+
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:shadowColor="#FBFBFB"
+                android:textColor="#0A0B0B"
+                android:textColorHighlight="#090909"
+                android:textColorHint="#777575"
+                android:textColorLink="#FAF3F3"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/crequests"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/btnn_bg"
+                    android:text="LOGOUT"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EB5B1FAF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttons" />
+
+                <Button
+                    android:id="@+id/chistories"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnn_bg"
+                    android:text="History"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EB5B1FAF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttons" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/crequests4"
+                    android:layout_width="398dp"
+                    android:layout_height="61dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/btnn_bg"
+                    android:text="View Accepted Request"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EB5B1FAF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttons" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

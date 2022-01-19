@@ -1,169 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
+    tools:context=".login">\
 
-    android:background="@drawable/p"
-    tools:context=".wardenlogin">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
 
-    <EditText
-        android:id="@+id/lemail"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
 
-        android:layout_marginTop="32dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_login_email_24"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="EMAIL"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColorHint="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textLogin4"
-        app:layout_constraintStart_toStartOf="@+id/textLogin4"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin4" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
 
-    <TextView
-        android:id="@+id/textLogin4"
-        android:layout_width="307dp"
-        android:layout_height="55dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="WARDEN'S LOGIN"
-        android:textColor="@color/colorBlack"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
 
-    <Button
-        android:id="@+id/lbutton"
-        android:layout_width="232dp"
-        android:layout_height="49dp"
+        <TextView
+            android:id="@+id/textLogin4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Warden's Log In"
+            android:textColor="#030E2E"
+            android:textSize="30sp"
+            android:textStyle="normal" />
 
-        android:layout_marginTop="28dp"
-        android:background="@drawable/btnn_bg"
-        android:text="LOGIN"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="@+id/checkBoxw"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="@+id/remember3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxw"
-        app:rippleColor="@color/colorRed" />
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
 
-    <TextView
-        android:id="@+id/lforpass"
-        android:layout_width="196dp"
-        android:layout_height="44dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:shadowColor="@color/colorBlack"
-        android:text="Forgot Password?"
-        android:textColor="@color/colorBlack"
-        android:textColorHint="@color/colorBlack"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lreg"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/lreg"
-        app:layout_constraintTop_toBottomOf="@+id/lreg"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/lreg"
-        android:layout_width="245dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="24dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Dont have an Account?"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lbutton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lbutton"
-        app:layout_constraintTop_toBottomOf="@+id/lprogress"
-        tools:ignore="MissingConstraints" />
+            android:src="@drawable/parentslogin">
 
-    <EditText
-        android:id="@+id/lpass"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_password"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="PASSWORD"
-        android:inputType="textPassword"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:textColorHint="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lemail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lemail"
-        app:layout_constraintTop_toBottomOf="@+id/lemail"
-        app:passwordToggleEnabled="true" />
+        </ImageView>
 
-    <ProgressBar
-        android:id="@+id/lprogress"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="93dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="20dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/lbutton"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/lbutton"
-        app:layout_constraintTop_toBottomOf="@+id/lbutton" />
+        <EditText
+            android:id="@+id/lemail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:ems="20"
+            android:hint="Email"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:shadowColor="#FBFBFB"
+            android:textColor="#0A0B0B"
+            android:textColorHighlight="#090909"
+            android:textColorHint="#777575"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="normal" />
 
-    <CheckBox
-        android:id="@+id/remember3"
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="Remember Me"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lpass"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lpass"
-        app:layout_constraintTop_toBottomOf="@+id/lpass" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="238dp">
 
-    <CheckBox
-        android:id="@+id/checkBoxw"
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="Show Password"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lpass"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="@+id/lpass"
-        app:layout_constraintTop_toBottomOf="@+id/lpass" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/lpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F4F4F6"
+                android:ems="50"
+                android:fontFamily="@font/roboto"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_8sdp"
+                android:textColor="#0F0F10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            \
+
+            <CheckBox
+                android:id="@+id/remember3"
+                android:layout_width="146dp"
+                android:layout_height="41dp"
+
+                android:text="Remember me"
+                android:textColor="#090909"
+
+                />
+
+            <CheckBox
+                android:id="@+id/checkBoxw"
+                android:layout_width="146dp"
+                android:layout_height="41dp"
+
+                android:text="Show Password"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/lbutton"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/inpuut_bg"
+            android:text="Login"
+
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#EB5B1FAF"
+            app:layout_constraintEnd_toEndOf="@+id/checkBoxp"
+            app:layout_constraintStart_toStartOf="@+id/remember2"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxp"
+            app:rippleColor="@color/colorRed" />
+
+
+        <ProgressBar
+            android:id="@+id/lprogress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/lreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+
+            android:text="Don't have an Account?"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/lforpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:shadowColor="@color/colorBlack"
+            android:text="Forgot Password?"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
